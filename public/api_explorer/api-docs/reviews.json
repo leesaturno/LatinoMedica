@@ -1,0 +1,137 @@
+{
+    "apis": [
+        {
+            "path": "/reviews/add",
+            "operations": [
+                {
+                    "summary": "For Add Doctor Review",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "ReviewAdd",
+                            "paramType": "body",
+                            "type": "ReviewAdd",
+                            "description": "Add Review Params",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__review__add"
+                }
+            ]
+        },
+        {
+            "path": "/reviews/{doctorid}",
+            "operations": [
+                {
+                    "summary": "For Get Doctor Review",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Doctor Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__reviews__doctorid"
+                }
+            ]
+        },
+        {
+            "path": "/reviews/{doctorid}/{patientid}",
+            "operations": [
+                {
+                    "summary": "For Get Doctor Review Posted Particular Patient",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "patientid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Patient Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__reviews__doctorid__patientid"
+                }
+            ]
+        }
+        
+    ],
+    "models": {
+        "ReviewAdd": {
+            "properties": {
+                "doctor_user_id": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Reviewd Doctor User Id"
+                },
+                "bedside_rate": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Star Count Out of 5"
+                },
+                "waittime_rate": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Star Count Out of 5"
+                },
+                "review": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Review Message"
+                }
+            }
+        }
+    },
+    "swaggerVersion": "1.2",
+    "apiVersion": "1",
+    "basePath": "http://abssalvador.localhost/api"
+}

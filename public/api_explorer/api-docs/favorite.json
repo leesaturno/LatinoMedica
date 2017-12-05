@@ -1,0 +1,105 @@
+{
+  "apis": [
+    {
+      "path": "/favorites",
+      "operations": [
+        {
+          "summary": "For List All Favorites",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__favorites"
+        }
+      ]
+    },
+    {
+      "path": "/favorite/add",
+      "operations": [
+        {
+          "summary": "For Add Favorite",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+			"name":"FavoriteAdd",
+			"paramType": "body",
+			"type": "FavoriteAdd",
+			"required": true,
+			"description": "Doctor Username"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__favorites__add"
+        }
+      ]
+    },
+	{
+      "path": "/favorite/delete/{id}",
+      "operations": [
+        
+		{
+          "summary": "Delete the favorite",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Enter Favorite ID"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "favorite__delete__id"
+        }
+]		
+		}
+		],
+  "models": {
+        "FavoriteAdd": {
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Doctor Username"
+                }
+            }
+        }
+    },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

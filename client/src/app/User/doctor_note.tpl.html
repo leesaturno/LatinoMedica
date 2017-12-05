@@ -1,0 +1,20 @@
+<div class="appointment-block pad-63">
+    <div class="container">
+        <div class="page-head clearfix">  
+            <h1 class="pull-left">{{'Note' | translate }}</h1>
+        </div>
+        <form class="form-horizontal appmt-view" name="remainder" ng-submit="note_add(remainder.$valid)">			
+			<div class="form-group col-md-8">
+				<div class="form-group" ng-class="{ 'has-error' : (remainder.patient_note.$submitted || remainder.patient_note.patient_note.$touched) && (remainder.patient_note.patient_note.$pristine || remainder.patient_note.patient_note.$invalid) && (remainder.patient_note.patient_note.$error.required)}">
+				 <label >{{'Note' | translate }}</label>
+                     <textarea ng-model="model.remainder.patient_note" name="patient_note" placeholder="Note Description" class="form-control" ng-required="true"></textarea>
+					<span class="error" ng-show="(remainder.patient_note.$submitted || remainder.patient_note.$touched) && (remainder.patient_note.$pristine || remainder.patient_note.$invalid) && (remainder.patient_note.$error.required)">{{'Enter Note'| translate }} </span>
+				</div>
+			</div>
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-lg btn-primary">{{'Submit' | translate}}</button>
+                <button class="btn btn-lg btn-warning" type="button" ng-click="notecloseModal()">{{'Cancel' | translate}}</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<section class="pad-63 subscription_block">
+    <div class="container">
+    	<div class="page-head">
+        	<h1>Upgrade Your Plan</h1>
+        </div>
+        <div class="subscription_details">
+        	<h3>Subscription Plan</h3>
+            <div class="row">
+                <div ng-show="subCount > 0" class="col-lg-3 col-md-3 col-sm-6 text-center" ng-repeat="plan in subscriptionsplan">
+                    <div class="subscription_plans" ng-class="{gold: $index === 0, silver: $index === 1, bronze: $index === 2, free: $index === 3}">
+                        <div class="subscription_head">
+                        	<span></span>
+                            <h4>{{plan.name}}</h4>
+                            <p>Creafted for a Great Web</p>
+                        </div>
+                        <div class="subs-payment text-center">
+                            <span class="currency" ng-if="($root.settings['site.enabled_plugins'].indexOf('Subscriptions') > - 1 && plan.price !== '0')">
+                                <span ng-if="$root.settings['site.currency_symbol'] !== ''">{{ plan.price | currency : $root.settings['site.currency_symbol']}} </span>
+                                <span ng-if="$root.settings['site.currency_symbol'] === ''">{{ plan.price | currency : $root.settings['site.currency_code']}} </span>
+                            </span>
+                            <span ng-if="plan.price === '0' && $root.settings['site.enabled_plugins'].indexOf('Subscriptions') > - 1 && model.amount === '0'">{{'Free'|translate}}</span>
+                            <span class="validity"> {{plan.period_days}} {{'Days'| translate}}</span>
+                        </div>
+                        <div class="subs-content">
+                            <div class="list-group-item-text"></div>
+                            <p class="text-left" ng-bind-html='plan.description'></p>
+                            <div class="navbar-btn clearfix list-group-item-heading"></div>
+                            <div class="navbar-btn clearfix list-group-item-heading"></div>
+                            <div class="payment-btn" ng-if="plan.name != 'FREE'">
+                                <a href="#/subscribe/payment/{{plan.id}}" title="{{'Buy Now'| translate}}" class="btn btn-green">{{'Buy Now'| translate}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="subCount < 0" class="col-md-12">
+                    <p class="hor-space alert alert-danger">{{'No Subscriptions Activated Contact Admin'|translate}}</p> 
+          		</div>
+            </div>
+            <!--
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="subscription_plans gold">
+                    <h4>Gold</h4>
+                    <div class="subs-payment text-center">
+                        <span class="currency">
+                            <span>$</span>
+                            <span>250.00</span>
+                        </span>
+                        <span></span>
+                        <span class="validity"> /365 Days</span>
+                    </div>
+                    <div class="subs-content">
+                        <div class="payment-btn">
+                            <a href="#/subscribe/payment/{{plan.id}}" title="{{'Subscribe'| translate}}" class="btn btn-animate btn-block">Subscribe</a>
+                        </div>
+                        <p class="text-left">
+                            Golden doctors will be in the listings at the top and also prepare them for other benefits, such as synchronizing with Google calendar, communicating with patients in the system and more.', 'Golden doctors will be in the listings at the top and also prepa
+                        </p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="subscription_plans silver">
+                    <h4>Gold</h4>
+                    <div class="subs-payment text-center">
+                        <span class="currency">
+                            <span>$</span>
+                            <span>250.00</span>
+                        </span>
+                        <span></span>
+                        <span class="validity"> /365 Days</span>
+                    </div>
+                    <div class="subs-content">
+                        <div class="payment-btn">
+                            <a href="#/subscribe/payment/{{plan.id}}" title="{{'Subscribe'| translate}}" class="btn btn-animate btn-block">Subscribe</a>
+                        </div>
+                        <p class="text-left">
+                            Golden doctors will be in the listings at the top and also prepare them for other benefits, such as synchronizing with Google calendar, communicating with patients in the system and more.', 'Golden doctors will be in the listings at the top and also prepa
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="subscription_plans bronze">
+                    <h4>Gold</h4>
+                    <div class="subs-payment text-center">
+                        <span class="currency">
+                            <span>$</span>
+                            <span>250.00</span>
+                        </span>
+                        <span></span>
+                        <span class="validity"> /365 Days</span>
+                    </div>
+                    <div class="subs-content">
+                        <div class="payment-btn">
+                            <a href="#/subscribe/payment/{{plan.id}}" title="{{'Subscribe'| translate}}" class="btn btn-animate btn-block">Subscribe</a>
+                        </div>
+                        <p class="text-left">
+                            Golden doctors will be in the listings at the top and also prepare them for other benefits, such as synchronizing with Google calendar, communicating with patients in the system and more.', 'Golden doctors will be in the listings at the top and also prepa
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="subscription_plans free">
+                    <h4>Gold</h4>
+                    <div class="subs-payment text-center">
+                        <span class="currency">
+                            <span>$</span>
+                            <span>250.00</span>
+                        </span>
+                        <span></span>
+                        <span class="validity"> /365 Days</span>
+                    </div>
+                    <div class="subs-content">
+                        <div class="payment-btn">
+                            <a href="#/subscribe/payment/{{plan.id}}" title="{{'Subscribe'| translate}}" class="btn btn-animate btn-block">Subscribe</a>
+                        </div>
+                        <p class="text-left">
+                            Golden doctors will be in the listings at the top and also prepare them for other benefits, such as synchronizing with Google calendar, communicating with patients in the system and more.', 'Golden doctors will be in the listings at the top and also prepa
+                        </p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</section>

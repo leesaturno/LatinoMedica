@@ -1,0 +1,90 @@
+<div class="messages col-md-12 question-page">
+    <div class="medical-answer">
+        <div class="clearfix question-detail">
+            <section class="clearfix">
+                <div>
+                    <div class="page-head clearfix">   
+                        <!--<h1 class="pull-left">Question with Answers</h1>-->
+                        <span ng-if="$root.auth.role_id == userRole.User" class="pull-right"> 
+                            <a href="#/questions" class="btn btn-red"><i class="fa fa-chevron-left"></i>Back</a>
+                        </span>
+                        <span ng-if="$root.auth.role_id == userRole.Doctor" class="pull-right"> 
+                            <a href="#/answers/question" class="btn btn-red"><i class="fa fa-chevron-left"></i>Back</a>
+                        </span>
+                    </div>
+                    
+                    <div class="answer-detail">
+                       <!-- <div class="clearfix">
+                            <div class="col-md-8 col-sm-8">
+                                <p><i class="fa fa-comment" aria-hidden="true"></i>{{questionR.question}}</p>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <span class="date">{{questionR.created_at | translate}}</span>
+                            </div>
+                        </div> -->
+                        <div class="answers" ng-repeat="answerR in answers">
+                            <div class="clearfix">
+                                <div class="col-md-6 col-sm-5">
+                                    <p><i class="fa fa-comments" aria-hidden="true"></i>{{answerR.answer}}</p>
+                                </div>
+                                <div ng-show="paginates.total == 0">
+                                    <p class="hor-space alert alert-danger text-center">{{'No Answers available'| translate}}</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <span class="date">{{answerR.created_at | dateFormat}}</span>
+                                </div>
+                                <!--<div class="col-md-3 col-sm-3">
+                                    <p>{{'Rate the best answer' | translate}}</p>
+                                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                                ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                                </div> -->
+                            </div>
+                            <!--<div class="clearfix">
+                                <div class="col-md-6 col-sm-5">
+                                    <h5><i class="fa fa-user" aria-hidden="true"></i>{{'Dr. Julio Castro | ' | translate}}<a href="javascript:void(0)">{{'Dentist' | translate}}</a></h5>
+                                    <p><i class="fa fa-comments" aria-hidden="true"></i>{{'Good afternoon, yes I do perform surgeries there and at la Victoria\'s Hospital' | translate}}</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <p></p>
+                                    <span class="date">{{'17/12/2016   -  12:10 am' | translate}}</span>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <p>{{'Rate the best answer' | translate}}</p>
+                                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                                ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                                </div>
+                            </div>-->
+                        </div>
+                        <!--<div class="doctor-questions">
+                            <div class="form-content">
+                                <form method="post" ng-submit="questionAdd(formValue.$valid, data)" novalidate>
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="{{'Write your question here'| translate }}"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+                    </div>
+                                
+                    <!--<div class="row">
+                       <div class="col-md-12 ques-ans m-t-15">
+                        <h2>{{questionR.question}}</h2>
+                        <ul class="list-unstyled">
+                            <li ng-repeat="answerR in answers">
+                                <p>{{answerR.answer}}</p>
+                            </li>
+                            <li ng-show="paginates.total == 0">
+                                <p class="hor-space alert alert-danger text-center">{{'No Answers available'| translate}}</p>
+                            </li>
+                        </ul>
+                       </div>
+                    </div>-->
+                </div>
+            </section>
+		</div>
+	</div>
+</div>
+
+

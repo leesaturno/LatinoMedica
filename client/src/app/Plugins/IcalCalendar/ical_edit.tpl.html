@@ -1,0 +1,34 @@
+<section class="clearfix">
+    <div class="page-head">
+        <div class="container">
+            <h1>{{'Edit Ical'| translate}}</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-content">
+            <form name="formValue" method="post" ng-submit="model.icalUpdate(formValue.$valid)" novalidate>
+                <div class="form-body">
+                    <div class="form-group" ng-class="{ 'has-error' : (formValue.$submitted || formValue.link.$touched) && (formValue.link.$pristine || formValue.link.$invalid) && (formValue.link.$error.required)}">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-check fa-fw"></i></span>
+                            <input type="url" class="form-control" name="link" id="link" placeholder="{{'Ical Url Link'| translate}}" ng-model="model.formValue.link" ng-required="true"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Active / In Active</label>
+                            <div>
+                                <switch id="enabled" name="enabled" ng-model="model.formValue.is_active" on="Yes" off="No" class="green"></switch>
+                            </div>
+                        </div>
+                        <span class="error" ng-show="(formValue.$submitted || formValue.link.$touched) && (formValue.link.$pristine || formValue.link.$invalid) && (formValue.link.$error.required)">{{'Please Enter Ical Link'| translate }} </span>
+                        <span class="error" ng-show="(formValue.$submitted || formValue.link.$touched) && (formValue.link.$pristine || formValue.link.$invalid) && (formValue.link.$error.url)">{{'Enter valid Ical URL - Starts with http:// and ends with .ics'| translate}}</span>
+
+                    </div>
+                </div>
+                <div class="form-footer education-btn">
+                    <button class="btn btn-blue btn-animate wid-230 mr5" type="submit">{{'Update'| translate }}</button>
+                    <a href="#/ical/list" class="btn btn-danger btn-animate wid-230">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="user_views">
+    <h3>show #{{userView.username}}</h3>
+    <div class="user_views_index">
+                Email         - <span >{{userView.email}}</span><br>
+                UserType      - <span >{{(userView.role_id == 3) ? 'Doctor' : 'Patient'}}</span><br>
+                Gender        - <span >{{(userView.gender_id == 1) ? 'Male' : 'Female'}}</span><br>
+                Registered On - <span >{{userView.created_at}}</span><br>
+                Registered IP - <span >{{userView.register_ip_id}}</span><br>
+                Login counts  - <span >{{userView.user_login_count}}</span><br>
+                Last Login IP - <span >{{userView.last_login_ip_id}}</span><br>
+                Address - <span >{{userView.address}}</span><br>
+                Mobile - <span >{{userView.phone}}</span><br>
+                Active - <span >{{(userView.is_active == 1) ? 'Yes' : 'No'}}</span><br>
+                Verified - <span >{{(userView.is_verified == 1) ? 'Yes' : 'No'}}</span><br>
+                Featured - <span >{{(userView.is_featured == 1) ? 'Yes' : 'No'}}</span><br>
+    </div>
+</div>

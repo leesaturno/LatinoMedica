@@ -1,0 +1,252 @@
+{
+  "apis": [
+    {
+      "path": "/workplaces",
+      "operations": [
+        {
+          "summary": "Fetch List of workplaces",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search workplace",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "type": "string",
+              "description": "filter list of workplaces",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The workplace Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort workplace by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__workplaces"
+        },
+        {
+          "summary": "Store workplaces",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "WorkplaceAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "WorkplaceAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__workplaces"
+        }
+      ]
+    },
+    {
+      "path": "/workplaces/{id}",
+      "operations": [
+        {
+          "summary": "Update workplaces",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The workplaces Identifier"
+            },
+            {
+              "name": "WorkplaceAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "WorkplaceAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__workplaces__id_"
+        },
+        {
+          "summary": "Fetch particular workplace",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The workplace Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__workplaces__id_"
+        },
+        {
+          "summary": "Delete workplace",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The workplace Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__workplaces__id_"
+        }
+      ]    
+    }
+  ],
+  "models": {
+    "WorkplaceAdd": {
+      "properties": {
+        "postal_code":{
+		      "type": "integer",
+          "required": true,
+          "description": "Postal Code"
+        },
+        "city_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "City"
+        },
+        "country_id":{
+          "type": "intgeger",
+              "required": false,
+              "description": "Country"
+        },
+        "state_id":{
+          "type": "intgeger",
+              "required": false,
+              "description": "Country"
+        },
+        "work_phone_number": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Phone number"
+        },
+        "price":{
+		      "type": "integer",
+          "required": true,
+          "description": "Doctor Id"
+        },
+        "address": {
+          "type": "string",
+          "required": true,
+          "description": "Address"
+        },
+        "is_preferred_location": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Is preferred location or not"
+        }
+      },
+      "id": "WorkplaceAdd"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

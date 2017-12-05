@@ -1,0 +1,84 @@
+<section class="clearfix pad-63 appmt-table">
+	<div class="container">
+        <div class="page-head">    
+            <h1>{{'My Appoinment Modification'|translate}} 
+				<span class="text-center">{{'Location:' |  translate}}{{model.workplace.location |translate}}</span>
+                <span class="pull-right search-table-field">
+                    <a href="#/user/workplaces/{{model.locationid}}/appoinmentmodification/create" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add'|translate}}</a>
+                </span>            
+                <span class="pull-right search-table-field">
+                    <a href="#/user/workplaces" class="btn btn-primary btn-animate"><i class="fa fa-chevron-left fa-fw"></i>{{'Back'|translate}}</a>
+                </span>                
+            </h1>
+        </div>
+
+		<div growl></div>
+        <div class="table-block">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="200">{{'Date'| translate}}</th>
+                            <th width="200">{{'Type'| translate}}</th>
+                            <th width="500">{{'Slot'| translate}}</th>
+                            <th width="150">{{'Status'| translate}}</th>
+                            <th width="220">{{'Action'| translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+						 <tr ng-repeat="modifyValue in model.appoinmentModification">
+                            <td>{{modifyValue.appoint_date | dateFormat}}</td>
+                            <td>
+                                <span ng-show="modifyValue.type == 1">
+                                    {{'Day Off'| translate}}
+                                </span>
+                                <span ng-show="modifyValue.type == 0">
+                                    {{'Schedule Change'| translate}}
+                                </span>
+                            </td>
+                            
+                            <td>
+                                <span ng-show="modifyValue.practice_open == ''">
+                                    --
+                                </span>
+                                <span ng-show="modifyValue.practice_open != ''" >
+                                    <ul ng-bind-html="modifyValue.practice_open | splitedShow" class="time-slots list-unstyled">
+                                    </ul>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="switch-option" ng-if="modifyValue.is_active == '1'">
+                                    <switch id="enabled" name="enabled" ng-model="modifyValue.is_active" disabled="true" on="Yes" off="No" class="green"></switch>
+                                </div>
+                                <div class="switch-option" ng-if="modifyValue.is_active != '1'">
+                                    <switch id="enabled" name="enabled" disabled="true" ng-model="modifyValue.is_active" on="Yes"  off="No" class="green"></switch>
+                                </div>
+                            </td>
+                            <td class="action-btn">                               
+								<a href="#/user/workplaces/{{model.locationid}}/appoinmentmodification/{{modifyValue.id}}/update" title="{{'Edit'| translate}}" class="btn green"><i class="fa fa-pencil"></i>{{'Edit' | translate}}</a>
+                                <a ng-click='deleteWorkPlace(modifyValue.id)' title="{{'Delete' | translate}}" class="btn red"><i class="fa fa-trash"></i>{{'Delete' | translate}}</a>
+                            </td>
+                        </tr>
+                        <tr ng-show="!model.dataModificationLength">
+                            <td colspan="5">
+                                <p class="hor-space alert alert-danger">{{'No Record Found' |translate}}</p>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="paging clearfix text-center" ng-show="model.worklocation._metadata.total_records > 0">
+                <pagination
+                    total-items="model.worklocation.meta.pagination.total"
+                    ng-model="currentPage"
+                    ng-change="paginate()"
+                    max-size="model.worklocation._metadata.maxSize"
+                    boundary-links="true"
+                    num-pages="model.worklocation.meta.pagination.total_pages"
+                    items-per-page="model.worklocation.meta.pagination.per_page"
+                ></pagination>
+            </div>
+        </div>
+	</div>
+</section>

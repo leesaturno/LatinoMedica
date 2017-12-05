@@ -1,0 +1,47 @@
+<section class="pad-63 selected-plan-details">
+    <div class="container">
+        <div class="form-content col-md-6 col-md-offset-3">
+        	<div class="page-head">
+                <h1>{{'Subscription Confirmation'| translate}}</h1>
+            </div>
+        	<form name="payconfirm" ng-submit="model.payment(payconfirm)" novalidate>
+                <div class="form-heading">
+                    <h2><span>{{'Your Selected Plan Details'| translate}}</span></h2>
+                </div>
+                <div class="form-body">
+                    <div class="form-group">
+                        <label>Plan Name <span>:</span></label>
+                        <span>{{model.subscribeplan.name}}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plan Price <span>:</span></label>
+                        <span>{{ model.subscribeplan.price | currency : $root.settings['site.currency_symbol']}}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plan Period <span>:</span></label>
+                    	<span>{{model.subscribeplan.period_days}} Days</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Plan Description <span>:</span></label>
+                        <p>{{model.subscribeplan.description}}</p>                    
+                    </div>
+                </div>
+                 <div class="form-footer">
+                      <div ng-show="model.subscribeplan.price !=0">
+                         <!--<button class="btn btn-blue btn-animate btn-block" type="submit">{{'Confirm to Pay'| translate }}</button>-->
+                         <button class="btn btn-green btn-block" type="submit">{{'Confirm to Pay'| translate }}</button>
+                     </div>
+                     <div ng-show="model.subscribeplan.price == 0">
+                         <!--<a href="#/subscribe/plans" class="btn btn-blue btn-animate btn-block" type="submit">{{'Back'| translate }}</a>-->
+                         <a href="#/subscribe/plans" class="btn btn-green btn-block" type="submit">{{'Back'| translate }}</a>
+                     </div>
+                </div>
+           </form>            
+        </div>
+   	</div>
+</section>
+<div oc-lazy-load='loadSeo'>
+    <user-profile-seo></user-profile-seo>
+</div>

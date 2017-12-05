@@ -1,0 +1,134 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <div class="row">
+                <div class="col-sm-3 edit-left">
+                    <display-template name="User/sidemenu.tpl.html"></display-template>
+                </div>
+                <div class="col-sm-9">
+                    <section class="clearfix checklist-content setting-page">
+                        <div class="page-head">    
+                            <h1>{{'Insurances'| translate}}</h1>
+                        </div>
+                        <div class="remove-width">
+                            <div class="form-content">
+                                <form name="insuranceUpdate" name="patientinsurance_add" method="post" ng-submit="model.myInsurance()" novalidate ng-if="$root.auth.role_id == model.ConstUserType.User">
+                                    <!--<div class="form-heading">
+                                        <h2><span>{{'Select Your Insurances'| translate}}</span></h2>
+                                    </div>-->
+                                    <div class="form-body clearfix">
+                                        <!--<div class="form-group col-md-4" ng-repeat="insurance in insurances">
+                                            <label class="checkbox-field">
+                                                <input class="hide" type="checkbox" checklist-model="user.insurance_ids" checklist-value="insurance.id" ng-change="check(insurance.id, checked)" id="{{insurance.name}}">
+                                                <span class="custom-check check-green"></span>
+                                                <span><label for="{{insurance.name}}">{{insurance.name}}</label></span>
+                                            </label>
+                                        </div>-->
+                                        <div class="row">
+                                            <div class="clearfix">
+                                                <div class="col-md-6">
+                                                    <div class="form-group clearfix">
+                                                        <label>{{'Medical insurance'| translate}}</label>
+                                                        <div class="input-group select-opt">
+                                                            <select class="form-control" name="preferred_lang" id="preferred_lang" ng-model="model.insurance.medical_insurance_id" ng-options="c.id as c.name for c in insurances">
+                                                                <option value="">{{"Choose a medical insurance" | translate }}</option>
+                                                            </select>
+                                                           </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="col-md-6">
+                                                    <div class="form-group clearfix">
+                                                        <label>{{'Dental insurance'| translate}}</label>
+                                                        <div class="input-group select-opt">
+                                                            <select class="form-control" name="preferred_lang" id="preferred_lang" ng-model="model.insurance.dental_insurance_id" ng-options="c.id as c.name for c in insurances">
+                                                                <option value="">{{"Choose a dental plan" | translate }}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="col-md-6">
+                                                    <div class="form-group clearfix">
+                                                        <label>{{'Eyesight insurance'| translate}}</label>
+                                                        <div class="input-group select-opt">
+                                                            <select class="form-control" name="preferred_lang" id="preferred_lang" ng-model="model.insurance.eye_insurance_id" ng-options="c.id as c.name for c in insurances">
+                                                                <option value="">{{"Choose a eyesight plan" | translate }}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer appmt-btn">
+                                        <button class="btn btn-green btn-animate" type="submit">{{'Save'| translate }}</button>
+                                    </div>
+                                </form>
+                                <div ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                                	<form name="doctorinsurance_add" method="post" ng-submit="model.DoctorInsurance(doctorinsurance_add.$valid)" novalidate>
+                                    <div class="form-body clearfix" >
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <label>{{'Accepted medical Insurance'| translate}}</label>
+                                                     <div class="form-group select-opt" ng-class="{ 'has-error' : (doctorinsurance_add.$submitted || doctorinsurance_add.insurance_id.$touched) && (doctorinsurance_add.insurance_id.$pristine || doctorinsurance_add.insurance_id.$invalid) && (doctorinsurance_add.insurance_id.$error.required)}">
+                                                    <select class="form-control" name="insurance_id" id="insurance_id" ng-model="model.insurancecount.insurance_id" ng-options="c.id as c.name for c in insurances" ng-required="true">
+                                                                <option value="">{{"Choose a medical insurance" | translate }}</option>
+                                                            </select>
+                                                          <span class="error" ng-show="(doctorinsurance_add.$submitted || doctorinsurance_add.insurance_id.$touched) && (doctorinsurance_add.insurance_id.$pristine || doctorinsurance_add.insurance_id.$invalid) && (doctorinsurance_add.insurance_id.$error.required)">{{"Select medical insurance" | translate }}</span>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                            	<div class="form-group">
+                                                    <label>{{'Patients per day'| translate}}</label>
+                                                    <div class="form-group" ng-class="{ 'has-error' : (doctorinsurance_add.$submitted || doctorinsurance_add.allowed_patients.$touched) && (doctorinsurance_add.allowed_patients.$pristine || doctorinsurance_add.allowed_patients.$invalid) && (doctorinsurance_add.allowed_patients.$error.required)}">
+                                                    <input type="text" class="form-control" name="allowed_patients" id="allowed_patients" ng-model="model.insurancecount.allowed_patients" ng-required="true">
+                                                        <span class="error" ng-show="(doctorinsurance_add.$submitted || doctorinsurance_add.allowed_patients.$touched) && (doctorinsurance_add.allowed_patients.$pristine || doctorinsurance_add.allowed_patients.$invalid) && (doctorinsurance_add.allowed_patients.$error.required)">{{"Enter patient count" | translate }} </span>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer appmt-btn">
+                                        <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button>
+                                    </div>
+                                </form>
+                                    
+                                    <div class="clearfix insurance-revoke">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group clearfix">
+                                                    <label>{{"Insurance Lists" | translate }}</label>
+                                                    <div class="clearfix" ng-repeat="insuranceList in model.insuranceLists.data" ng-show="model.dataLength">
+                                                        <p class="pull-left">{{insuranceList.insurance.name}}{{" | "}}{{insuranceList.allowed_patients}}</p>
+                                                        <a class="pull-right" href="javascript:void(0)" ng-click="model.removeInsurance(insuranceList.id)" >{{"Revoke" | translate }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix" ng-show="!model.dataLength">
+                                         <p class="hor-space alert alert-danger">{{'No Record Found'|translate}}</p>
+                                    </div>
+                                     <div class="paging clearfix text-center" ng-show="model.dataLength">
+                                        <uib-pagination total-items="model._metadata.total" num-pages="model._metadata.total_pages" ng-model="model.currentPage" max-size="model.maxSize" boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="model._metadata.per_page" previous-text="&#xf104;" next-text="&#xf105;" ng-change="model.paginate()"></uib-pagination>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+<!--<div oc-lazy-load='loadSeo'>
+    <user-profile-seo></user-profile-seo>
+</div> -->
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

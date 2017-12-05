@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="clearfix">
+        <div class="pull-left">
+            <h2>{{'Money Transfer Accounts' | translate}}</h2>
+        </div>
+        <div class="pull-right">
+            <dashboard-settings></dashboard-settings>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#/user_cash_withdrawals" class="text-primary">{{'Withdraw Fund Requests'|translate}}</a></li>
+            <i class="fa fa-angle-double-right well-sm"></i>
+            <li class="active"><span class="text-muted">{{'Money Transfer Accounts'|translate}}</span></li>
+        </ol>
+    </div>
+    <div ng-if="moneyTransferAccLists.length > 0">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat='moneyTransferAccList in moneyTransferAccLists'>
+                <div class="clearfix">
+                    <div class=" col-md-6"><span><p ng-bind-html="moneyTransferAccList.account">
+                        {{moneyTransferAccList.account}} <span ng-if="moneyTransferAccList.is_primary > 0" class="text-success textb">{{'Primary Account' | translate}}</span>
+                    </p></span></div>
+                    <div class=" col-md-6 text-right">
+                        <a class="btn btn-danger" title="{{'Delete' | translate}}" ng-click='MoneyTransferAccDelete(moneyTransferAccList.id)'>{{'Delete' | translate}}</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="text-center" ng-show="_metadata.total_records === 0"><h3 class="text-muted">{{'No records found' | translate}}</h3></div>
+    </div>
+    <div class="well-sm"></div>
+    <form role="form" class="form-horizontal clearfix" name="MoneyTransferAccAdd"
+          ng-submit="MoneyTransferAccSubmit(MoneyTransferAccAdd.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : (MoneyTransferAccAdd.$submitted || MoneyTransferAccAdd.account.$touched) && (MoneyTransferAccAdd.account.$pristine || MoneyTransferAccAdd.account.$invalid) }">
+            <label class="col-md-3 col-sm-3 control-label" for="account">{{'Account Details' | translate}}</label>
+            <div class="col-md-5 col-sm-9">
+                <textarea class="form-control" name="account" id="account" placeholder="{{'Account Details' | translate}}"
+                          ng-model='money_transfer_account.account' ng-required="true"></textarea>
+                <span class="help-block" ng-show="(MoneyTransferAccAdd.$submitted || MoneyTransferAccAdd.account.$touched) && (MoneyTransferAccAdd.account.$pristine || MoneyTransferAccAdd.account.$invalid) && (MoneyTransferAccAdd.account.$error.required)">{{'Enter Account Details' | translate}}</span>
+                <p class="help-block">
+                    <p>{{'e.g' | translate}}.,</p>
+                    <p>
+                        {{'Bank' | translate}}:&nbsp;{{'HDFC' | translate}},<span>&nbsp;&nbsp;{{'Account No' | translate}}:&nbsp;<span>XXXXXX</span></span>
+                    </p>
+                    <p>{{'IFSC Code' | translate}}:&nbsp;<span>XXXXX</span></p>
+                    <p>({{'or' | translate}})</p>
+                    <p>{{'PayPal Account' | translate}}:&nbsp;<span>{{'example@domain.com' | translate}}</span></p>
+                </p>
+            </div>
+        </div>
+        <div class="well well-sm clearfix">
+            <div class="pull-right">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{'Submit' | translate }}</button>
+            </div>
+        </div>
+    </form>
+</div>

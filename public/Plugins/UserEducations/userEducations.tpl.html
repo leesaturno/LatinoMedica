@@ -1,0 +1,54 @@
+<section class="clearfix pad-63 appmt-table">
+	<div class="container">
+        <div class="page-head">    
+            <h1>{{'My Educations'|translate}}
+                <span class="pull-right search-table-field">
+                    <a href="#/user/education/add" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add Education'|translate}}</a>
+                </span>
+            </h1>
+        </div>
+
+		<div growl></div>
+        <div class="table-block">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="500">{{'Education'|translate}}</th>
+                            <th width="500">{{'Location'|translate}}</th>
+                            <th width="500">{{'Organization'|translate}}</th>
+                            <th width="500">{{'Action'|translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="userEducation in userEducations" ng-show="!noEducationDiv">
+                            <td>{{userEducation.education}}</td>
+                            <td>{{userEducation.location}}</td>
+                            <td>{{userEducation.organization}}</td>
+                            <td class="action-btn">
+                                <a href="#/user/education/{{userEducation.id}}/edit" title="{{'Edit'| translate}}" class="btn green"><i class="fa fa-pencil"></i>Edit</a>
+                                <a ng-click='UserEducationDelete(userEducation.id)' title="{{'Delete' | translate}}" class="btn red"><i class="fa fa-trash"></i>Delete</a>
+                            </td>
+                        </tr>
+                        <tr ng-show="noEducationDiv">
+                            <td colspan="5">
+                                <p class="hor-space alert alert-danger">{{'No Record Found'|translate}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="paging clearfix text-center" ng-show="_metadata.total_records > 0">
+                <pagination
+                    total-items="_metadata.total_records"
+                    ng-model="currentPage"
+                    ng-change="paginate()"
+                    max-size="_metadata.maxSize"
+                    boundary-links="true"
+                    num-pages="_metadata.noOfPages"
+                    items-per-page="_metadata.limit"
+                ></pagination>
+            </div>
+        </div>
+	</div>
+</section>

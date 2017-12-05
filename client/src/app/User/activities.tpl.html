@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <section class="contest-block">
+                <div class="container" ng-controller="AcitivitiesController">
+                    <div class="clearfix">
+                        <div class="panel-heading">
+                            <h3 style="display:inline;">{{'Activities'|translate}}</h3>
+                        </div>
+                        <div ng-repeat="activity in activities">
+                            <p> <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.PendingApproval">Your Appointment status is Pending.</span>  
+                            <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.Approved">Your Appointment status is Approved.</span>
+                            <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.Closed">Your Appointment status is Closed.</span>  
+                            <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.Cancelled">Your Appointment status is Cancelled.</span>
+                            <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.Rejected">Your Appointment status is Rejected.</span> <span ng-if="activity.foreign.appointment_status_id == model.ConstAppointmentStatus.Expired">Your Appointment status is Expired.</span>   
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="text-center" ng-show="!loader && activities.length">
+                            <uib-pagination ng-hide="!activities.length " total-items="total_items" max-size="maxSize " items-per-page="items_per_page" ng-model="current_page " class="pagination-sm " boundary-links="true" num-pages="no_of_pages " ng-click="activityPaginate() "></uib-pagination>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

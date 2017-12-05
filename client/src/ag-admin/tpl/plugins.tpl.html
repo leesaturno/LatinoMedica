@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="page-header">
+			<h1><span>Plugins</span></h1>
+	    </div>
+	</div>
+</div>
+<div class="row view-plugins" id="create-view">
+	<div class="clearfix well-sm">
+		<div class="col-md-12 text-right refresh-btn">{{'To reflect plugin changes, you need to' | translate}} <a class="btn btn-xs btn-primary" ng-click="fullRefresh();">{{'refresh' | translate}}.</a></div>		
+		<div class="well-lg clearfix" ng-show="other_plugin.length > 0" ></div>
+		<!-- payment gateway group ends -->
+		<!-- others group starts -->
+		<div ng-repeat="plugin in other_plugin  | orderBy:'display_order'">		
+			<div class="col-md-6 col-lg-4">
+            	<div class="plugins-block">
+                    <div class="plugins-head clearfix">
+                        <h3 class="pull-left"><i class="{{plugin.class}}"></i> {{plugin.name}}</h3>
+                        <ul class="list-inline pull-right">
+                            <li ng-class="{'disabled': checkStatus(plugin.name, enabled_plugin)}"><a href="#" ng-click="updatePluginStatus($event, plugin.name, 1)"></a></li>
+                            <li ng-class="{'disabled': !checkStatus(plugin.name, enabled_plugin)}"><a href="#" ng-click="updatePluginStatus($event, plugin.name, 0)"></a></li>	
+                        </ul>
+                    </div>
+                    <div class="plugins-content">
+                		<p ng-bind-html="plugin.description" class="text-justify"></p>
+					</div>
+                </div>
+			</div>				
+		</div>
+		<div class="well-lg clearfix"></div>
+		<!-- others group ends -->
+	</div>	
+</div>

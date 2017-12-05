@@ -1,0 +1,593 @@
+<div class="practice-list">
+    <!-- Start: Banner -->
+    <div class="practice-banner text-center fa-inverse">
+        <div class="container">
+        	<div class="practice-caption">
+                <h1 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Doctors thrive with" | translate }} {{$root.settings['site.name']}}</h1>
+                <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Subscribe now!" | translate }}</a>
+                <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a Doctor" | translate }}</p>
+                <span>Dr. Julio César Castro</span>
+            </div>
+        </div>
+    </div>
+    <!-- End: Banner -->
+
+    <!-- Start: Banner Bottom -->
+    <div class="practice-banner-bottom">
+        <div class="container">
+            <ul class="list-inline pull-left">
+                <li class="active">
+                    <a href="javascript:void(0)">{{"What is" | translate }} {{$root.settings['site.name']}}{{"?"}}</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoDiv('doctorsjoin')">{{"Why join?" | translate }}</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoDiv('howitworks')">{{"How does it work?" | translate }}</a>
+                </li>
+            </ul>
+            <a class="pull-right btn" href="javascript:void(0)" ng-click="gotoDiv('joinlationmedica')">{{"List your practice" | translate }}</a>
+        </div>
+    </div>
+    <!-- End: Banner Bottom -->
+
+    <!-- Start: Related Practices -->
+    <div class="related-list text-center">
+    	<div class="container">
+            <h2>{{"Throughout the country, Doctors rely on" | translate }} {{$root.settings['site.name']}}</h2>
+			<h4>{{"Your coleagues already registered" | translate }}</h4>
+            <p>{{"See who is using" | translate }} {{$root.settings['site.name']}} {{"in your area:" | translate }}</p>
+            <form class="form-inline practice-search col-md-12" name="searchForm" ng-submit="model.search(searchForm)">
+            	<div class="form-group col-md-8 select-opt col-sm-12">
+                    <div class="input-group">
+                        <div class="input-group-addon hidden-xs">{{"Show me" | translate }}</div>
+                        <select ng-model="model.specialty_id" name="specialty_id" class="form-control">
+                                        <option value="">{{"Select specialty" | translate }}</option>
+                                        <option ng-repeat="specialtyliList in specialtyliLists" value="{{specialtyliList.id}}">{{specialtyliList.name}}</option>
+                                    </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-3 select-opt col-sm-12">
+                    <select class="form-control" name="city_id" id="city_id" ng-model="model.city_id" ng-options="city.id as city.name for city in cityArray">
+					   <option value="">{{"City" | translate }}</option>
+					</select>
+				</div>
+                <div class="col-md-1">
+                    <button class="btn btn-block" type="submit">{{"Go" | translate }}</button>
+                </div>
+            </form>
+            <!-- Dynamic Data for Featured Doctors -->
+            <div class="related-practice text-center col-md-12">
+    			<div class="container">
+                	<featured-specialist-doctor></featured-specialist-doctor>
+                </div>
+            </div>
+            <p class="col-md-12"><a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Subscribe Now!" | translate }}</a></p>
+        </div>
+    </div>
+    <!-- End: Related Practices -->
+
+    <!-- Start: How patients find you -->
+    <div class="container" id="howitworks">
+    	<div class="patients-find text-center">
+            <h3>{{"How will patients find you" | translate }}</h3>
+            <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Create your profile" | translate }}</a>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <figure>
+                        <img src="assets/img/search-mob.png" alt="search mobile" class="img-responsive" />
+                    </figure>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="media text-center date">
+                        <div class="pull-left">
+                            <figure>
+                                <img src="assets/img/date-icon.png" alt="Date Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{"Your Own Search List" | translate }}</h4>
+                            <p>{{"Patients can find it on our website and through the application" | translate }} {{$root.settings['site.name']}}</p>
+                        </div>
+                    </div>
+                    <div class="media text-center search">
+                        <div class="pull-left">
+                            <figure>
+                                <img src="assets/img/search-icon.png" alt="search Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{"Online reservations 24/7" | translate }}</h4>
+                            <p>{{"Patients can view their availability and book with a tap - either 2 pm and their phones are busy, or it's 2 am and their office is closed" | translate }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="media text-center location">
+                        <div class="media-left">
+                            <h4 class="media-heading">{{"Custom profile of Latinomedica" | translate }}</h4>
+                            <p>{{"Your profile of" | translate }} {{$root.settings['site.name']}} {{"is personalized with your insurance on the network, the procedures offered and their availability in real time" | translate }}</p>
+                        </div>
+                        <div class="media-body">
+                            <figure>
+                                <img src="assets/img/location-icon.png" alt="location Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="media text-center foto">
+                        <div class="media-left">
+                            <h4 class="media-heading">{{"Professional pictures" | translate }}</h4>
+                            <p>{{"Headshots and photos of the office enhance your profile and help attract more patients. (Only available in certain areas.)" | translate }}</p>
+                        </div>
+                        <div class="media-body">
+                            <figure>
+                                <img src="assets/img/foto-icon.png" alt="location Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="media text-center edit">
+                        <div class="media-left">
+                            <h4 class="media-heading">{{"Unlimited Locations" | translate }}</h4>
+                            <p>{{"List several practice locations in your profile to help patients find the most convenient" | translate }}</p>
+                        </div>
+                        <div class="media-body">
+                            <figure>
+                                <img src="assets/img/edit-icon.png" alt="location Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="media text-center star">
+                        <div class="media-left">
+                            <h4 class="media-heading">{{"Patient Feedback" | translate }}</h4>
+                            <p>{{"Build and Protect Your Online Reputation with Verified Reviews of Real Patients" | translate }}</p>
+                        </div>
+                        <div class="media-body">
+                            <figure>
+                                <img src="assets/img/star-icon.png" alt="location Icon" class="img-responsive" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <figure>
+                        <img src="assets/img/search-browser.png" alt="search mobile" class="img-responsive" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: How patients find you -->
+
+    <!-- Start: Information Today -->
+    <div class="interested">
+        <div class="container">
+            <p>{{"Interested? Get more information today" | translate }}</p>
+            <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Register for a FREE demonstration" | translate }}</a>
+        </div>
+    </div>
+    <!-- End: Information Today -->
+
+    <!-- Start: Latinomedica work -->
+    <div class="interested-bottom">
+    	<div class="container">
+        	<div class="patients-find text-center">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <figure>
+                            <img src="assets/img/latinowork-mob.png" alt="latinowork mobile" class="img-responsive" />
+                        </figure>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="media text-center notepad">
+                            <div class="pull-left">
+                                <figure>
+                                    <img src="assets/img/notepad-icon.png" alt="Notepad Icon" class="img-responsive" />
+                                </figure>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{"Register immediately" | translate }}</h4>
+                                <p>{{"Patients fill their papers online - all you have to do is print it. This can improve the accuracy and readability of their practice" | translate }}</p>
+                            </div>
+                        </div>
+                        <div class="media text-center mail">
+                            <div class="pull-left">
+                                <figure>
+                                    <img src="assets/img/mail-icon.png" alt="Mail Icon" class="img-responsive" />
+                                </figure>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{"Email reminders and text" | translate }}</h4>
+                                <p>{{"His patients receive appointment reminders," | translate }} {{$root.settings['site.name']}} {{"reducing no-shows and the time spent by your office staff on the phone" | translate }}</p>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                <h4>{{"This features make latinomedica work for you" | translate }}</h4>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="media text-center calendar">
+                            <div class="media-left">
+                                <h4 class="media-heading">{{"Calendar Latinomedica" | translate }}</h4>
+                                <p>{{"Manage availability without problems. You control your schedule and patients can choose when booking" | translate }}</p>
+                            </div>
+                            <div class="media-body">
+                                <figure>
+                                    <img src="assets/img/calendar-icon.png" alt="calendar Icon" class="img-responsive" />
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="media text-center clock">
+                            <div class="media-left">
+                                <h4 class="media-heading">{{"Account Activity" | translate }}</h4>
+                                <p>{{"I'll remind you to confirm appointments and send other useful updates." | translate }}</p>
+                            </div>
+                            <div class="media-body">
+                                <figure>
+                                    <img src="assets/img/clock-icon.png" alt="clock Icon" class="img-responsive" />
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="media text-center synchronize">
+                            <div class="media-left">
+                                <h4 class="media-heading">{{"Get synchronized" | translate }}</h4>
+                                <p>{{"Our technology reads your practice management software (PMS) and automatically displays the times available in your profile " | translate }} {{$root.settings['site.name']}}</p>
+                            </div>
+                            <div class="media-body">
+                                <figure>
+                                    <img src="assets/img/synchronize-icon.png" alt="synchronize Icon" class="img-responsive" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <figure>
+                            <img src="assets/img/latinowork-browser.png" alt="Latinowork Browser" class="img-responsive" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Latinomedica work -->
+
+    <!-- Start: Doctors Join -->
+    <div class="container" id="doctorsjoin">
+        <div class="doctors-join">
+            <h3>{{"Why do Doctors join Latinomedica's?" | translate }}</h3>
+            <div class="row text-center">
+                <div class="col-md-6 col-sm-6">
+                    <h5>{{"Building Patient Loyalty" | translate }}</h5>
+                    <p>{{"Strengthen relationships with patients by offering"}} {{$root.settings['site.name']}} {{"first-class comfort - from simple booking and personalized reminders to trouble-free online registration" | translate }}</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h5>{{"Attract the patients you need" | translate }}</h5>
+                    <p>{{"Your profile of" | translate }} {{$root.settings['site.name']}} {{"is personalized with your insurance, the procedures offered and their availability in real time" | translate }}</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="doctors-join-bottom">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Improve attendance" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/mejorar.png" alt="mejorar" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"reminders improve attendance by 60%" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"You are always up to date" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/siempre.png" alt="siempre" class="img-responsive" />
+                    </figure>
+                    <p>{{"Reminders by SMS Booking You can be located Users or potential itinerants" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"High Refunds" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/reembolsos.png" alt="reembolsos" class="img-responsive" />
+                    </figure>
+                    <p>{{"95% of" | translate }} {{$root.settings['site.name']}} {{"patients are commercially insured or pay in cash" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Large search presence" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/gran.png" alt="gran" class="img-responsive" />
+                    </figure>
+                    <p>{{"120 million annual searches of doctors show" | translate }} {{$root.settings['site.name']}} {{"in the best results" | translate }}.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maximice text-center">
+        <div class="container">
+        	<div class="max-wid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <h5>{{"Maximize your availability" | translate }}</h5>
+                        <p>{{"Fill in the last-minute openings on your calendar caused by cancellations and schedule changes. With" | translate }} {{$root.settings['site.name']}} {{",you are there for your patients when they need it" | translate }}</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <h5>{{"Strengthen your reputation" | translate }}</h5>
+                        <p>{{$root.settings['site.name']}} {{"protects and improves its presence on the web with verified reviews of real patients" | translate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<hr />
+        <div class="container">
+    		<div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Accommodate urgent needs" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/acomodar.png" alt="acomodar" class="img-responsive" />
+                    </figure>
+                    <p>{{"The typical" | translate }} {{$root.settings['site.name']}} {{"patient visits a doctor in 24 hours" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Be available 24/7" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/estar.png" alt="estar" class="img-responsive" />
+                    </figure>
+                    <p>{{"45% of" | translate }} {{$root.settings['site.name']}} {{"appointments are booked after hours" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Capture more comments" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/capture.png" alt="capture" class="img-responsive" />
+                    </figure>
+                    <p>{{"The average physician score after one year in" | translate }} {{$root.settings['site.name']}} {{"is 4.68 out of 5 stars" | translate }}</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>{{"Get verified reviews" | translate }}</h5>
+                    <figure>
+                        <img src="assets/img/obtener.png" alt="obtener" class="img-responsive" />
+                    </figure>
+                    <p>{{"The average provider has 40 qualifications after one year in" | translate }} {{$root.settings['site.name']}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Doctors Join -->
+
+    <!-- Begin: Testimonials -->
+    <div class="list-testimonial text-center">
+        <div class="container">
+        	<slick dots="true" responsive="breakpointSlick" slides-to-show=1 slides-to-scroll=1 class="slider lazy slick-slider">
+                <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">
+                    <img src="assets/img/left-slick-white.png" alt="Previous" class="img-responsive" />
+                </button>
+                <div class="item">
+                    <figure>
+                        <img src="assets/img/specialists.png" alt="specialists" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p>
+                    <span>Dr. Julio César Castro</span>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="assets/img/specialists.png" alt="specialists" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p>
+                    <span>Dr. Julio César Castro</span>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="assets/img/specialists.png" alt="specialists" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p>
+                    <span>Dr. Julio César Castro</span>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="assets/img/specialists.png" alt="specialists" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p>
+                    <span>Dr. Julio César Castro</span>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="assets/img/specialists.png" alt="specialists" class="img-responsive" />
+                    </figure>
+                    <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p>
+                    <span>Dr. Julio César Castro</span>
+                </div>
+                <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">
+                    <img src="assets/img/right-slick-white.png" alt="Next" class="img-responsive" />
+                </button>
+            </slick>
+        </div>
+    </div>
+    <!-- End: Testimonials -->
+
+    <!-- Begin: Clients -->
+    <div class="text-center list-client">
+        <div class="container">
+			<slick dots="true" responsive="breakpointSlick" slides-to-show=1 slides-to-scroll=1 class="slider lazy slick-slider">
+                <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">
+                    <img src="assets/img/left-slick-white.png" alt="Previous" class="img-responsive" />
+                </button>
+                <div class="item">
+                    <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and painless way to schedule an appointment with the right doctor" | translate }}</p>
+                    <figure>
+                        <img src="assets/img/elsiglo.png" alt="elsiglo" class="img-responsive" />
+                    </figure>
+                </div>
+                <div class="item">
+                    <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and painless way to schedule an appointment with the right doctor" | translate }}</p>
+                    <figure>
+                        <img src="assets/img/elsiglo.png" alt="elsiglo" class="img-responsive" />
+                    </figure>
+                </div>
+                <div class="item">
+                    <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and painless way to schedule an appointment with the right doctor" | translate }}</p>
+                    <figure>
+                        <img src="assets/img/elsiglo.png" alt="elsiglo" class="img-responsive" />
+                    </figure>
+                </div>
+                <div class="item">
+                    <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and painless way to schedule an appointment with the right doctor" | translate }}</p>
+                    <figure>
+                        <img src="assets/img/elsiglo.png" alt="elsiglo" class="img-responsive" />
+                    </figure>
+                </div>
+                <div class="item">
+                    <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and painless way to schedule an appointment with the right doctor" | translate }}</p>
+                    <figure>
+                        <img src="assets/img/elsiglo.png" alt="elsiglo" class="img-responsive" />
+                    </figure>
+                </div>
+                <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">
+                    <img src="assets/img/right-slick-white.png" alt="Next" class="img-responsive" />
+                </button>
+    		</slick>
+        </div>
+    </div>
+    <!-- End: Clients -->
+
+    <!-- Start: Join Latinomedica -->
+    <div class="register list-register" id="joinlationmedica">
+        <div class="container">
+            <!--<figure class="page-logo">
+                <a href="#!/">
+                    <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+                </a>
+            </figure>-->
+            <h3>{{"Join" | translate }} {{$root.settings['site.name']}}{{"!"}}</h3>
+            <div class="user-login form-content">
+                <div class="user-signup">
+                    <form class="form-login" name="signupForm" ng-submit="model.signup(signupForm.$valid)" novalidate>
+                    	<div class="row">
+                        	<div class="col-md-6">
+                            	<div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid)}">
+                                        	<label>{{"First Name" | translate }}</label>
+                                            <input type="text" class="form-control" placeholder="" name="first_name" ng-model="model.first_name" ng-required="true" ng-minlength="3" ng-pattern="/^[a-zA-Z]*$/">
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.required)">{{"Please enter your first name" | translate }} </span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.pattern)">{{"Enter Valid name without number and space" | translate }}</span>
+                                        </div>
+                                        <div class="col-sm-6" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid)}">
+                                        	<label>{{"Last Name" | translate }}</label>
+                                            <input type="text" class="form-control" placeholder="" name="last_name" ng-model="model.last_name" ng-required="true" ng-minlength="3" ng-pattern="/^[a-zA-Z]*$/">
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.required)">{{"Please enter your last name" | translate }} </span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.pattern)">{{"Enter valid name without number and space" | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid)}">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{"Direct Phone number" | translate }}</label>
+                                            <input type="text" class="form-control" placeholder="" name="phone" ng-model="model.phone" ng-required="true" ng-minlength="8" ng-maxlength="12" ng-pattern="/^[0-9]*$/">
+                                             <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.required)">{{"Enter Phone Number" | translate }} </span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.maxlength)">{{"Maximum length is 12" | translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.minlength)">{{"Minimum length is 8" | translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.pattern)">{{"Enter Valid Mobile Number Without Character"| translate }} </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>{{"Your Email" | translate }}</label>
+                                            <input type="email" class="form-control" name="email" ng-model="model.email"  ng-required="true">
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.email.$touched) && (signupForm.email.$pristine || signupForm.email.$invalid) && (signupForm.email.$error.required)">{{"Please enter your mail id"| translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.email.$touched) && (signupForm.email.$pristine || signupForm.email.$invalid) && (signupForm.email.$error.email)">{{"Enter valid email"| translate }}</span>
+                                            <span class="error" ng-show="model.emailErr">{{model.emailErr}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid)}">
+                                	<div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{"Password" | translate }}</label>
+                                            <input type="password" class="form-control" placeholder="" name="password" ng-model="model.password" ng-required="true" ng-minlength="6" ng-maxlength="40">
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.required)">{{"Please enter password" | translate }}</span>
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.minlength)">{{"Minimum length is 6" | translate }}</span>
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.maxlength)">{{"Maximum length is 20" | translate }}</span>
+											<span class="error" ng-show="model.passwordErr">{{model.passwordErr}}</span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>{{"Confirm Password" | translate }}</label>
+                                            <input type="password" class="form-control" placeholder="" name="confirmPassword" ng-model="model.confirm_password" ng-required="true" ng-minlength="6" ng-maxlength="40">
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.confirmPassword.$touched) && (signupForm.confirmPassword.$pristine || signupForm.confirmPassword.$invalid) && (signupForm.confirmPassword.$error.required)">{{"Please enter confirm password" | translate}}</span>
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.confirmPassword.$touched) && (signupForm.confirmPassword.$pristine || signupForm.confirmPassword.$invalid) && (signupForm.confirmPassword.$error.minlength)">{{"Minimum length is 6" | translate}}</span>
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.confirmPassword.$touched) && (signupForm.confirmPassword.$pristine || signupForm.confirmPassword.$invalid) && (signupForm.confirmPassword.$error.maxlength)">{{"Maximum length is 20" | translate }}</span>
+											<span class="error" ng-show="(signupForm.$submitted || signupForm.confirmPassword.$touched) && (signupForm.password.$dirty && signupForm.confirmPassword.$dirty) && (model.password != model.confirm_password)">{{"Password Mismatch" | translate }}</span>
+											<span class="error" ng-show="model.confirmPasswordErr">{{model.confirmPasswordErr}}</span>
+                                        </div>
+                                	</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                            	<label>{{"Specialty" | translate }}</label>
+                            	<div class="form-group select-opt" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.specialty_id.$touched) && (signupForm.specialty_id.$pristine || signupForm.specialty_id.$invalid)}">
+                                    <select ng-model="model.specialty_id" ng-required="true" name="specialty_id" class="form-control">
+                                        <option value="">Select your specialty</option>
+                                        <option ng-repeat="specialtyliList in specialtyliLists" value="{{specialtyliList.id}}">{{specialtyliList.name}}</option>
+                                    </select>
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.specialty_id.$touched) && (signupForm.specialty_id.$pristine || signupForm.specialty_id.$invalid) && (signupForm.specialty_id.$error.required)">{{"Please select specialty" | translate }} </span>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.postal_code.$touched) && (signupForm.postal_code.$pristine || signupForm.postal_code.$invalid)}">
+                                	<div class="row">
+                                        <div class="">
+                                            <label>{{"Postal Code" | translate }}</label>
+                                            <input type="text" class="form-control" placeholder="" name="postal_code" ng-model="model.postal_code"  ng-required="true" ng-minlength="3" ng-maxlength="6">
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.postal_code.$touched) && (signupForm.postal_code.$pristine || signupForm.postal_code.$invalid) && (signupForm.postal_code.$error.required)">{{"Enter Postal Code" | translate }} </span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.postal_code.$touched) && (signupForm.postal_code.$pristine || signupForm.postal_code.$invalid) && (signupForm.postal_code.$error.minlength)">{{"Minimum length is 3" | translate }}</span>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.postal_code.$touched) && (signupForm.postal_code.$pristine || signupForm.postal_code.$invalid) && (signupForm.postal_code.$error.maxlength)">{{"Maximum length is 6" | translate }}</span>
+                                    	</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-body">
+                           <div class="row joint-field-w">
+                                <div class="col-sm-6">
+                                    <div class="form-group select-opt">
+                                        <label class="form-name">{{"City'| translate}}</label>
+                                        <div ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.city_id.$touched) && (signupForm.city_id.$pristine || signupForm.city_id.$invalid) && (signupForm.city_id.$error.required)}">
+                                            <select class="form-control" name="city_id" id="city_id" ng-model="model.user_profile.city_id" ng-options="city.id as city.name for city in cityArray">
+                                                <option value="">{{"City'| translate}}</option>
+                                            </select>
+                                            <span class="error" ng-show="(signupForm.$submitted || signupForm.city_id.$touched) && (signupForm.city_id.$pristine || signupForm.city_id.$invalid) && (signupForm.city_id.$error.required)">{{"Choose City"| translate }} </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.hobbies.$touched) && (signupForm.hobbies.$pristine || signupForm.hobbies.$invalid)}">
+                                <label class="form-name">{{"Hobbies'}}</label>
+                                <input type="text" class="form-control" name="hobbies" ng-model="model.hobbies" ng-required="true" ng-minlength="3" ng-pattern="/^[a-z A-Z]*$/">
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.hobbies.$touched) && (signupForm.hobbies.$pristine || signupForm.hobbies.$invalid) && (signupForm.hobbies.$error.required)">{{"Please enter your hobbies"| translate }} </span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.hobbies.$touched) && (signupForm.hobbies.$pristine || signupForm.hobbies.$invalid) && (signupForm.hobbies.$error.minlength)">{{ 'Minimum length is 3" | translate }}</span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.hobbies.$touched) && (signupForm.hobbies.$pristine || signupForm.hobbies.$invalid) && (signupForm.hobbies.$error.pattern)">{{ 'Enter hobbies without number" | translate }}</span>
+                            </div>
+                        </div>-->
+                        <div class="form-group">
+                            <div class="g-recaptcha" vc-recaptcha key="model.captcha_site_key" ng-class="{ 'has-error' : model.captchaErr}"></div>
+                            <span class="error" ng-show="model.captchaErr">{{model.captchaErr}}</span>
+                        </div>
+                        <div class="form-group checkbox-field" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.termCondition.$touched) && (signupForm.termCondition.$pristine || signupForm.termCondition.$invalid)}">
+                            <div class="checkbox col-sm-12 first-box">
+                                <label>
+                                    <input id="terms_cond" class="hide" type="checkbox" name="termCondition" ng-model="model.terms_conditions" ng-required="true">
+                                    {{"Please read and agree to" | translate }} <em>{{"The terms of Use and privace policy" | translate }}</em>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <span class="error" ng-show="(signupForm.$submitted || signupForm.termCondition.$touched) && (signupForm.termCondition.$pristine || signupForm.termCondition.$invalid) && (signupForm.termCondition.$error.required)">{{"Required" | translate }}</span>
+                        </div>
+                        <div class="form-footer clearfix">
+                            <div class="pull-left">
+                                <button class="btn btn-green btn-animate" type="submit">{{"Begin" | translate }}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Join Latinomedica -->
+</div>

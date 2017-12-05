@@ -1,0 +1,28 @@
+<div class="login-page">
+    <div class="container">
+    	<div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="admin-logo text-center">
+                <a href="#"><img src="../assets/img/logo-white.png" alt="logo" /></a>
+            </div>
+            <form class="form-login" name="loginController.form"  ng-submit="loginController.login()">
+                <h2 class="form-login-heading"><span>Sign in to your account</span></h2>
+                <div class="form-body">
+                    <div class="form-group email">
+                        <label for="inputLogin" class="sr-only">Login</label>
+                        <input type="email" id="inputLogin" class="form-control" name="email" placeholder="Email" ng-model="loginController.data.email" ng-required="true" ng-minlength="3" ng-enter="loginController.login()">
+                        <span class="error" ng-show="(loginController.form.$submitted || loginController.form.email.$touched) && (loginController.form.email.$pristine || loginController.form.email.$invalid) && (loginController.form.email.$error.required)" >Enter Email</span>
+                        <span class="error" ng-show="(loginController.form.$submitted || loginController.form.email.$touched) && (loginController.form.email.$pristine || loginController.form.email.$invalid) && (loginController.form.email.$error.email)" >Enter valid email</span>
+                    </div>
+                    <div class="form-group password">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" ng-model="loginController.data.password" ng-required="true" ng-minlength="6" ng-maxlength="40" ng-enter="loginController.login()">
+                        <span class="error" ng-show="(loginController.form.$submitted || loginController.form.password.$touched) && (loginController.form.password.$pristine || loginController.form.password.$invalid) && (loginController.form.password.$error.required)">Enter Password</span>
+                        <span class="error" ng-show="(loginController.form.$submitted || loginController.form.password.$touched) && (loginController.form.password.$pristine || loginController.form.password.$invalid) && (loginController.form.password.$error.minlength)">Minimum length is 6</span>
+                        <span class="error" ng-show="(loginController.form.$submitted || loginController.form.password.$touched) && (loginController.form.password.$pristine || loginController.form.password.$invalid) && (loginController.form.password.$error.maxlength)">Maximum length is 40</span>
+                    </div>
+                </div>
+                <button class="btn" type="submit" ng-disabled="loginController.form.$invalid">Login</button>
+            </form>
+   		</div>
+    </div>
+</div>

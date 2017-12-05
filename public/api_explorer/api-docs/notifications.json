@@ -1,0 +1,84 @@
+{
+  "apis": [
+    {
+      "path": "/notifications",
+      "operations": [
+        {
+          "summary": "Fetch particular notification",
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__notifications__user_id_"
+        },
+        {
+          "summary": "Store notifications",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "notificationAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "notificationAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__notifications"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "notificationAdd": {
+      "properties": {
+        "is_remind_email_wellness":{
+		      "type": "boolean",
+          "required": true,
+          "description": "is remind email wellness"
+        },
+        "is_remind_app_appointments":{
+		      "type": "boolean",
+          "required": false,
+          "description": "is remind app appointments"
+        },
+        "is_remind_app_appointment_changed":{
+            "type": "boolean",
+            "required": false,
+            "description": "is remind app appointment changed"
+        },
+        "is_remind_app_wellness":{
+            "type": "boolean",
+            "required": false,
+            "description": "is remind app wellness"
+        }
+      },
+      "id": "notificationAdd"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

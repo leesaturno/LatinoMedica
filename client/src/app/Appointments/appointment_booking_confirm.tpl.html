@@ -1,0 +1,88 @@
+<section class="pad-63 book-appmt-block">
+	<div class="col-md-12 pad0">
+    	<div class="breadcrumb-bg">
+            <div class="col-sm-1"> 
+            </div>
+            <div class="col-sm-11">
+                <booking-bread-crum></booking-bread-crum>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-head">
+            <h1>{{'Book Your Appointment'| translate}}</h1>
+        </div>
+        <!--<div class="appmt-steps col-md-12">
+            <ul class="list-inline row">
+                <li class="complete-step col-md-4">
+                    <span>Step 1</span> 
+                    <p class="tab-title">{{'Appointment Info'| translate}}</p>
+                </li>
+                <li class="complete-step col-md-4">
+                    <span>Step 2</span> 
+                    <p class="tab-title">{{'Patient Info'| translate}}</p>
+                </li>
+                <li class="complete-step col-md-3">
+                    <span>3</span> 
+                    <p class="tab-title">{{'Details'| translate}}</p>
+                </li>
+                <li class="current-step col-md-4">
+                    <span>Step 3</span> 
+                    <p class="tab-title">{{'Complete'| translate}}</p>
+                </li>
+            </ul>
+        </div>-->
+        <div class="col-md-12 book-doctor-details" ng-show="widgetCheck == 0">
+        	<div class="col-md-4">
+            	<div class="media">
+                    <div class="media-left">
+                        <img class="doctor-image" ng-src="{{doctorProfile.User.data.attachmentable.data.thumb.medium}}" alt="Dr. Patricia A. Lloyd">
+                    </div>
+                    <div class="media-body">
+                        <h3>{{doctorProfile.dr_title}} {{doctorProfile.first_name}} {{doctorProfile.last_name}}</h3>
+                        <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctorProfile.start_rating"></input-stars>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            	<address class="text-blue"> {{doctorProfile.address}} </address>
+            </div>
+            <div class="col-md-4">
+            	<div class="js-time"> 
+                    <ul class="list-unstyled text-left">
+                        <li>{{'Appt Date:'| translate }}<span>{{appt_date}}</span></li>
+                        <li>{{'Appt Time:'| translate }}<span>{{appt_time}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    	<div class="col-md-12 table-block appmt-finish">
+            <div class="table-responsive row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email Id</th>
+                            <th>Mobile</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{email}}</td>
+                            <td>{{mobile}}</td>
+                            <td>{{dob}}</td>
+                            <td>{{gender}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="appmt-btn text-center">
+                <button ng-click="finalConfirm()" class="btn btn-green confirm">Confirm Your Appointment </button> 
+                <button ng-click="bookingCancel()" class="btn cancel">Cancel Booking </button> 
+            </div>
+        </div>
+    </div>
+</section>

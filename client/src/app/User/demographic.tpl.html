@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <div class="row">
+                <div class="col-sm-3 edit-left">
+                    <display-template name="User/sidemenu.tpl.html"></display-template>
+                </div>
+                <div class="col-sm-9">
+					<section class="clearfix demograph setting-page">
+						<div class="page-head">    
+							<h1>{{"Demographic information" | translate }}</h1>
+						</div>
+						<div class="form-content">
+							<form name="demographic_info" method="post" ng-submit="model.addDemographic()">
+								<div class="form-body">
+									<div class="clearfix">
+										<div class="col-md-12">
+											<div class="form-group checkbox-field">
+												<label for="name">{{"Race(choose one or more)" | translate }}</label>
+												<div class="checkbox" ng-repeat="race in model.races">
+												<label>
+													<input type="checkbox" checklist-model="model.racevalue.race_ids" checklist-value="race.id" class="hide" ng-change="model.race_check(race.id, checked)"> {{race.name | translate }}
+													<span></span>
+												</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix">
+										<div class="col-md-12">
+											<div class="form-group checkbox-field">
+												<label for="name">{{"Ethnicity" | translate }}</label>
+												<div class="checkbox" ng-repeat="ethnicity in model.ethnic">
+												<label>
+													<input type="checkbox" checklist-model="model.ethic.ethic_ids" checklist-value="ethnicity.id" class="hide" ng-change="model.ethnicity_check(ethnicity.id, checked)"> {{ethnicity.name | translate }}
+													<span></span>
+												</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="name">{{"Preferred Language" | translate }}</label>
+												<p>{{"Latinomedica is currently available in " | translate }} <a href="javascript:void(0)">{{"English" | translate }} </a>{{"and" | translate }} <a href="javascript:void(0)">{{"Spanish" | translate }}</a></p>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group select-opt">
+															<div class="input-group">
+													 			<select class="form-control" name="preferred_lang" id="preferred_lang" ng-model="model.demographicInformation.preferred_lang" ng-options="c.value as c.option for c in model.languages">
+																	<option value="">{{"Select Language" | translate }}</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="name">{{"Zip code (Optional)" | translate }}</label>
+												<input type="text" class="form-control" name="postal_code" id="postal_code" ng-model="model.demographicInformation.postal_code" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-footer appmt-btn">
+									<button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button>
+								</div>
+							</form>
+						</div>
+				</section>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

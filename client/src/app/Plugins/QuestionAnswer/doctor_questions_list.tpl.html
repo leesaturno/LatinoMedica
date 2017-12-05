@@ -1,0 +1,85 @@
+<section class="clearfix pad-63 appmt-table appointment-block">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-12" role="navigation">
+                    <div class="appointment-header clearfix">
+                    	<h1 class="pull-left">{{'Questions' | translate }}</h1>
+                         <div class="appointment-list pull-right">
+                              <ul class="nav navbar-nav">
+                                   <li><a href="#/answers"> {{'Answers' | translate }} </a></li>
+                                   <li class="active"><a href="#/answers/question"> {{'Questions' | translate }} </a></li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="col-md-12 table-block">
+                    <div class="table-responsive">
+                         <table class="table table-hover">
+                             <!-- <thead>
+                                  <tr>
+                                       <th>{{'S.No' | translate }}</th>
+                                       <th width="450">{{'Questions' | translate }}</th>
+                                       <th>{{'Specialty' | translate }}</th>
+                                       <th>{{'Action' | translate }}</th>
+                                  </tr>
+                              </thead>-->
+                              <tbody>
+                                  <!--<tr ng-repeat="questionR in questions">
+                                       <td> {{$index+1}} </td>
+                                       <td class="ques-field">
+                                            <a href="#/questions/view/{{questionR.slug}}">{{questionR.question}}</a>
+                                            <span class="badge bg-primary">{{questionR.answer_count}}</span>
+                                       </td>
+                                       <td> {{questionR.specialty.name}} </td>
+                                       <td class="action-btn">
+                                            <a href="#/answers/add/{{questionR.id}}" class="btn green"> <i class="fa fa-plus"></i>{{'Add Answer' | translate }} </a>
+                                            <a href="#/questions/view/{{questionR.slug}}" class="btn blue"> <i class="fa fa-eye"></i>{{'View Answer' | translate }}</a>
+                                            <input type="button" value="Show Hide DIV" ng-click="ShowHide($index)" />
+                                            <div class="hide js-answers{{$index}}">
+                                                <question-answers slug="{{questionR.slug}}"></question-answers>
+                                            </div>
+                                       </td>
+                                  </tr>-->
+                                  <tr ng-show="paginates.total == 0">
+                                       <td colspan="5"><p class="hor-space alert alert-danger text-center">{{'No Questions available' | translate }}</p></td>
+                                  </tr>
+                              </tbody>
+                         </table>
+                    </div>
+               </div>
+               
+               <div class="messages col-md-12 question-page doctor-question">
+                   <div class="medical-answer">
+                       <div class="clearfix question-detail">
+                            <div class="clearfix" ng-repeat="questionR in questions">
+                                <div class="col-md-7 col-sm-5">
+                                    <h5>{{'Specialty' | translate}}</h5>
+                                    <span> {{ questionR.specialty.name}}</span>
+                                    <div>
+                                        <p>{{questionR.question}}</p>
+                                        <span class="badge bg-primary" ng-click="ShowHide($index)">{{questionR.answer_count}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <span class="date">{{questionR.created_at | dateFormat}}</span>
+                                </div>
+                                <div class="col-md-1 col-sm-1 add-answer">
+                                    <a class="btn btn-success btn-xs btn-animate" href="#/answers/add/{{questionR.id}}" title="Add Answer"> <i class="fa fa-plus"></i></a>
+                                    <!--<a class="btn btn-success btn-xs btn-animate" href="#/questions/view/{{questionR.slug}}" title="View Answer"> <i class="fa fa-eye"></i></a>-->        
+                                </div>
+                                <div class="col-md-1 col-sm-1">
+                                	<a href="javascript:void(0)" ng-click="ShowHide($index)"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-md-12 hide js-answers{{$index}}">
+                                    <question-answers slug="{{questionR.slug}}"></question-answers>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+

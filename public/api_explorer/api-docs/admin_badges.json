@@ -1,0 +1,107 @@
+{
+  "apis": [
+    {
+      "path": "/admin/badges",
+      "operations": [
+        {
+          "summary": "Fetch List of badges",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "user_id",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which user to be loaded",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__badges"
+        },
+        {
+          "summary": "Store Badges",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+                "name": "badge",
+                "in": "formData",
+                "required": true,
+                "type": "file"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__badges"
+        }
+      ]
+    },
+    {
+      "path": "/admin/badges/{id}",
+      "operations": [
+        {
+          "summary": "Delete Badges",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Badges Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__badges__id_"
+        }
+      ]
+    }
+  ],
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

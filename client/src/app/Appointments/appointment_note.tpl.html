@@ -1,0 +1,17 @@
+<div class="appointment-block app-modal">
+    <div class="page-head">  
+        <h1>{{'Note' | translate }}</h1>
+    </div>
+    <form class="form-horizontal form-content appmt-view" name="remainder" ng-submit="remainder_note_add(remainder.$valid)">
+        <div class="form-group" ng-class="{ 'has-error' : (remainder.reminder_text.$submitted || remainder.reminder_text.reminder_text.$touched) && (remainder.reminder_text.reminder_text.$pristine || remainder.reminder_text.reminder_text.$invalid) && (remainder.reminder_text.reminder_text.$error.required)}">
+            <label >{{'Note Description' | translate }}</label>
+            <textarea ng-model="model.remainder.reminder_text" name="reminder_text" placeholder="Note Description" class="form-control" ng-required="true"></textarea>
+            <span class="error" ng-show="(remainder.reminder_text.$submitted || remainder.reminder_text.$touched) && (remainder.reminder_text.$pristine || remainder.reminder_text.$invalid) && (remainder.reminder_text.$error.required)">{{'Enter Remainder Text'| translate }} </span>
+        </div>
+        
+        <div class="form-group education-btn appmt-btn">
+            <button type="submit" class="btn btn-green">{{'Submit' | translate}}</button>
+            <button class="btn cancel" type="button" ng-click="closeModal()">{{'Cancel' | translate}}</button>
+        </div>
+    </form>
+</div>

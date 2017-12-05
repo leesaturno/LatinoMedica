@@ -1,0 +1,14 @@
+<!--- Page Form--->
+<section class="pad-63 clearfix">
+    <div class="container">
+        <figure class="page-logo">
+            <a href="#!/">
+                <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+            </a>
+        </figure>
+        <div class="page-head">
+            <h1>{{page.title}}</h1>
+        </div>
+        <div class="static-content" ng-bind-html="page.page_content | html"></div>
+    </div>
+</section>

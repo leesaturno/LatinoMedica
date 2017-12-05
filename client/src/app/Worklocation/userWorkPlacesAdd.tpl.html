@@ -1,0 +1,92 @@
+<section class="clearfix">
+    <div class="container page-space">
+        <div class="form-content col-md-6 col-md-offset-3">
+            <div class="page-head">
+                <h1>{{'Add Work Place'| translate}}</h1>
+            </div>
+            <form class="clearfix" name="workplace_add" method="post" ng-submit="new_workplace(workplace_add.$valid)" novalidate>
+                <div class="form-body">
+                    <div class="form-group select-opt">
+                        <label>{{'Country' | translate }}</label>
+                        <select ng-required="true" class="form-control" name="country" id="country" ng-options="c.id as c.name for c in model.countries" ng-model="model.workplace.country_id">  
+                                <option value="">{{'Select Country'| translate}}</option>                                
+                        </select>
+                        <div ng-show="(workplace_add.country.$dirty && workplace_add.country_id.$invalid) || workplace_add.country_id.$touched">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>                
+                    </div>
+                    <div class="form-group select-opt">
+                      <label>{{'State' | translate }}</label>
+                       <select ng-required="true" class="form-control" name="state" id="state" ng-options="s.id as s.name for s in model.states" ng-model="model.workplace.state_id">  
+                                <option value="">{{'Select State'| translate}}</option>                                
+                        </select>
+                        <div ng-show="(workplace_add.state.$dirty && workplace_add.state_id.$invalid) || workplace_add.state_id.$touched">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group select-opt">
+                       <label>{{'City' | translate }}</label>
+                       <select ng-required="true" class="form-control" name="city" id="city" ng-options="c.id as c.name for c in model.cities" ng-model="model.workplace.city_id">  
+                                <option value="">{{'Select City'| translate}}</option>                                
+                        </select>
+                        <div ng-show="(workplace_add.city.$dirty && workplace_add.city_id.$invalid) || workplace_add.city_id.$touched">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                         <label>{{'Location' | translate }}</label>
+                        <input type="text" class="form-control" name="location" id="location" placeholder="{{'Location'| translate}}" ng-model="model.workplace.location" ng-required="true" />        
+                        <div ng-show="(workplace_add.location.$submitted || workplace_add.location.$touched) && (workplace_add.location.$pristine || workplace_add.location.$invalid) && (workplace_add.location.$error.required)">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>           
+                    </div>
+                    <div class="form-group">
+                        <label>{{'Google Location' | translate }}</label>
+                                    <geo-location entry="entry" entity="entity"></geo-location>
+                                    <!--<input type="hidden" ng-model="model.user_profile.latitude" />
+                                    <input type="hidden" ng-model="model.user_profile.longitude" />
+                                    <textarea class="form-control" id="address" name="address" placeholder="{{'Address'| translate}}" ng-model="model.user_profile.address" required></textarea>-->
+                                <span class="error" ng-show="(workplace_add.address1.$submitted || workplace_add.address1.$touched) && (workplace_add.address1.$pristine || workplace_add.address1.$invalid) && (workplace_add.address1.$error.required)">{{'Enter Address'| translate }} </span>
+                            </div>
+                   
+						 
+                                    <div class="form-group" ng-class="{ 'has-error' : (workplace_add.work_phone_number.$submitted || workplace_add.work_phone_number.work_phone_number.$touched) && (workplace_add.work_phone_number.work_phone_number.$pristine || workplace_add.work_phone_number.work_phone_number.$invalid) && (workplace_add.work_phone_number.work_phone_number.$error.required)}">
+                                       <label>{{'Phone Number' | translate }}</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                                            <input type="text" class="form-control" name="work_phone_number" id="work_phone_number" placeholder="{{'Mobile'| translate}}" ng-model="model.workplace.work_phone_number"
+                                                ng-required="true" ng-minlength="8" ng-maxlength="12" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(workplace_add.work_phone_number.$submitted || workplace_add.work_phone_number.$touched) && (workplace_add.work_phone_number.$pristine || workplace_add.work_phone_number.$invalid) && (workplace_add.work_phone_number.$error.required)">{{'Enter Mobile Number'| translate }} </span>
+                                        <span class="error" ng-show="(workplace_add.work_phone_number.$submitted || workplace_add.work_phone_number.$touched) && (workplace_add.work_phone_number.$pristine || workplace_add.work_phone_number.$invalid) && (workplace_add.work_phone_number.$error.pattern)">{{'Enter Valid Mobile Number Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(workplace_add.work_phone_number.$submitted || workplace_add.work_phone_number.$touched) && (workplace_add.work_phone_number.$pristine || workplace_add.work_phone_number.$invalid) && (workplace_add.work_phone_number.$error.minlength)">{{'Minimum Length is 8'| translate }} </span>
+                                        <span class="error" ng-show="(workplace_add.work_phone_number.$submitted || workplace_add.work_phone_number.$touched) && (workplace_add.work_phone_number.$pristine || workplace_add.work_phone_number.$invalid) && (workplace_add.work_phone_number.$error.maxlength)">{{'Maximum Length is 12'| translate }} </span>
+                                    </div>
+                      
+                    <div class="form-group">
+                        <label>Price :</label>
+                        <input type="text" class="form-control" name="price" id="price" placeholder="{{'Price'| translate}}" ng-model="model.workplace.price" ng-required="false"  /> 
+                    </div>
+					<div class="form-group">
+                            <label class="checkbox-field1">
+                                <input class="hide" type="checkbox" name="type" ng-model="model.workplace.is_preferred_location" />
+                                <span></span>{{'is Preferred location?' | translate }}
+                            </label>
+                        </div>
+					<div class="form-group">
+                            <label>{{'Active / In Active' | translate }}</label>
+                            <div class="switch-option" ng-init="model.workplace.is_active = true">
+                                <switch id="enabled" name="enabled" ng-model="model.workplace.is_active" on="Yes" off="No" class="green"></switch>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="form-footer education-btn appmt-btn">
+                    <button ng-disabled="workplace_add.$invalid" class="btn btn-green btn-animate wid-230 mr5 confirm" type="submit">{{'Save'| translate }}</button>
+                    <a href="#/user/workplaces" class="btn btn-animate wid-230 cancel">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

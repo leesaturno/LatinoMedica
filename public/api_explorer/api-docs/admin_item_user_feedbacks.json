@@ -1,0 +1,251 @@
+{
+  "apis": [
+    {
+      "path": "/admin/item_user_feedbacks",
+      "operations": [
+        {
+          "summary": "Fetch List of item user feedback",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search Item user feedback",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Item user feedback Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort Item user feedback by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__admin_item_user_feedbacks"
+        }
+      ]
+    },
+    {
+      "path": "/admin/item_user_feedbacks/{id}",
+      "operations": [
+        {
+          "summary": "Update item user feedbacks",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The item user feedbacks Identifier"
+            },
+            {
+              "name": "ItemUserFeedbackEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "ItemUserFeedbackEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__admin_item_user_feedbacks__id_"
+        },
+        {
+          "summary": "Fetch particular Item user feedback",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The item user feedbacks Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__admin_item_user_feedbacks__id_"
+        },
+        {
+          "summary": "Delete item user feedbacks",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The item user feedbacks Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__admin_item_user_feedbacks__id_"
+        }
+      ]
+    },
+    {
+      "path": "/admin/item_user_feedbacks/{id}/edit",
+      "operations": [
+        {
+          "summary": "Edit Item user feedbacks",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The item user feedbacks Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__admin_item_user_feedbacks__id__edit"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "ItemUserFeedbackEdit": {
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "The item user feedback identifier"
+        },
+        "user_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "User id"
+        },
+        "booker_user_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Booker User id"
+        },
+        "item_user_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "item user id"
+        },
+        "item_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Item id"
+        },
+        "feedback": {
+          "type": "string",
+          "required": true,
+          "description": "Feedback"
+        },
+        "ip_id": {
+          "format": "int64",
+          "type": "integer",
+          "description": "Ip id",
+          "required": false
+        },
+        "rating": {
+          "format": "int64",
+          "type": "integer",
+          "description": "rating",
+          "required": false
+        }
+      },
+      "id": "ItemUserFeedbackEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

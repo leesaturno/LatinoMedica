@@ -1,0 +1,51 @@
+<section class="clearfix pad-63 appmt-table user-badge">
+	<div class="container">
+        <!--<div class="page-head">    
+            <h1>{{'Upload Badges'|translate}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">              
+                <div class="form-group">
+                    <button class="btn btn-green btn-animate btn-block" ngf-select="uploadFiles($files)"    ngf-pattern="'.jpg,.png,.gif,.jpeg'">Select Files</button>
+                    <p class="help-block">Example block-level help text here.</p>                    
+                </div> 
+            </div>   
+        </div>-->
+        <div class="page-head">    
+            <h1>{{'My Badges'|translate}}</h1>
+        </div>
+		<div growl></div>
+        <div class="row">
+            <div ng-if="model.userBadgesLength" ng-repeat="badge in model.userBadges">
+				<div class="col-sm-6 col-md-3" > 
+                    <div class="thumbnail">
+					    <img class="img-responsive" style="max-width:100%" src="{{badge.thumb.small}}">
+                        <!--<div class="caption">
+                            <p><a ng-click="deleteBadges(badge.id)" title="Delete" class="pull-right" href="javascript:void(0);">
+                            	<i class="fa fa-trash-o error" aria-hidden="true"></i></a>
+                            </p>
+                        </div>-->
+                    </div> 
+                </div> 
+            </div>
+            <div ng-if="!model.userBadgesLength">
+                <div class="col-sm-12" > 
+                    <p class="text-center text-danger"> {{'No record(s) found'| translate }}</p>
+                </div>
+            </div>            
+        </div>
+        <div class="table-block">            
+            <div class="paging clearfix text-center" ng-show="model.worklocation._metadata.total_records > 0">
+                <pagination
+                    total-items="model.worklocation._metadata.total_records"
+                    ng-model="currentPage"
+                    ng-change="paginate()"
+                    max-size="model.worklocation._metadata.maxSize"
+                    boundary-links="true"
+                    num-pages="model.worklocation._metadata.noOfPages"
+                    items-per-page="model.worklocation._metadata.limit"
+                ></pagination>
+            </div>
+        </div>
+	</div>
+</section>

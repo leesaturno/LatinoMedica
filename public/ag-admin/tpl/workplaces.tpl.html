@@ -1,0 +1,40 @@
+<div class="work_places">
+    <h3>My Workplaces</h3>
+    <div class="work_places_index">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Country</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Price</th>
+                <th>Preferred</th>
+                <th>Status</th>
+            </tr>
+            <tr ng-if="workplaces.length > 0" ng-repeat="workplace in workplaces">
+                <td >{{workplace.country.name}}</td>
+                <td >{{workplace.city.name}}</td>
+                <td >{{workplace.work_phone_number}}</td>
+                <td >{{workplace.price}}</td>
+                <td >
+                    <span ng-if="workplace.is_preferred_location == 1">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </span>
+                    <span ng-if="workplace.is_preferred_location != 1">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                </td>
+                <td >
+                    <span ng-if="workplace.is_active == 1">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </span>
+                    <span ng-if="workplace.is_active != 1">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                </td>
+            </tr>
+            <tr ng-if="workplaces.length == 0">
+                <td colspan="6">No records Found.</td>
+            </tr>
+        </table>
+    </div>
+</div>

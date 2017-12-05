@@ -1,0 +1,44 @@
+<section class="clearfix">
+     <div class="page-head">
+	<div class="container">    
+    	<h1 class="pull-left">{{'Question and Answer'|translate}}</h1>
+   	</div>
+    </div>
+     <div class="container">
+          <div class="row">
+               <div class="col-md-12 table-block">
+                    <div class="table-responsive">
+                         <table class="table table-hover table-bordered">
+                              <thead>
+                              <tr>
+                                   <th>{{'S.No'| translate}}</th>
+                                   <th>{{'Questions'| translate}}</th>
+                                   <th>{{'Specialty'| translate}}</th>
+                                   <th>{{'Action'| translate}}</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr ng-repeat="questionR in questions">
+                                   <td> {{$index+1}} </td>
+                                   <td class="ques-field">
+                                        <a href="#/questions/view/{{questionR.slug}}">{{questionR.question}}</a>
+                                        <span class="badge bg-primary">{{questionR.answer_count}}</span>
+                                   </td>
+                                   <td> {{questionR.specialty.name}} </td>
+                                   <td>
+                                        <a href="#/answers/edit/{{questionR.id}}"> <i class="fa fa-pencil"></i> Edit</a>
+                                        <a href="#/questions/view/{{questionR.slug}}"> <i class="fa fa-eye"></i> View Answer</a>
+                                   </td>
+                              </tr>
+                              <tr ng-show="paginates.total == 0">
+                                   <td colspan="5"><p class="hor-space alert alert-danger text-center">{{'No Questions available'| translate}}</p></td>
+                              </tr>
+                              </tbody>
+                         </table>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+

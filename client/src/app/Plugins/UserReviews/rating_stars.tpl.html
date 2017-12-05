@@ -1,0 +1,42 @@
+<form role="form" class="form-horizontal clearfix review-form" name="reviewForm" method="post" ng-class="col-xs-8" ng-submit="model.postReviewRating(model.reviewRate.$valid); reviewForm.$setPristine()">
+    <div class="form-body">
+        <!--<div class="form-group" ng-class="{ 'has-error' : reviewForm.pet_name.$invalid && reviewForm.pet_name.$dirty }">
+            <div class="col-xs-12">
+                <input type="text" class="form-control" id="review_title" name="pet_name" placeholder="{{'Name'|translate}}" ng-model="model.reviewRate.pet_name" ng-minlength="3" ng-maxlength="25" ng-pattern="/^[a-z A-Z]*$/" ng-required="required">
+                <div class="help-block text-danger" ng-if="reviewForm.pet_name.$dirty" ng-messages="reviewForm.pet_name.$error">
+                    <div ng-message="required">{{'Please Enter Name'| translate}}.</div>
+                    <span class="error" ng-show="(steptwo.$submitted || steptwo.pet_name.$touched) && (steptwo.pet_name.$pristine || steptwo.pet_name.$invalid) && (steptwo.pet_name.$error.minlength)">{{'Minimum 3 character required'| translate }}</span>
+                    <span class="error" ng-show="(steptwo.$submitted || steptwo.pet_name.$touched) && (steptwo.pet_name.$pristine || steptwo.pet_name.$invalid) && (steptwo.pet_name.$error.maxlength)">{{'Maximum 25 Character'| translate }}</span>
+                    <span class="error" ng-show="(steptwo.$submitted || steptwo.pet_name.$touched) && (steptwo.pet_name.$pristine || steptwo.pet_name.$invalid) && (steptwo.pet_name.$error.pattern)">{{'Enter a valid name without numbers'| translate }}</span>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="form-group">
+            <div class="col-xs-12 clearfix">
+                <label>{{'Bedside Manner'|translate}}<span>:</span></label>
+                <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" ng-model="model.reviewRate.bedside_rate"></input-stars>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-12 clearfix">
+                <label>{{'Wait Time'|translate}}<span>:</span></label>
+                <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" ng-model="model.reviewRate.waittime_rate"></input-stars>
+            </div>
+        </div>
+        <input type="hidden" value="{{userId}}" name="doctor_user_id" ng-model="model.reviewRate.doctor_user_id">
+        <div class="form-group" ng-class="{ 'has-error' : reviewForm.review.$invalid && reviewForm.review.$dirty }">
+            <div class="col-xs-12">
+                <textarea rows="3" class="form-control" id="review" name="review" ng-model="model.reviewRate.review" placeholder="{{'review'|translate}}" required autofocus></textarea>
+                <div class="help-block text-danger" ng-if="reviewForm.review.$dirty" ng-messages="reviewForm.review.$error">
+                    <div ng-message="required">{{'Please Enter Your Review'| translate}}.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-footer education-btn">
+        <button class="btn btn-block btn-blue btn-animate" type="submit">{{'Add Review'| translate }}</button>
+        <!--<a href="#/doctor/{{$root.auth.username}}" class="btn btn-danger btn-animate">{{'Cancel'| translate }}</a>-->
+    </div>
+</form>

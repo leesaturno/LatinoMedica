@@ -1,0 +1,30 @@
+{
+  "apis": [
+    {
+      "path": "/badges",
+      "operations": [
+        {
+          "summary": "Fetch List of badges",
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__badges"
+        }
+      ]
+    }
+  ],
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

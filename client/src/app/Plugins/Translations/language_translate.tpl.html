@@ -1,0 +1,4 @@
+<li class="language-select" ng-if="visible">
+    <select  ng-init="currentLocaleDisplayName = 'Spanish'" ng-model="currentLocaleDisplayName" ng-options="localesDisplayName for localesDisplayName in localesDisplayNames" ng-change="changeLanguage(currentLocaleDisplayName)" class="form-control">
+    </select>
+</li>

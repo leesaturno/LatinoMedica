@@ -1,0 +1,23 @@
+{
+    "name": "k98kurz/pdf-lumen",
+    "description": "compatibility fork of Thujohn/pdf (dompdf wrapper) for Laravel Lumen",
+	"keywords": ["pdf", "dompdf", "laravel", "lumen"],
+    "license": "MIT",
+    "version": "1.0.7.3",
+    "authors": [
+        {
+            "name": "k98kurz",
+            "email": "k98kurz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.*|5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "k98kurz\\Pdf": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

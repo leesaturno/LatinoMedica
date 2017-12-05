@@ -1,0 +1,21 @@
+<section class="clearfix">
+     <div class="page-head">
+          <div class="container">
+               <h1>{{'Edit Widget' | translate}}</h1>
+          </div>
+     </div>
+     <div class="container">
+          <div class="form-content">
+               <form name="formValue" method="post" ng-submit="model.widgetUpdate(formValue)" novalidate>
+                    <div class="form-body">
+                         <div class="form-group">
+                              <input type="url" name="website_name" ng-model="model.formValue.website_name" placeholder="Website Name" class="form-control">
+                         </div>
+                    </div>
+                    <div class="form-footer">
+                         <button class="btn btn-blue btn-animate btn-block" type="submit">{{'Add'| translate }}</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+</section>

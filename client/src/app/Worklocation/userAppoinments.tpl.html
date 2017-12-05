@@ -1,0 +1,71 @@
+<section class="clearfix pad-63 appmt-table">
+	<div class="container">
+        <div class="page-head">    
+            <h1>{{'My Appoinment Modification'|translate}}
+                <span class="pull-right search-table-field">
+                    <a href="#/user/workplaces/{{model.locationid}}/appoinmentsettings/create" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add Appoinmments'|translate}}</a>
+                </span>
+                <span class="pull-right search-table-field">
+                    <a href="#/user/workplaces" class="btn btn-primary btn-animate"><i class="fa fa-chevron-left fa-fw"></i>{{'Back'|translate}}</a>
+                </span>
+            </h1>
+        </div>
+
+		<div growl></div>
+        <div class="table-block">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="500">{{'Country'|translate}}</th>                            
+                            <th width="500">{{'City'|translate}}</th>
+                            <th width="500">{{'Phone'|translate}}</th>
+                            <th width="500">{{'Price'|translate}}</th>
+                            <th width="500">{{'Preferred'|translate}}</th>
+                            <th width="500">{{'status'|translate}}</th>
+                            <th width="500">{{'Action'|translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr ng-repeat="appoinmentModification in model.appoinmentModification.data" ng-show="model.dataModificationLength">
+                            <td>{{worklocation.country.name |translate}}</td>                            
+                            <td>{{worklocation.city.name |translate}}</td>
+                            <td>{{worklocation.work_phone_number |translate}}</td>
+                            <td>{{worklocation.price |currency | translate}}</td>
+                            <td>
+                                <a ng-if="worklocation.is_preferred_location===1" ng-click="setPreferLocation(worklocation.id)" href="javascript:;" title="Preferred Location"><i class="fa fa-circle text-success" aria-hidden="true"></i></a>
+                                <a ng-if="worklocation.is_active===0" ng-click="setPreferLocation(worklocation.id)" href="javascript:;" title="Location"><i class="fa fa-circle-o text-success" aria-hidden="true"></i></a>                                
+                            </td>
+                            <td>
+                                <a ng-if="worklocation.is_active===1" ng-click="setStatus(worklocation.id)" href="javascript:;" title="Active"><i class="fa fa-thumbs-o-up text-success" aria-hidden="true"></i></a>
+                                <a ng-if="worklocation.is_active===0" ng-click="setStatus(worklocation.id)" href="javascript:;" title="Inactive"><i class="fa fa-thumbs-o-down text-danger" aria-hidden="true"></i></a>
+                            </td>
+                            <td class="action-btn">
+                                <a href="#/user/workplaces/{{worklocation.id}}/edit" title="{{'Edit'| translate}}" class="btn green"><i class="fa fa-pencil"></i>{{'Edit' | translate}}</a>
+                                <a ng-click='deleteWorkPlace(worklocation.id)' title="{{'Delete' | translate}}" class="btn red"><i class="fa fa-trash"></i>{{'Delete' | translate}}</a>
+                                <a href="#/user/{{worklocation.id}}/appoinmentsettings" title="{{'Appoinment Settings' | translate}}" class="btn blue"><i class="fa fa-calendar-check-o"></i>{{'Appoinment Settings' | translate}}</a>
+                                <a href="#/user/{{worklocation.id}}/appoinmentmodification/{id}/update" title="{{'Appoinment Modification' | translate}}" class="btn text-success"><i class="fa fa-calendar-plus-o"></i>{{'Appoinment Modification Settings' | translate}}</a>                                
+                            </td>
+                        </tr>
+                        <tr ng-show="!model.dataModificationLength">
+                            <td colspan="8">
+                                <p class="hor-space alert alert-danger">{{'No Record Found'|translate}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="paging clearfix text-center" ng-show="model.worklocation._metadata.total_records > 0">
+                <pagination
+                    total-items="model.worklocation.meta.pagination.total"
+                    ng-model="currentPage"
+                    ng-change="paginate()"
+                    max-size="model.worklocation._metadata.maxSize"
+                    boundary-links="true"
+                    num-pages="model.worklocation.meta.pagination.total_pages"
+                    items-per-page="model.worklocation.meta.pagination.per_page"
+                ></pagination>
+            </div>
+        </div>
+	</div>
+</section>

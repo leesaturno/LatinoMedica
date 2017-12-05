@@ -1,0 +1,57 @@
+<section class="clearfix appointment-block pad-63 appmt-table">
+	<!-- TABLE -->
+    <div class="container">
+         <div class="row">
+              <div class="col-md-12" role="navigation">
+                   <div class="appointment-header clearfix">
+                   		<h1 class="pull-left">{{'Question and Answer'|translate}}</h1>
+                        <div class="appointment-list pull-right">
+                             <ul class="nav navbar-nav">
+                                  <li class="active"><a href="#/answers"> {{'Answers'| translate}} </a></li>
+                                  <li><a href="#/answers/question"> {{'Questions'| translate}} </a></li>
+                             </ul>
+                        </div>
+                   </div>
+              </div>
+    
+              <div class="col-md-12 table-block">
+                   <div class="table-responsive">
+                        <table class="table table-hover">
+                             <thead>
+                                  <tr>
+                                       <th> Specialty</th>
+                                       <th> Question </th>
+                                       <th> Answer</th>
+                                       <th> Status</th>
+                                       <th> Action </th>
+                                  </tr>
+                             </thead>
+                             <tbody>
+                                  <tr ng-repeat="answerR in answers">
+                                       <td>{{answerR.question.specialty.name}}</td>
+                                       <td>{{answerR.question.question}}</td>
+                                       <td>{{answerR.answer}}</td>
+                                       <td>
+                                            <a ng-if="answerR.is_active == '1'"  href="javascript:;" title="Active"><i class="fa fa-thumbs-o-up text-success" aria-hidden="true"></i></a>
+                                            <a ng-if="answerR.is_active != '1'"  href="javascript:;" title="Inactive"><i class="fa fa-thumbs-o-down text-danger" aria-hidden="true"></i></a>
+                                        </td>
+                                       <td class="action-btn">
+                                            <a class="btn green" href="#/answers/edit/{{answerR.id}}"> <i class="fa fa-pencil"></i> Edit </a>
+                                       </td>
+                                  </tr>
+                                  <tr ng-show="paginates.total === 0">
+                                       <td colspan="4" class="text-center">
+                                            <p class="hor-space alert alert-danger">{{'No Answers Added' |translate}}</p>
+                                       </td>
+                                  </tr>
+                             </tbody>
+                        </table>
+                   </div>
+                   <div class="paging clearfix text-center" ng-show="_metadata.total > 0">
+                        <uib-pagination class="pull-right" total-items="_metadata.total" num-pages="_metadata.total_pages" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false" items-per-page="_metadata.per_page" ng-change="paginate()"></uib-pagination>
+                   </div>
+              </div>
+         </div>
+    </div>
+    <!-- TABLE -->
+</section>

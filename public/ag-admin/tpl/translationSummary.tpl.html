@@ -1,0 +1,37 @@
+<div class="dashboard_summary">
+    <h3>Translations</h3>
+    <div class="translations index">
+        <div class="add-block">
+            <a href="#/translations/add" class="btn btn-success" title="Make New Translation">Make New Translation</a>
+            <a href="#/translations/text/add" class="btn btn-success" title="Add New Text">Add New Text</a>
+            Search : <input type="text" ng-model="lang_filter">
+        </div>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Language</th>
+                <th>Verified</th>
+                <th>Not Verified</th>
+                <th>Manage</th>
+            </tr>
+            <tr class="altrow" ng-if="translationLanguages.length > 0" ng-repeat="language in translationLanguages | filter : lang_filter">
+                <td><span class="c">{{language.Language.name}}</span></td>
+                <td>{{language.Language.translation_verify_count}}</td>
+                <td>{{language.Language.translation_not_verified_count}}</td>
+                <td>
+                    <span><a ng-if="language.Language.translation_active == 0" ng-click="languageAction(1,language.Language.id)" href="#" class="btn btn-warning textb" title="Active">Active</a></span>
+                    <span><a ng-if="language.Language.translation_active == 1" ng-click="languageAction(0,language.Language.id)" class="btn btn-warning textb" title="Inactive">Inactive</a></span>
+                    <span><a href="#/translations/langedit/{{language.Language.id}}" class="btn btn-success textb" title="Edit">Manage</a></span>
+                    <span><a href="#" class="btn btn-danger textb" title="Delete Translation" ng-click="deletelanguage(language.Language.id)">Delete</a></span>
+                </td>
+            </tr>
+            <tr class="altrow" ng-if="translationLanguages.length == 0">
+                <td colspan="4">
+                    <p class="hor-space alert alert-danger text-center">No records Found.</p>
+                </td>
+            </tr>
+        </table>
+        <div class="paging clearfix text-center" ng-if="translationLanguages.length > 0">
+                <uib-pagination total-items="totalItems" num-pages="totalPages" ng-model="currentPage" max-size="maxSize" boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="maxSize" previous-text="&#xf104;" next-text="&#xf105;" ng-change="pageChanged(currentPage)"></uib-pagination>
+        </div>
+   </div>
+</div>

@@ -1,0 +1,109 @@
+{
+  "apis": [
+    {
+      "path": "/insurances",
+      "operations": [
+        {
+          "summary": "Fetch Insurance Companies",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "filter",
+              "paramType": "query",
+              "type": "string",
+              "description": "filter list of insurance companies",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "type",
+              "paramType": "query",
+              "type": "string",
+              "description": "Display Insurance Companies By Listing Type ( 0 - all / 1 - medical / 2 - eye / 3 - dental )",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "field",
+              "paramType": "query",
+              "type": "string",
+              "description": "Give Whatever Fields Needed by &quot;Comma Seperator&quot;",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search Insurance Companies",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Insurance Company Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort insurance companies by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "doctor_id",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which doctor id",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "date",
+              "paramType": "query",
+              "type": "string",
+              "description": "Give which date to be loaded",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__insurances"
+        }
+      ]
+    }
+  ],
+  "models": {},
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

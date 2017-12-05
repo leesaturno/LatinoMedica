@@ -1,0 +1,29 @@
+<div class="row" id="create-view">
+	<h3>Add Translation</h3>
+	<form class="col-lg-12" name="translations">
+			<div class="form-group">
+				<label>From Language :</label>
+				<div class="">
+					<input type="text" name="languageFrom" class="form-control" value="English" ng-disabled="true" />
+				</div>				
+			</div>            
+            <div class="form-group">
+                <label>To Language :</label>
+                <select class="form-control" name="languageTo" ng-model="languageTo" ng-required="true">  
+                    <option value="">{{'Select language'}}</option>     
+                    <option ng-repeat="language in languageList" value="{{ language.id }}">{{language.name}}</option>	                         
+                </select>
+                <span class="error" ng-show="false">{{'Select language'| translate }} </span>
+            </div>
+            <div class="form-group">
+				<div class="">
+				<button class="btn btn-primary" ng-click="languagetranslationAdd(1)"><span class="glyphicon glyphicon-ok"></span> Manual Translate</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="">
+				<button class="btn btn-primary" ng-click="languagetranslationAdd(2)"><span class="glyphicon glyphicon-ok"></span> Google Translate</button>
+				</div>
+			</div>
+	</form>
+</div>

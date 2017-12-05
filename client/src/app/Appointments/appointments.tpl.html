@@ -1,0 +1,24 @@
+<section class="clearfix">
+    <div class="container">
+
+        <div class="panel">
+            <div class="list-header text-center well-sm">
+                <h3>{{'Appointments'|translate}}</h3>
+            </div>
+        </div>
+        <div class="well-lg panel clearfix" ng-controller="AppointmentsController">
+            
+                    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" select="getContent($index)" active="tab.active" disabled="tab.disabled">
+                        <div ng-hide="!tabs.isLoaded">
+                            <h1>{{tab.title}}</h1>
+                            <div ng-repeat="item in tabs.content">
+                                <p>{{item[tab.title]}}</p>
+                            </div>
+                        </div>
+                        <div ng-hide="tabs.isLoaded"><h3>Loading...</h3></div>
+                    </tab>
+            
+        </div>
+
+    </div>
+</section>

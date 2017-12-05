@@ -1,0 +1,262 @@
+<div class="dashboard_summary">
+    <!-- Dasbboard Count Row Start -->
+    <div class="row dashboard_custom_panel">
+        <!-- Patient Count -->
+        <div class="col-sm-6 col-lg-3 navbar-btn">
+            <div class="panel panel-red">
+                <div class="dashboard-heading">
+                    <div class="row">
+                    	<div class="col-xs-4 text-right">
+                            <div class="add-icon-bg">
+                                <img src="../assets/img/patient.png" alt="patient" />
+                         	</div>
+						</div>
+                        <div class="col-xs-8">
+                            <div class="huge"><h2>{{adminactivities.total_patient_count}}</h2></div>
+                            <small>{{'Total Patients' | translate}}</small>
+                        </div>
+                    </div>
+                </div>
+                <a href='#/users/list?search={"filter":"active","role_id":"patient"}'>
+                    <div class="panel-footer">
+                    	<span>{{'View Details' | translate}}</span> 
+                        <span class="pull-right"><img src="../assets/img/arrow.png" alt="arrow" /></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Doctor Count -->
+        <div class="col-sm-6 col-lg-3 navbar-btn">
+            <div class="panel panel-red">
+                <div class="dashboard-heading">
+                    <div class="row">
+                    	<div class="col-xs-4 text-right">
+                            <div class="add-icon-bg">
+		                        <img src="../assets/img/doctor.png" alt="doctor" />
+                           	</div>
+        				</div>
+                        <div class="col-xs-8">
+                            <div class="huge"><h2>{{adminactivities.total_doctor_count}}</h2></div>
+                            <small>{{'Total Doctors' | translate}}</small>
+                        </div>
+                    </div>
+                </div>
+                <a href='#/users/list?search={"filter":"active","role_id":"doctor"}'>
+                    <div class="panel-footer">
+                    	<span>{{'View Details' | translate}}</span> 
+                        <span class="pull-right"><img src="../assets/img/arrow.png" alt="arrow" /></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Doctor Reviews -->
+        <div class="col-sm-6 col-lg-3 navbar-btn">
+            <div class="panel panel-red">
+                <div class="dashboard-heading">
+                    <div class="row">
+                    	<div class="col-xs-4 text-right">
+                        	<div class="add-icon-bg">
+                                <img src="../assets/img/total-reviews.png" alt="total-reviews" />
+                          	</div>
+						</div>
+                        <div class="col-xs-8">
+                            <div class="huge"><h2>{{adminactivities.total_reviews_count}}</h2></div>
+                            <small>{{'Total Reviews' | translate}}</small>
+                        </div>
+                    </div>
+                </div>
+                <a href='#/user_reviews/list'>
+                    <div class="panel-footer">
+                    	<span>{{'View Details' | translate}}</span> 
+                        <span class="pull-right"><img src="../assets/img/arrow.png" alt="arrow" /></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Total Appointments Reviews -->
+        <div class="col-sm-6 col-lg-3 navbar-btn">
+            <div class="panel panel-red">
+                <div class="dashboard-heading">
+                    <div class="row">
+                    	<div class="col-xs-4 text-right">
+                        	<div class="add-icon-bg">
+                                <img src="../assets/img/book_appmt.png" alt="book_appmt" />
+                           	</div>
+                      	</div>
+                        <div class="col-xs-8">
+                            <div class="huge"><h2>{{adminactivities.total_appointments_count}}</h2></div>
+                            <small>{{'Total Appointments' | translate}}</small>
+                        </div>
+                    </div>
+                </div>
+                <a href='#/appointments/list'>
+                    <div class="panel-footer">
+                    	<span>{{'View Details' | translate}}</span> 
+                        <span class="pull-right"><img src="../assets/img/arrow.png" alt="arrow" /></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Dasbboard Count Row End -->
+    <!-- Dasbboard Graph and Activities Row Start -->
+    <div class="navbar-btn list-group-item-heading"></div>
+    <div class="row">
+        <!-- Graph Row Start Here -->
+        <div class="col-lg-9 dashboard_grid">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <div class="pull-left">{{'Overview' | translate}} - {{rangeText}}</div>
+                    <div class="dropdown pull-right">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                            {{'Filter' | translate}}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="range in rangeVal">
+                                <a href="#" ng-click="selectedRangeItem(range.key, range.value)">
+                                    {{range.value}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group clearfix text-center">
+                         <div
+                            area-chart
+                            area-data=adminstats
+                            area-xkey='y'
+                            area-ykeys='["a", "b"]'
+                            area-labels='["User Login", "User Register"]'
+                            line-colors='["#31C0BE"]'>
+                        </div>
+                 	</div>
+                </div>
+            </div>
+        </div>
+        <!-- Graph Row End Here -->
+        <!-- Actvities Row Start Here -->
+        <div class="col-lg-3 dashboard_activities">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{'Activities' | translate}}</div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <div class="col-md-12 act-list">
+                            <a class="list-group-item m-r-25" href='#/users/list?search={"filter":"active","isemailverified":"yes"}'>
+                                <p class="dashboard-icon"><img src="../assets/img/last-reg.png" alt="last-register" /></p>
+                                <p class="dashboard-icon">
+                                    {{'Last Register' | translate}}
+                                    <span ng-if="adminactivities.last_register != null">{{adminactivities.last_register}}</span>
+                                    <span ng-if="adminactivities.last_register == null">-</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col-md-12 act-list">
+                            <a href="#/user_logins/list" class="list-group-item">
+                                <p class="dashboard-icon"><img src="../assets/img/last-login.png" alt="last-login" /></p>
+                                <p class="dashboard-icon">
+                                    {{'Last User Login' | translate}}
+                                    <span ng-if="adminactivities.last_user_login != null">{{adminactivities.last_user_login}}</span>
+                                    <span ng-if="adminactivities.last_user_login == null">-</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.list-group -->
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <div class="navbar-btn "></div>
+        </div>
+        <!-- Dasbboard Graph and Activities Row End -->
+        <!-- Dasbboard Donut Chart Row Start -->
+        <div class="col-lg-9 dashboard_master">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{'Master' | translate}}</div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <!-- Country Count -->
+                        <div class="col-lg-3">
+                            <div
+                                donut-chart
+                                donut-data='[
+                                    {label: "Countries Count", value: adminactivities.total_countries_count},
+                                ]'
+                                donut-colors='["#ffb61c","#c7254e","#98a0d3"]'
+                            >
+                            </div>
+                        </div>
+
+                        <!-- Cities Count -->
+                        <div class="col-lg-3">
+                            <div
+                                donut-chart
+                                donut-data='[
+                                    {label: "Citites Count", value: adminactivities.total_cities_count},
+                                ]'
+                                donut-colors='["#e05d6f","#c7254e","#98a0d3"]'
+                            >
+                            </div>
+                        </div>
+
+                        <!-- Specialities Count -->
+                        <div class="col-lg-3">
+                            <div
+                                donut-chart
+                                donut-data='[
+                                    {label: "Specialties Count", value: adminactivities.total_specialties_count},
+                                ]'
+                                donut-colors='["#16a085","#c7254e","#98a0d3"]'
+                            >
+                            </div>
+                        </div>
+
+                        <!-- Languages Count -->
+                        <div class="col-lg-3">
+                            <div
+                                donut-chart
+                                donut-data='[
+                                    {label: "Language Count", value: adminactivities.total_languages_count},
+                                ]'
+                                donut-colors='["#418bca","#c7254e","#98a0d3"]'
+                            >
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dasbboard Donut Chart Row End -->
+        <!-- Activites Row End Here -->
+        <div class="col-lg-3 dashboard_lumen">
+            <div class=""></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Abs</div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <div class="navbar-btn">
+                            <h3>{{'Version' | translate}}{{siteversion.value}}</h3>
+                        </div>
+                        <a href="http://customers.agriya.com/" target="_blank" class="list-group-item">{{'Product Support' | translate}}</a>
+                        <a href="http://dev1products.dev.agriya.com/doku.php?id=abs" target="_blank" class="list-group-item">{{'Product Manual' | translate}}</a>
+                        <a href="http://www.cssilize.com/" target="_blank" class="list-group-item">CSSilize PSD to XHTML Conversion and Abs theming</a>
+                        <a href="http://blogs.agriya.com/" target="_blank" class="list-group-item">Agriya Blog Follow Agriya news</a>
+                    </div>
+                    <!-- /.list-group -->
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+        </div>
+        <div class="navbar-btn "></div>
+   	</div>
+</div>

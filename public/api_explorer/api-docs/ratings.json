@@ -1,0 +1,136 @@
+{
+    "apis": [
+        {
+            "path": "/patient_reviews/add",
+            "operations": [
+                {
+                    "summary": "For Add Doctor Review",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "ReviewAdd",
+                            "paramType": "body",
+                            "type": "ReviewAdd",
+                            "description": "Add Review Params",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__review__add"
+                }
+            ]
+        },
+        {
+            "path": "/patient_reviews/{id}",
+            "operations": [
+                {
+                    "summary": "For Get patient Review",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "patient Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__patient_reviews__userId"
+                },
+                {
+                "summary": "update pages",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                    "name": "id",
+                    "paramType": "path",
+                    "type": "integer",
+                    "format": "int64",
+                    "required": true,
+                    "description": "The Review Identifier"
+                    },
+                    {
+                    "name": "ReviewEdit",
+                    "paramType": "body",
+                    "required": true,
+                    "type": "ReviewEdit",
+                    "format": "string"
+                    }
+                ],
+                "method": "PUT",
+                "nickname": "put__patient_reviews__id_"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "ReviewAdd": {
+            "properties": {
+                "patient_id": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Reviewd Doctor User Id"
+                },
+                "appointment_id": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Reviewd Doctor User Id"
+                },
+                "rating_option_id": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Reviewd Doctor User Id"
+                },
+                "rate": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Star Count Out of 5"
+                }
+            }
+        },
+        "ReviewEdit": {
+            "properties": {
+                "rating_option_id": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Reviewd Doctor User Id"
+                },
+                "rate": {
+                    "type": "integer",
+                    "required": true,
+                    "description": "Star Count Out of 5"
+                }
+            }
+        }
+    },
+    "swaggerVersion": "1.2",
+    "apiVersion": "1",
+    "basePath": "http://abssalvador.localhost/api"
+}

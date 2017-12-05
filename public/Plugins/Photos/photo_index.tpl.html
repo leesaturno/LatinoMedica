@@ -1,0 +1,23 @@
+<div class="pad-63">
+    <div class="container">
+        <div class="page-head clearfix">
+            <h1 class="pull-left">{{'My Clinic Photos'|translate}}</h1>
+            <div class="pull-right search-table-field">
+                <a href="#/photos/add" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add New Photo'|translate}}</a>
+            </div>
+        </div>
+        <div id="tourpackages-carousel">
+            <div class="branch-photos clearfix">
+                <div class="col-sm-6 col-md-3" ng-repeat="photo in photos" ng-show="!isShown">
+                    <div class="thumbnail">
+                        <img src="{{photo.attachmentable.data.thumb.small}}" title="Clinic Photo" class="" alt="Clinic Photo"> 
+                        <a ng-click='photoDelete(photo.id)' title="{{'Delete' | translate}}" class="btn btn-red"><i class="fa fa-trash"></i>Delete</a>
+                    </div>
+                </div>
+                <div ng-show="isShown">
+                    <p class="hor-space alert alert-danger text-center">{{'No Image Added' |translate}}</p>
+                </div>
+            </div><!-- End row -->    
+        </div><!-- End container -->
+ 	</div>
+</div>

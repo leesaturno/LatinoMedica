@@ -1,0 +1,675 @@
+<div class="homePage">
+	<!-- Start: Banner -->
+    <div class="banner text-center fa-inverse">
+        <div class="container">
+        	<figure>
+               <img src="assets/img/logo.png" alt="logo" class="img-responsive"/>
+            </figure>
+            <h1 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Surprised! Find a Doctor" | translate }}</h1>
+            <h3 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Your Medical Directory" | translate }}</h3>
+            <h5 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Only medical and health professionals" | translate }}</h5>
+            <form data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:100}" class="home-search form-inline col-md-12" name="homeSearchForm" ng-submit="model.homesearch(homeSearchForm)" novalidate>
+            	<div class="row">
+                    <div class="form-group speciality col-md-6">
+                       <div angucomplete-alt id="ex1" ng-model="model.doctor" placeholder="Especialidad, Nombre del Doctor" maxlength="50" pause="100" selected-object="selectedCountry" local-data="autocomplete" search-fields="name" title-field="name" minlength="1" image-field="image" input-class="form-control form-control-small" match-class="highlight"></div>
+                    </div>
+                    <div class="form-group city col-md-2">
+                        <select class="form-control" ng-model="model.form_city" name="form_city">
+                            <option value="">{{"City" | translate }}</option>
+                            <option ng-repeat="citiesliList in citiesliLists" value="{{citiesliList.id}}">{{citiesliList.name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group insurance col-md-3">
+                        <select class="form-control" ng-model="model.form_insurances" name="form_insurances">
+                            <option value="">{{"Health insurance" | translate }}</option>
+                            <option ng-repeat="insurance in insurances" value="{{insurance.id}}">{{insurance.name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-btn col-md-1">
+                        <button class="btn btn-block btn-sblue btn-animate" type="submit"><i class="fa fa-search fa-inverse" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End: Banner -->
+
+    <!-- Start: start Doctor -->
+   	<div class="star-doctor">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-6 col-lg-7 star-doc-left" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:400}">
+                	<h2>{{"Are you a Doctor Five Star?" | translate }}</h2>
+                    <h3>{{"List your practice to reach millions of patients" | translate }}</h3>
+                    <ul class="list-unstyled">
+                    	<li>{{"Attract and attract new patients" | translate }}</li>
+                        <li>{{"Build and strengthen their online reputation" | translate }}</li>
+                        <li>{{"Provide premium patient experience" | translate }}</li>
+                    </ul>
+                    <a href="#/users/practice" class="btn" ng-if="!$root.auth">{{"List your practice in" | translate }} {{$root.settings['site.name']}}</a>
+                </div>
+                <figure class="col-md-6 col-lg-5">
+                	<img data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400}" src="assets/img/bg-doctor.png" alt="doctor" class="img-responsive" />
+                    <div class="">
+                    	<div class="star-rating">
+                            <div class="star-rating2" style="width:80%;">
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!-- End: start Doctor -->
+
+    <!-- Start: App -->
+    <div class="app-link">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-7 hidden-sm hidden-xs">
+                	<figure>
+                    	<img src="assets/img/app-img.png" alt="app" class="img-responsive" />
+                        <ul class="list-unstyled">
+                        	<li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/android-app.png" alt="android" class="img-responsive" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/iphone-app.png" alt="iphone" class="img-responsive" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/windows-app.png" alt="windows" class="img-responsive" />
+                                </a>
+                            </li>
+                        </ul>
+                    </figure>
+                </div>
+                <div class="col-md-5">
+                	<h2>{{"Get the application" | translate }} {{$root.settings['site.name']}}</h2>
+                    <ul class="list-unstyled">
+                    	<li>{{"Check the map of doctors in your insurance network" | translate }}</li>
+                        <li>{{"See patient comments to help you choose the right doctor" | translate }}</li>
+                        <li>{{"See schedule any doctor available, and click to book instantly" | translate }}</li>
+                    </ul>
+                </div>
+                <div class="col-md-7 visible-sm visible-xs">
+                	<figure>
+                    	<img src="assets/img/app-img.png" alt="app" class="img-responsive" />
+                        <ul class="list-unstyled">
+                        	<li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/android-app.png" alt="android" class="img-responsive" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/iphone-app.png" alt="iphone" class="img-responsive" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="javascript:void(0)">
+                            		<img src="assets/img/windows-app.png" alt="windows" class="img-responsive" />
+                                </a>
+                            </li>
+                        </ul>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: App -->
+    <!-- Start: Related Practices -->
+    <div class="related-practice text-center">
+    	<div class="container">
+        	<div data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">
+                <h2>{{"Featured Specialists" | translate }}</h2>
+                <!--<p>{{'Save your time by searching the doctors based on the key ratings of the practices.' | translate }}</p>-->
+            </div>
+
+            <!--<ul class="list-unstyled thumb-block row">
+            	<li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:200}" ng-repeat="bestRatedDoctor in bestRatedDoctors">
+                	<div class="thumbnail">
+                        <a href="#/doctor/{{bestRatedDoctor.username}}" title="{{bestRatedDoctor.username}}" class="">
+                            <img ng-src="{{bestRatedDoctor.attachments.thumb.large}}" alt="{{bestRatedDoctor.user_profile.specialties[0]['name']}}" />
+                        </a>
+                        <div class="caption text-left">
+                        	<h3 class="text-left">
+                            	<a href="#/doctor/{{bestRatedDoctor.username}}" title="{{bestRatedDoctor.username}}" class="">
+                                	{{bestRatedDoctor.user_profile.first_name }} {{bestRatedDoctor.user_profile.last_name}} - {{bestRatedDoctor.user_profile.specialties[0]['name']}}
+                                </a>
+                            </h3>
+                            <p class="text-left">{{bestRatedDoctor.user_profile.about_me | limitTo: 75}}</p>
+                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="bestRatedDoctor.overall_avg_rating"></input-stars>
+                            <p class="text-left">{{bestRatedDoctor.user_profile.address}},{{bestRatedDoctor.user_profile.postal_code}} {{bestRatedDoctor.user_profile.city.name}}, {{bestRatedDoctor.user_profile.country.name}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>-->
+            <!-- Dynamic Data for Featured Doctors -->
+            <featured-specialist-doctor></featured-specialist-doctor>
+            <!--<slick lazy-load='ondemand' slides-to-show=5 slides-to-scroll=1 class="slider lazy slick-slider">
+            	<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">
+	            	<img src="assets/img/left-slick.png" alt="Previous" class="img-responsive" />
+                </button>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="specialist-list image">
+                    <div class="border-right">
+                        <div class="green-box">
+                            <figure class="avatar">
+                                <img src="assets/img/specialists.png" alt="specialists" class="img-responsive img-circle" />
+                            </figure>
+                            <img src="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                        </div>
+                        <h4>Dr. Julio C. Castro</h4>
+                        <p>Dentist</p>
+                        <span>ARAGUA - LA VICTORIA</span>
+                        <div class="rating">
+                            <div class="specialist-rating">
+                                <div class="specialist-rating2" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="specialist-footer clearfix">
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5000
+                            </a>
+                            </span>
+                            <span class="col-md-5">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> 11000
+                            </a>
+                            </span>
+                            <span class="col-md-2">
+                            <a href="javascript:void(0)" class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">
+                    <img src="assets/img/right-slick.png" alt="Next" class="img-responsive" />
+                </button>
+            </slick>-->
+            <!--<a href="#/search?is_online_booking=true&specialty_id=1" class="btn" data-uk-scrollspy="{cls:'uk-animation-fade', delay:800}">{{'View All' | translate }}</a>-->
+        </div>
+    </div>
+    <!-- End: Related Practices -->
+
+    <!-- Start: Book Appointment -->
+    <!--<div class="book-appmt text-center">
+    	<div class="container">
+        	<div class="paging-head" data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">
+                <h2 class="text-center">{{'Find the suitable doctors to book the appointments' | translate }}</h2>
+                <p>{{'Choose the best time for you. Just a click to book.' | translate }}</p>
+            </div>
+            <ul class="list-unstyled row">
+            	<li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:200}">
+                	<div class="doctor-list">
+                    	<span><img src="assets/img/search.png" alt="search" /></span>
+                        <h3>{{'Search doctor, 24/7' | translate }}</h3>
+                        <p>{{'Look for the appropriate specialist doctors online for treating your ailments.' | translate }}</p>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:500}">
+                	<div class="doctor-list">
+                    	<span><img src="assets/img/stethoscope.png" alt="stethoscope" /></span>
+                        <h3>{{'Choose best practice' | translate }} </h3>
+                        <p>{{'Make a decision in choosing the specialist doctors for each and every health issue.' | translate }}</p>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:800}">
+                	<div class="doctor-list">
+                    	<span><img src="assets/img/ambulance.png" alt="ambulance" /></span>
+                        <h3>{{'Book appointment' | translate }}</h3>
+                        <p>{{'Schedule a preferred doctor’s appointment and get consulting on your own time and date.' | translate }}</p>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:1100}">
+                	<div class="doctor-list">
+                    	<span><img src="assets/img/review.png" alt="review" /></span>
+                        <h3>{{'Review service' | translate }}</h3>
+                        <p>{{'Get the genuine rating about the service of all specialist doctors immensely.' | translate }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+    <!-- End: Book Appointment -->
+
+    <!-- Start: Related Practices -->
+    <!--<div class="related-practice text-center">
+    	<div class="container">
+        	<div class="paging-head" data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">
+                <h2>{{'Browse best rated Practices' | translate }}</h2>
+                <p>{{'Save your time by searching the doctors based on the key ratings of the practices.' | translate }}</p>
+            </div>
+            <ul class="list-unstyled thumb-block row">
+            	<li class="col-md-3 col-sm-6" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:200}" ng-repeat="bestRatedDoctor in bestRatedDoctors">
+                	<div class="thumbnail">
+                        <a href="#/doctor/{{bestRatedDoctor.username}}" title="{{bestRatedDoctor.username}}" class="">
+                            <img ng-src="{{bestRatedDoctor.attachments.thumb.large}}" alt="{{bestRatedDoctor.user_profile.specialties[0]['name']}}" />
+                        </a>
+                        <div class="caption text-left">
+                        	<h3 class="text-left">
+                            	<a href="#/doctor/{{bestRatedDoctor.username}}" title="{{bestRatedDoctor.username}}" class="">
+                                	{{bestRatedDoctor.user_profile.first_name }} {{bestRatedDoctor.user_profile.last_name}} - {{bestRatedDoctor.user_profile.specialties[0]['name']}}
+                                </a>
+                            </h3>
+                            <p class="text-left">{{bestRatedDoctor.user_profile.about_me | limitTo: 75}}</p>
+                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="bestRatedDoctor.overall_avg_rating"></input-stars>
+                            <p class="text-left">{{bestRatedDoctor.user_profile.address}},{{bestRatedDoctor.user_profile.postal_code}} {{bestRatedDoctor.user_profile.city.name}}, {{bestRatedDoctor.user_profile.country.name}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#/search?is_online_booking=true&specialty_id=1" class="btn" data-uk-scrollspy="{cls:'uk-animation-fade', delay:800}">{{'View All' | translate }}</a>
+        </div>
+    </div>-->
+    <!-- End: Related Practices -->
+
+    <!-- Start: How it works -->
+    <!--<div class="how-it-works text-center">
+    	<div class="container" data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">
+        	<div id="carousel-example-generic" class="carousel slide col-md-8 col-md-offset-2" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                    	<div class="paging-head">
+                            <h1>Success Stories</h1>
+                            <p>Costco employees love the feeling of camaraderie that’s at the core of our nearest doctors in your network. So we didn’t just want a program that worked. We wanted a program with heart.</p>
+                            <p><span>Donna Sexton, Director of Benefits, Costco</span></p>
+                        </div>
+                  	</div>
+                    <div class="item">
+                    	<div class="paging-head">
+                            <h1>Success Stories</h1>
+                            <p>Costco employees love the feeling of camaraderie that’s at the core of our nearest doctors in your network. So we didn’t just want a program that worked. We wanted a program with heart.</p>
+                            <p><span>Donna Sexton, Director of Benefits, Costco</span></p>
+                        </div>
+                  	</div>
+                    <div class="item">
+                    	<div class="paging-head">
+                            <h1>Success Stories</h1>
+                            <p>Costco employees love the feeling of camaraderie that’s at the core of our nearest doctors in your network. So we didn’t just want a program that worked. We wanted a program with heart.</p>
+                            <p><span>Donna Sexton, Director of Benefits, Costco</span></p>
+                        </div>
+                  	</div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- End: How it works -->
+
+    <!-- Start: Find Doctor -->
+    <div class="find-doctor">
+    	<div class="container">
+        	<h2 data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">{{"Find Doctor by" | translate }}{{"..."}}</h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-4" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200}">
+                    <div class="change-location city">
+                        <h4><span>{{"City" | translate }}</span></h4>
+                        <ul class="list-unstyled" ng-init="citiesliList=9" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                            <li ng-repeat="citiesliList in citiesliLists | limitTo:citiesliList track by $index">
+                                <a href="javascript:void(0)" ng-click="model.pageRedirect('city_id=' + citiesliList.id)">{{citiesliList.name}}</a>
+                            </li>
+                            <li>
+                          		<a class="btn-more" ng-click="$parent.citiesliList=citiesliLists.length" ng-if="citiesliList==9">{{"More" | translate }}{{"..."}}</a>
+                                <a class="btn-more" ng-click="$parent.citiesliList=9" ng-if="citiesliList!=9">{{"Less" | translate }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:300}">
+                    <div class="change-location specialty">
+                        <h4><span>{{"Specialty" | translate }}</span></h4>
+                        <ul class="list-unstyled" ng-init="specialtyliList=9" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                            <li ng-repeat="specialtyliList in specialtyliLists | limitTo:specialtyliList track by $index">
+                                <a href="javascript:void(0)" ng-click="model.pageRedirect('specialty_id=' + specialtyliList.id)">{{specialtyliList.name | translate}}</a>
+                            </li>
+                            <li>
+                          		<a class="btn-more" ng-click="$parent.specialtyliList=specialtyliLists.length" ng-if="specialtyliList==9">Más...</a>
+                                <a class="btn-more" ng-click="$parent.specialtyliList=9" ng-if="specialtyliList!=9">Menos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:600}">
+                    <div class="change-location insurance">
+                        <h4><span>{{"Insurance" | translate }}</span></h4>
+                        <ul class="list-unstyled" ng-init="insurance=9" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                            <li ng-repeat="insurance in insurances | limitTo:insurance track by $index">
+                                <a href="javascript:void(0)" ng-click="model.pageRedirect('insurance_id=' + insurance.id)">{{insurance.name | translate}}</a>
+                            </li>
+                            <li>
+                          		<a class="btn-more" ng-click="$parent.insurance=insurances.length" ng-if="insurance==9">Más...</a>
+                                <a class="btn-more" ng-click="$parent.insurance=9" ng-if="insurance!=9">Menos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>{{"Or search by Name" | translate }}{{","}} <span><a href="#/users/practice">{{"Practice" | translate }}</a></span>{{","}} <span><a href="#/users/practice">{{"Procedure" | translate }}</a></span> {{" or Clinic" | translate }}</p>
+       	</div>
+   	</div>
+	<!-- End: Find Doctor -->
+
+    <!-- Start: Contact -->
+    <!--<div class="contact-block">
+    	<div class="container">
+        	<div class="row">
+                <div class="col-md-7 footer-logo text-left" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}">
+                    <img src="assets/img/footer-logo.png" alt="logo" />
+                    <p>{{'Need help booking online?' | translate }} {{$root.settings['site.contact_number']}}</p>
+                </div>
+                <div class="col-md-5 text-right" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:100}">
+                    <a class="btn btn-red" href="javascript:void(0);">{{$root.settings['site.contact_email']}}</a>
+                </div>
+			</div>
+        </div>
+    </div>-->
+    <!-- End: Contact -->
+
+    <!-- Start: Clients -->
+    	<div class="clients">
+        	<div class="container">
+            	<h2 class="text-center">{{"Patients are losing patience when trying to access your attention" | translate }}</h2>
+                <p class="text-center">{{"See why we are the perfect partner for health systems" | translate }}</p>
+                <ul class="list-inline row">
+                	<li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-centro.png" alt="client-centro" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-clinica.png" alt="client-clinica" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-maracay.png" alt="client-maracay" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-medicas.png" alt="client-medicas" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-hospital.png" alt="client-hospital" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li class="col-md-2 col-xs-12 col-sm-6">
+                    	<a href="javascript:void(0)">
+                        	<img src="assets/img/client-sociedad.png" alt="client-sociedad" class="img-responsive" />
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-center"><a class="btn" href="#/users/practice">{{"Join us and our partners" | translate }}</a></p>
+            </div>
+        </div>
+    <!-- End: Clients -->
+
+</div>

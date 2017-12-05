@@ -1,0 +1,54 @@
+<section class="clearfix pad-63 appmt-table">
+     <div class="container">
+        <div class="page-head clearfix">    
+            <h1 class="pull-left">{{'My Icals'|translate}}</h1>
+            <div class="pull-right search-table-field">
+            	<!-- for table -->
+                <div class="pull-left ical-link">
+               		<label class="col-md-4">Ical Link</label>
+                    <div class="col-md-8">
+                    	<input type="text" ng-model="userIcalUrl" class="form-control">
+                	</div>
+                </div>
+                <a href="#/ical/add" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add Ical'|translate}}</a>
+            </div>
+        </div>
+       	<div class="table-block">
+                <div class="clearfix"></div>
+                <div class="table-responsive">
+                     <table class="table table-hover">
+                          <thead>
+                          <tr>
+                               <th width="200">{{'S.No'| translate}}</th>
+                               <th width="500">{{'Link'| translate}}</th>
+                               <th width="500">{{'Status'| translate}}</th>
+                               <th width="500">{{'Action'| translate}}</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr ng-repeat="ical in icals">
+                               <td> {{$index+1}}</td>
+                               <td> {{ical.link}}</td>
+                               <td>
+                                    <div class="switch-option">
+                                         <switch id="enabled" name="enabled" ng-model="ical.is_active" on="Yes" off="No" class="green" disabled="true"></switch>
+                                    </div>
+                               </td>
+                               <td class="action-btn">
+                                    <!--<a href="#/ical/preview/{{ical.id}}" target="_blank"> <i class="fa fa-eye"></i> View</a>-->
+                                    <a href="#/ical/edit/{{ical.id}}" class="btn green"><i class="fa fa-pencil"></i>Edit</a>
+                                    <a href="javascript:void(0)" ng-click="icalDelete(ical.id)" class="btn red"><i class="fa fa-trash"></i>Delete</a>
+                               </td>
+                          </tr>
+                          <tr ng-show="paginates.total == 0">
+                               <td colspan="4"><p class="hor-space alert alert-danger text-center">{{'No Icals available'| translate}}</p></td>
+                          </tr>
+                          </tbody>
+                     </table>
+                </div>
+                <div bs-modal></div>
+           </div>
+      </div>
+</section>
+
+

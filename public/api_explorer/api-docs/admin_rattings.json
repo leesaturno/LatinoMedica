@@ -1,0 +1,240 @@
+{
+  "apis": [
+    {
+      "path": "/admin/ratting_options",
+      "operations": [
+        {
+          "summary": "Fetch List of Ratting Options",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Give which page to be loaded",
+              "required": false
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search City",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "type": "string",
+              "description": "filter list of City",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The City Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort City by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get_admin_ratting_options"
+        }
+      ]
+    },
+    {
+      "path": "/admin/ratting_options/{id}",
+      "operations": [
+        {
+          "summary": "Delete City",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Delete IP Details from List"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__admin_ratting_options__id_"
+        },
+        {
+          "summary": "Update City",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit IP Details from List"
+            },
+            {
+              "name": "CityEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "CityEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__admin_ratting_options__id_"
+        }
+      ]
+    },
+    {
+      "path": "/admin/ratting_options",
+      "operations": [
+        {
+          "summary": "Add City Details",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "RattingOptionsAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "RattingOptionsAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__admin_ratting_options"
+        }
+      ]
+    },
+    {
+      "path": "/admin/ratting_options/{id}/edit",
+      "operations": [
+        {
+          "summary": "Edit City",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit IP Details from List"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__admin_ratting_options__id__edit"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "RattingOptionsAdd": {
+      "properties": {
+        "option": {
+          "type": "string",
+          "required": true,
+          "description": "City Name"
+        }
+      },
+      "id": "RattingOptionsAdd"
+    },
+    "CityEdit": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "description": "The City identifier"
+        },
+        "option": {
+          "type": "string",
+          "required": true,
+          "description": "City Name"
+        }
+      },
+      "id": "CityEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

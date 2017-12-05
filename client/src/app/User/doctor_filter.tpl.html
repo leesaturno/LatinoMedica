@@ -1,0 +1,31 @@
+<div class="appointment-block pad-63">
+    <div class="container">
+        <div class="page-head clearfix">  
+            <h1 class="pull-left">{{"Your team" | translate }}</h1>
+        </div>
+        <form class="form-horizontal appmt-view" name="search_list" ng-submit="model.search_list_data(search_list.$valid)">
+			
+			<div class="form-group col-md-8">
+				<select class="form-control" ng-model="model.add_list.city_id" name="city_id" ng-required="true">
+					<option value="">{{"City" | translate }}</option>
+					<option ng-repeat="citiesliList in citiesliLists" ng-model="model.add_list.city_id" value="{{citiesliList.id}}">{{citiesliList.name}}</option>
+				</select>
+				<div ng-show="(search_list.city_id.$dirty && search_list.city_id.$invalid) || search_list.city_id.$touched" ng-messages="search_list.city_id.$error">
+					<span class="error" ng-message="required">{{'select city'| translate }}</span>
+				</div>
+            </div>
+            <div class="form-group col-md-8">
+				             <select ng-model="model.add_list.specialty_id" ng-required="true" class="form-control" name="specialty_id"  ng-options="specialtyliLists.id as specialtyliLists.name for specialtyliLists in specialtyliLists">
+                                    <option value="">{{"Specialists" | translate }}</option>
+                             </select>
+				<div ng-show="(search_list.specialty_id.$dirty && search_list.specialty_id.$invalid) || search_list.specialty_id.$touched" ng-messages="search_list.specialty_id.$error">
+					<span class="error" ng-message="required">{{'select specialty'| translate }}</span>
+				</div>
+                        </div>
+			 <div class="form-group col-md-6">
+			<button type="submit" class="btn btn-lg btn-primary">{{"Submit" | translate}}</button>
+			 <button class="btn btn-lg btn-warning" type="button" ng-click="closeModal()">{{"Cancel" | translate}}</button>
+			</div>
+        </form>
+    </div>
+</div>

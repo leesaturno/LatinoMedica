@@ -1,0 +1,320 @@
+<div class="register m-b-100">
+    <div class="container m-t-100">
+    	<figure class="m-b-100">
+            <a href="#!/">
+                <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+            </a>
+        </figure>
+        <div class="user-login col-sm-8 col-sm-offset-2 row">
+            <div class="user-signup">
+                <div class="form-heading">
+                    <h2 class="form-login-heading">{{'Book your appointment'| translate }}
+                      
+                    </h2>
+                </div>
+                <form class="form-login form-horizontal" name="signupForm" ng-submit="model.signup(signupForm.$valid)" novalidate>
+                    <div class="form-body">
+						<div class="col-md-12 location-info row">
+                            
+                            <div class="row">
+								<div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.is_seen_before.$touched) && (signupForm.is_seen_before.$pristine || signupForm.is_seen_before.$invalid)}">
+									<label class="col-sm-12 form-name"><span class="red">*</span>{{'Have you used Latinomedica before?'| translate}}</label>
+									<span>We will use the information from your last visit</span>
+								<div class="col-md-6">
+                          
+							<label>
+    <input type="radio" ng-model="model.is_seen_before" value="1">{{"I'm new in latinomedica" | translate }}
+  </label>
+									</div>
+									<div class="col-md-6">
+  <label>
+    <input type="radio" ng-model="model.is_seen_before" value="0">{{"I have used Latinomedica before" | translate }}
+  </label>
+									</div>
+                        </div>
+									
+						 </div>
+                        </div>
+						
+						<div class="form-heading">
+                    <h2 class="form-login-heading">{{'Create your account'| translate }}
+                      
+                    </h2>
+							<span>{{"This will help you handle your appointments" | translate}}</span>
+                </div>
+								<div class="col-md-12 location-info row">
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+									 <label class="col-sm-12 form-name">{{'*Cellphone'| translate}}</label>
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.required)}">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                                            <input type="text" class="form-control" name="phone" id="phone" placeholder="{{'Mobile'| translate}}" ng-model="model.user_profile.phone"
+                                                ng-required="true" ng-minlength="8" ng-maxlength="12" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.required)">{{'Enter Mobile Number'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.pattern)">{{'Enter Valid Mobile Number Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.minlength)">{{'Minimum Length is 8'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.phone.$touched) && (signupForm.phone.$pristine || signupForm.phone.$invalid) && (signupForm.phone.$error.maxlength)">{{'Maximum Length is 12'| translate }} </span>
+                                    </div>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                            
+                            <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.email.$touched) && (signupForm.email.$pristine || signupForm.email.$invalid)}">
+								 
+                            	<div class="col-sm-6">
+                                    <label class="col-sm-12">{{'*Insert your E-mail address'}}</label>
+                                    <input type="email" class="form-control" placeholder="Email" name="email" ng-model="model.email" ng-required="true">
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.email.$touched) && (signupForm.email.$pristine || signupForm.email.$invalid) && (signupForm.email.$error.required)">{{'Please enter your E-mail id'| translate }}</span>
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.email.$touched) && (signupForm.email.$pristine || signupForm.email.$invalid) && (signupForm.email.$error.email)">{{'Enter valid E-mail'| translate }}</span>
+                                    <span class="error" ng-show="model.emailErr">{{model.emailErr}}</span>
+                                </div>
+							</div>
+								 <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.confirm_email.$touched) && (signupForm.confirm_email.$pristine || signupForm.confirm_email.$invalid)}">
+								<div class="col-sm-6">
+                                    <label class="col-sm-12">{{'*Confirm your E-mail address'}}</label>
+                                    <input type="email" class="form-control" placeholder="Confirm Email" name="confirm_email" ng-model="model.confirm_email" ng-required="true">
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.confirm_email.$touched) && (signupForm.confirm_email.$pristine || signupForm.confirm_email.$invalid) && (signupForm.confirm_email.$error.required)">{{'Please re-enter your E-mail id'| translate }}</span>
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.confirm_email.$touched) && (signupForm.confirm_email.$pristine || signupForm.confirm_email.$invalid) && (signupForm.confirm_email.$error.email)">{{'Enter valid E-mail'| translate }}</span>
+									<span class="error" ng-show="(signupForm.$submitted || signupForm.confirm_email.$touched) && (signupForm.email.$dirty && signupForm.confirm_email.$dirty) && (model.email != model.confirm_email)">{{'E-mail Mismatch'| translate }}</span>
+                                    <span class="error" ng-show="model.confirm_emailErr">{{model.confirm_emailErr}}</span>
+                                </div>
+								</div>
+							
+							<div class="form-group checkbox-field" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.remainder.$touched) && (signupForm.remainder.$pristine || signupForm.remainder.$invalid)}">
+                            <div class="checkbox col-sm-12">
+                                <label>
+                                    <input id="terms_cond" class="hide" type="checkbox" name="remainder" ng-model="model.remainder">
+                                    {{'Please, send me emails with preventive health care remainders. recommended'| translate }}
+                                    <span></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                            
+                            <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid)}">
+                            	<div class="col-sm-6">
+                                    <label class="col-sm-12">{{'*Create a Password'}}</label>
+                                    <input type="password" class="form-control" placeholder="Password" name="password" ng-model="model.password" ng-required="true" ng-minlength="6" ng-maxlength="40">
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.required)">{{ 'Enter Password' | translate }}</span>
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.minlength)">{{ 'Minimum length is 6' | translate }}</span>
+                                    <span class="error" ng-show="(signupForm.$submitted || signupForm.password.$touched) && (signupForm.password.$pristine || signupForm.password.$invalid) && (signupForm.password.$error.maxlength)">{{ 'Maximum length is 20' | translate }}</span>
+                                    <span class="error" ng-show="model.passwordErr">{{model.passwordErr}}</span>
+                                </div>
+                            </div>
+                            
+							<div class="form-group">
+                            <label class="col-sm-12 form-name">{{'*Name'}}</label>
+                            <div class="col-sm-6" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid)}">
+                                <input type="text" class="form-control" placeholder="Please enter your first name" name="first_name" ng-model="model.first_name" ng-required="true" ng-minlength="3" ng-pattern="/^[a-z A-Z]*$/">
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.required)">{{'Please enter your first name'| translate }} </span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.minlength)">{{ 'Minimum length is 3' | translate }}</span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.first_name.$touched) && (signupForm.first_name.$pristine || signupForm.first_name.$invalid) && (signupForm.first_name.$error.pattern)">{{ 'Enter Valid name without number' | translate }}</span>
+                                 
+                            </div>
+                                <div class="col-sm-6" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid)}">
+                                <input type="text" class="form-control" placeholder="Please enter your last name" name="last_name" ng-model="model.last_name" ng-required="true" ng-minlength="3" ng-pattern="/^[a-z A-Z]*$/">
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.required)">{{'Please enter your last name'| translate }} </span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.minlength)">{{ 'Minimum length is 3' | translate }}</span>
+                                <span class="error" ng-show="(signupForm.$submitted || signupForm.last_name.$touched) && (signupForm.last_name.$pristine || signupForm.last_name.$invalid) && (signupForm.last_name.$error.pattern)">{{ 'Enter valid name without number' | translate }}</span>
+
+                                 
+                            </div>
+                        </div>
+							
+							
+							<div class="col-md-12 location-info row">
+                            
+                            <div class="row">
+								 <label class="col-sm-12 form-name">{{'*Date of birth'| translate}}</label>
+								<div class="col-md-4">
+									
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.month.$touched) && (signupForm.month.$pristine || signupForm.month.$invalid) && (signupForm.month.$error.required)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="month" id="month" placeholder="{{'MM'| translate}}" ng-model="model.signupForm.month"
+                                                ng-required="true" ng-minlength="2" ng-maxlength="2" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.month.$touched) && (signupForm.month.$pristine || signupForm.month.$invalid) && (signupForm.month.$error.required)">{{'Enter Month'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.month.$touched) && (signupForm.month.$pristine || signupForm.month.$invalid) && (signupForm.month.$error.pattern)">{{'Enter Valid Month Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.month.$touched) && (signupForm.month.$pristine || signupForm.month.$invalid) && (signupForm.month.$error.minlength)">{{'Minimum Length is 2'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.month.$touched) && (signupForm.month.$pristine || signupForm.month.$invalid) && (signupForm.month.$error.maxlength)">{{'Maximum Length is 2'| translate }} </span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-4">
+									
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.date.$touched) && (signupForm.date.$pristine || signupForm.date.$invalid) && (signupForm.date.$error.required)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="date" id="date" placeholder="{{'DD'| translate}}" ng-model="model.signupForm.date"
+                                                ng-required="true" ng-minlength="2" ng-maxlength="2" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.date.$touched) && (signupForm.date.$pristine || signupForm.date.$invalid) && (signupForm.date.$error.required)">{{'Enter date'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.date.$touched) && (signupForm.date.$pristine || signupForm.date.$invalid) && (signupForm.date.$error.pattern)">{{'Enter Valid date Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.date.$touched) && (signupForm.date.$pristine || signupForm.date.$invalid) && (signupForm.date.$error.minlength)">{{'Minimum Length is 2'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.date.$touched) && (signupForm.date.$pristine || signupForm.date.$invalid) && (signupForm.date.$error.maxlength)">{{'Maximum Length is 2'| translate }} </span>
+                                    </div>
+                                    
+                                </div>
+								<div class="col-md-4">
+									
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.year.$touched) && (signupForm.year.$pristine || signupForm.year.$invalid) && (signupForm.year.$error.required)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="year" id="year" placeholder="{{'yyyy'| translate}}" ng-model="model.signupForm.year"
+                                                ng-required="true" ng-minlength="4" ng-maxlength="4" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.year.$touched) && (signupForm.year.$pristine || signupForm.year.$invalid) && (signupForm.year.$error.required)">{{'Enter year'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.year.$touched) && (signupForm.year.$pristine || signupForm.year.$invalid) && (signupForm.year.$error.pattern)">{{'Enter Valid year Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.year.$touched) && (signupForm.year.$pristine || signupForm.year.$invalid) && (signupForm.year.$error.minlength)">{{'Minimum Length is 4'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.year.$touched) && (signupForm.year.$pristine || signupForm.year.$invalid) && (signupForm.year.$error.maxlength)">{{'Maximum Length is 4'| translate }} </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+							
+							<div class="input-group dropdown-block">
+                                <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+                                <select ng-model="model.gender_id" ng-required="true" name="gender_id" class="form-control">
+                                    <option value="">Gender</option>
+                                    <option ng-repeat="genderList in genderLists" value="{{genderList.id}}">{{genderList.name}}</option>
+                                </select>
+                            </div>
+					
+                        <div class="col-md-12 location-info row">
+                            
+                            <div class="row">
+								<div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.is_member.$touched) && (signupForm.is_member.$pristine || signupForm.is_member.$invalid)}">
+									<label class="col-sm-12 form-name"><span class="red">*</span>{{"who's is going to see the Doctor?"| translate}}</label>
+									
+								<div class="col-md-6">
+                          
+							<label>
+    <input type="radio" ng-model="model.is_member" value="1">{{"Myself" | translate }}
+  </label>
+									</div>
+									<div class="col-md-6">
+  <label>
+    <input type="radio" ng-model="model.is_member" value="2">{{"A family member" | translate }}
+  </label>
+									</div>
+									<div class="col-md-6">
+  <label>
+    <input type="radio" ng-model="model.is_member" value="3">{{"Other person" | translate }}
+  </label>
+									</div>
+                        </div>
+									
+						 </div>
+                        </div>
+						
+						<div class="input-group dropdown-block">
+                                <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+                                <select ng-model="model.family_member" ng-required="true" name="family_member" class="form-control">
+                                    <option value="">{{"Select from the list of family member or friend"| translate }}</option>
+                                    <option ng-repeat="genderList in genderLists" value="{{genderList.id}}">{{genderList.name}}</option>
+                                </select>
+                            </div>
+						
+						<div class="col-md-12 location-info row">
+                            
+                            <div class="row">
+								<label class="col-sm-12 form-name"><span>*</span>{{'Add a new Family of Friend'| translate}}</label>
+								<div class="col-md-3">
+									
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.name_member.$touched) && (signupForm.name_member.$pristine || signupForm.name_member.$invalid) && (signupForm.name_member.$error.required)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="name_member" id="name_member" placeholder="{{'Name of the family member or Patient'| translate}}" ng-model="model.signupForm.name_member" ng-required="true" ng-minlength="3"  ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.name_member.$touched) && (signupForm.name_member.$pristine || signupForm.name_member.$invalid) && (signupForm.name_member.$error.required)">{{'Enter Name'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.name_member.$touched) && (signupForm.name_member.$pristine || signupForm.name_member.$invalid) && (signupForm.name_member.$error.pattern)">{{'Enter Valid Name Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.name_member.$touched) && (signupForm.name_member.$pristine || signupForm.name_member.$invalid) && (signupForm.name_member.$error.minlength)">{{'Minimum Length is 3'| translate }} </span>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-3">
+									
+                                     <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+                                <select ng-model="model.family_member" ng-required="true" name="family_member" class="form-control">
+                                    <option value="">{{"Select from the list of family member or friend"| translate }}</option>
+                                    <option ng-repeat="genderList in genderLists" value="{{genderList.id}}">{{genderList.name}}</option>
+                                </select>
+                                    
+                                </div>
+								<div class="col-md-3">
+									
+                                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.age.$touched) && (signupForm.age.$pristine || signupForm.age.$invalid) && (signupForm.year.$error.required)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="age" id="age" placeholder="{{'age'| translate}}" ng-model="model.signupForm.age"
+                                                ng-required="true" ng-minlength="2" ng-maxlength="2" ng-pattern="/^[0-9]*$/"
+                                            />
+                                        </div>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.age.$touched) && (signupForm.age.$pristine || signupForm.age.$invalid) && (signupForm.age.$error.required)">{{'Enter age'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.age.$touched) && (signupForm.age.$pristine || signupForm.age.$invalid) && (signupForm.age.$error.pattern)">{{'Enter Valid age Without Character'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.age.$touched) && (signupForm.age.$pristine || signupForm.age.$invalid) && (signupForm.age.$error.minlength)">{{'Minimum Length is 2'| translate }} </span>
+                                        <span class="error" ng-show="(signupForm.$submitted || signupForm.age.$touched) && (signupForm.age.$pristine || signupForm.age.$invalid) && (signupForm.age.$error.maxlength)">{{'Maximum Length is 2'| translate }} </span>
+                                    </div>
+                                    
+                                </div>
+								<div class="col-md-3">
+									
+                                     <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+                                <select ng-model="model.family_member" ng-required="true" name="family_member" class="form-control">
+                                    <option value="">{{"Select from the list of family member or friend"| translate }}</option>
+                                    <option ng-repeat="genderList in genderLists" value="{{genderList.id}}">{{genderList.name}}</option>
+                                </select>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="form-group progress-reg">
+                        	<div class="col-sm-12">
+                                <p><span></span></p>
+                            </div>
+                        </div>
+    
+                        <div class="form-group checkbox-field" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.termCondition.$touched) && (signupForm.termCondition.$pristine || signupForm.termCondition.$invalid)}">
+                            <div class="checkbox col-sm-12">
+                                <label>
+                                    <input id="terms_cond" class="hide" type="checkbox" name="termCondition" ng-model="model.terms_conditions" ng-required="true">
+                                    {{'Please read and agree to The terms of Use and privace policy'| translate }}
+                                    <span></span>
+                                </label>
+                            </div>
+                            <span class="error" ng-show="(signupForm.$submitted || signupForm.termCondition.$touched) && (signupForm.termCondition.$pristine || signupForm.termCondition.$invalid) && (signupForm.termCondition.$error.required)">{{'Required'| translate }}</span>
+                        </div>
+						<div class="form-group checkbox-field" ng-class="{ 'has-error' : (signupForm.$submitted || signupForm.contract.$touched) && (signupForm.contract.$pristine || signupForm.contract.$invalid)}">
+                            <div class="checkbox col-sm-12">
+                                <label>
+                                    <input id="terms_cond" class="hide" type="checkbox" name="contract" ng-model="model.contract" ng-required="true">
+                                    {{'I have read and agree to Latinomedia '| translate }}
+                                    <span></span>
+                                </label>
+                            </div>
+                            <span class="error" ng-show="(signupForm.$submitted || signupForm.contract.$touched) && (signupForm.contract.$pristine || signupForm.contract.$invalid) && (signupForm.contract.$error.required)">{{'Required'| translate }}</span>
+                        </div>
+                    </div>
+                    <div class="form-footer clearfix">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <div class="pull-left">
+                                <button class="btn btn-green btn-animate" type="submit">{{'Join Now' | translate }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

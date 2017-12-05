@@ -1,0 +1,418 @@
+{
+  "apis": [
+    {
+      "path": "/bookings",
+      "operations": [
+        {
+          "summary": "Get the list of bookings",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Page number for filtering",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "enum": [
+                "upcoming",
+                "waiting for review",
+                "past",
+                "waiting for acceptance",
+                "rejected",
+                "expired",
+                "All"
+              ],
+              "type": "integer",
+              "description": "filter list of booking",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Booking Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort Booking by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings"
+        },
+        {
+          "summary": "Add Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "AddBooking",
+              "paramType": "body",
+              "required": true,
+              "type": "AddBooking",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__bookings"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}/edit",
+      "operations": [
+        {
+          "summary": "Edit Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id__edit"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}",
+      "operations": [
+        {
+          "summary": "Update Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            },
+            {
+              "name": "EditBooking",
+              "paramType": "body",
+              "required": true,
+              "type": "EditBooking",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__bookings__id_"
+        },
+        {
+          "summary": "Show Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id_"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}/paynow",
+      "operations": [
+        {
+          "summary": "Pay Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id__paynow"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}/reject",
+      "operations": [
+        {
+          "summary": "Reject Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id__reject"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}/cancel",
+      "operations": [
+        {
+          "summary": "Cancel Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id__cancel"
+        }
+      ]
+    },
+    {
+      "path": "/bookings/{id}/confirm",
+      "operations": [
+        {
+          "summary": "Confirm Booking",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Booking Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__bookings__id__confirm"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "AddBooking": {
+      "properties": {
+        "item_userable_id": {
+          "type": "integer",
+          "required": true,
+          "description": "The Item Identifier"
+        },
+        "item_userable_type": {
+          "type": "string",
+          "required": true,
+          "description": "The Item Type"
+        },
+        "item_booking_start_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Starting Date"
+        },
+        "item_booking_end_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Ending Date"
+        },
+        "quantity": {
+          "type": "integer",
+          "required": true,
+          "description": "Qunatity"
+        },
+        "coupon_code": {
+          "type": "string",
+          "description": "Coupon Code",
+          "required": false
+        }
+      },
+      "id": "AddBooking"
+    },
+    "EditBooking": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "description": "The Booking identifier"
+        },
+        "item_userable_id": {
+          "type": "integer",
+          "required": true,
+          "description": "The Item Identifier"
+        },
+        "item_userable_type": {
+          "type": "string",
+          "required": true,
+          "description": "The Item Type"
+        },
+        "item_booking_start_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Starting Date"
+        },
+        "item_booking_end_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Ending Date"
+        },
+        "quantity": {
+          "type": "integer",
+          "required": true,
+          "description": "Qunatity"
+        },
+        "coupon_code": {
+          "type": "string",
+          "description": "Coupon Code",
+          "required": false
+        }
+      },
+      "id": "EditBooking"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

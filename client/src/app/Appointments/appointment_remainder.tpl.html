@@ -1,0 +1,23 @@
+<div class="appointment-block app-modal">
+    <div class="page-head">  
+        <h1>{{'Remainder' | translate }}</h1>
+    </div>
+    <form class="form-horizontal form-content appmt-view" name="remainder" ng-submit="remainder_add(remainder.$valid)">
+        <div class="form-group" ng-class="{ 'has-error' : (remainder.reminder_text.$submitted || remainder.reminder_text.reminder_text.$touched) && (remainder.reminder_text.reminder_text.$pristine || remainder.reminder_text.reminder_text.$invalid) && (remainder.reminder_text.reminder_text.$error.required)}">
+            <label >{{'Remainder Text' | translate }}</label>
+            <textarea ng-model="model.remainder.reminder_text" name="reminder_text" placeholder="Remainder text" class="form-control" ng-required="true"></textarea>
+            <span class="error" ng-show="(remainder.reminder_text.$submitted || remainder.reminder_text.$touched) && (remainder.reminder_text.$pristine || remainder.reminder_text.$invalid) && (remainder.reminder_text.$error.required)">{{'Enter Remainder Text'| translate }} </span>
+        </div>
+        
+        <div class="form-group">
+            <label>{{'Remainder on' | translate }}</label>
+            <input class="form-control" ng-model="model.remainder.remind_on" placeholder="Date"  data-date-format="yyyy-MM-dd" data-max-date="{{dobDateLimit}}" data-autoclose="1" name="remind_on" bs-datepicker type="text" ng-required="true">
+            <span class="error" ng-show="(remainder.$submitted || remainder.remind_on.$touched) && (remainder.remind_on.$pristine || remainder.remind_on.$invalid) && (remainder.remind_on.$error.required)">{{'Select Date'| translate }}</span>
+        </div>
+        
+        <div class="form-group education-btn appmt-btn">
+            <button type="submit" class="btn btn-green">{{'Submit' | translate}}</button>
+            <button class="btn cancel" type="button" ng-click="closeModal()">{{'Cancel' | translate}}</button>
+        </div>
+    </form>
+</div>

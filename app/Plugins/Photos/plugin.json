@@ -1,0 +1,9 @@
+{
+	"name": "Photos", 
+	"class": "fa fa-2x fa-file-text",
+	"description": "Doctor Photos",
+	"dependencies": "",
+	"module_id": "",
+	"module_hash": "",
+	"display_order": "9"
+}

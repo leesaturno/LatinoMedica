@@ -1,0 +1,23 @@
+<section class="clearfix pad-63 widget">
+    <div class="container">
+        <div class="form-content col-md-6 col-md-offset-3">
+        	<div class="page-head">
+                <h1>{{'Add Widget'| translate}}</h1>
+            </div>
+            <form name="formValue" method="post" ng-submit="model.widgetAdd(formValue.$valid)" novalidate>
+                <div class="form-body">
+                    <div class="form-group" ng-class="{ 'has-error' : (formValue.$submitted || formValue.website_name.$touched) && (formValue.website_name.$pristine || formValue.website_name.$invalid) && (formValue.website_name.$error.required)}">
+                   		<input type="url" class="form-control" name="website_name" id="website_name" placeholder="{{'Website URL'| translate}}" ng-model="model.formValue.website_name" ng-required="true"/>
+                    	<span class="error" ng-show="(formValue.$submitted || formValue.website_name.$touched) && (formValue.website_name.$pristine || formValue.website_name.$invalid) && (formValue.website_name.$error.required)">{{'Please Enter Website'| translate }} </span>
+                        <span class="error" ng-show="(formValue.$submitted || formValue.website_name.$touched) && (formValue.website_name.$pristine || formValue.website_name.$invalid) && (formValue.website_name.$error.url)">{{'Enter valid website URL - Starts with http://'| translate}}</span>
+
+                    </div>
+                </div>
+                <div class="form-footer education-btn">
+                    <button class="btn btn-green" type="submit">{{'Add'| translate }}</button>
+                    <a href="#/widget/list" class="btn btn-red">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

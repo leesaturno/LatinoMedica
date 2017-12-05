@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs list-inline" role="tablist">
+	<li role="presentation" ng-repeat="tabsMenu in tabsMenus">
+		<a ng-click="switchMenu(tabsMenu.state)" aria-controls="equipo" role="tab" data-toggle="tab"><span class="{{tabsMenu.header_class | translate}}"></span>{{tabsMenu.header_text | translate}}</a>
+	</li>
+</ul>

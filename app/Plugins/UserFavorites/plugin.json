@@ -1,0 +1,9 @@
+{
+	"name": "UserFavorites", 
+	"class": "fa fa-2x fa fa-heartbeat",
+	"description": "For Manage Patient Favorite add a Docotor",
+	"dependencies": "",
+	"module_id": "",
+	"module_hash": "",
+	"display_order": "13"
+}

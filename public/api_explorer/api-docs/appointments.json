@@ -1,0 +1,356 @@
+{
+    "apis": [
+        {
+            "path": "/appointments/{type}",
+            "operations": [
+                {
+                    "summary": "Fetch List of Appointments",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "type",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "For get the List Based on Type (Doctor{'all','today','week','month'}, Patient{'all','pending-approval','approved','cancelled','rejected', 'upcomming_appointment'})",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointments__type"
+                }
+            ]
+        },
+        {
+            "path": "/appointment/{id}",
+            "operations": [
+                {
+                    "summary": "Appointment Detail",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Appointment Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointment__id"
+                }
+            ]
+        },
+        {
+            "path": "/appointment/{id}/{status}",
+            "operations": [
+                {
+                    "summary": "Change Status of Appointment",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Appointment Id",
+                            "required": true
+                        },
+                        {
+                            "name": "status",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Status (Patient {status:cancel}, Doctor {staus:{confirm, decline}})",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointment__id__status"
+                }
+            ]
+        },
+        {
+            "path": "/appointments/booking/{doctorid}/{appt_date}/{appt_time}",
+            "operations": [
+                {
+                    "summary": "Get Booknig Appointment Step1 Detail",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_date",
+                            "paramType": "path",
+                            "type": "date",
+                            "description": "Appointment Date",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_time",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Appointment Time",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointments__booking__doctorid__appt_date__appt_time"
+                }
+            ]
+        },
+        {
+            "path": "/appointments/booking/{doctorid}/{appt_date}/{appt_time}/{workplaceid}",
+            "operations": [
+                {
+                    "summary": "Get Booknig Appointment with Workplace Detail",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_date",
+                            "paramType": "path",
+                            "type": "date",
+                            "description": "Appointment Date",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_time",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Appointment Time",
+                            "required": true
+                        },
+                        {
+                            "name": "workplaceid",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Work Place Id",
+                            "required": true
+                        },
+                        {
+                            "name": "family_friend_id",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Family friend Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointments__booking__doctorid__appt_date__appt_time__workplaceid_"
+                }
+            ]
+        },
+        {
+            "path": "/appointments/booking/{doctorid}/{appt_date}/{appt_time}/step2",
+            "operations": [
+                {
+                    "summary": "Get Booknig Appointment Step2 Detail",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_date",
+                            "paramType": "path",
+                            "type": "date",
+                            "description": "Appointment Date",
+                            "required": true
+                        },
+                        {
+                            "name": "appt_time",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "Appointment Time",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointments__booking__doctorid__appt_date__appt_time__step2"
+                }
+            ]
+        },
+        {
+            "path": "/appointments/booking/add",
+            "operations": [
+                {
+                    "summary": "Patient AAppointment Booking",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "Booking",
+                            "paramType": "body",
+                            "type": "Booking",
+                            "description": "Booking Docotor Appointment",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__appointments__booking__add"
+                }
+            ]
+        },
+        {
+            "path": "/appointments/export/{type}/{formet}",
+            "operations": [
+                {
+                    "summary": "Export List of Appointments",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "type",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "For get the List Based on Type (Doctor{'all','today','week','month'}, Patient{'all','pending-approval','approved','cancelled','rejected'})",
+                            "required": true
+                        },
+                        {
+                            "name": "formet",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "For Export Based on Type ('excel','pdf')",
+                            "required": true
+                        },
+                        {
+                            "name": "token",
+                            "paramType": "query",
+                            "type": "string",
+                            "description": "For Token",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__appointments__type__formet"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "Booking": {
+            "properties": {
+                "step1value": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Need to Convert the Objects in to string and Base6Encode"
+                },
+                "step2value": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Need to Convert the Objects in to string and Base6Encode"
+                }
+            }
+        }
+    },
+    "swaggerVersion": "1.2",
+    "apiVersion": "1",
+    "basePath": "http://abssalvador.localhost/api"
+}

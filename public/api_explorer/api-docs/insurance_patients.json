@@ -1,0 +1,226 @@
+{
+  "apis": [
+    {
+      "path": "/insured_patients",
+      "operations": [
+        {
+          "summary": "Fetch List of insured_patients",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The workplace Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort workplace by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__insured_patients"
+        },
+        {
+          "summary": "Store insured_patients",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "InsurancePatientAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "InsurancePatientAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__insured_patients"
+        }
+      ]
+    },
+    {
+      "path": "/insured_patients/{id}",
+      "operations": [
+        {
+          "summary": "Update insured_patients",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The insured_patients Identifier"
+            },
+            {
+              "name": "InsurancePatientEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "InsurancePatientEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__insured_patients__id_"
+        },
+        {
+          "summary": "Fetch particular workplace",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The workplace Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__insured_patients__id_"
+        },
+        {
+          "summary": "Delete workplace",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The workplace Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__insured_patients__id_"
+        }
+      ]    
+    }
+  ],
+  "models": {
+    "InsurancePatientAdd": {
+      "properties": {
+        "doctor_id":{
+		      "type": "integer",
+          "required": true,
+          "description": "The Insurance Doctor Id"
+        },
+        "insurance_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "The Insurance Patient Id"
+        },
+        "allowed_patients":{
+          "type": "intgeger",
+            "required": false,
+            "description": "Allowed Patients"
+        }
+      },
+      "id": "InsurancePatientAdd"
+    },
+    "InsurancePatientEdit": {
+      "properties": {
+        "doctor_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "The Insurance Doctor Id"
+        },
+        "insurance_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "The Insurance Patient Id"
+        },
+        "allowed_patients":{
+          "type": "intgeger",
+            "required": false,
+            "description": "Allowed Patients"
+        }
+      },
+      "id": "InsurancePatientEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

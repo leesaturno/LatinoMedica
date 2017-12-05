@@ -1,0 +1,232 @@
+{
+  "apis": [
+    {
+      "path": "/search",
+      "operations": [
+        {
+          "summary": "For search the doctor's",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Give which page to be loaded",
+              "required": false
+            },
+            {
+              "name": "specialty_id",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Search by Specialty",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "gender_id",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Search by Gender",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "language_id",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Search by Doctor using Language",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "city_id",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Search by Doctor using City",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "specialty_disease_id",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Search by Doctor using Specialty Disease",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "doctor",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search by Doctor using name",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "insurance_id",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Search by Doctor using Insurance",
+              "required": false,
+              "format": "int64"
+            },
+            {
+              "name": "appointment",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search by Doctor using ('today', 'threeday')",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__search"
+        }
+      ]
+    },
+    {
+      "path": "/search/weeklist/{usersid}/{viewslotid}",
+      "operations": [
+        {
+          "summary": "For get the week list details",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "usersid",
+              "paramType": "path",
+              "type": "string",
+              "required": true,
+              "description": "User's Id which is weekids in Serch Response"
+            },{
+              "name": "viewslotid",
+              "paramType": "path",
+              "type": "integer",
+              "required": true,
+              "description": "For Previous or Next Slot which is viewslot in Search Response"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__search__weeklist__usersid__viewslotid_"
+        }
+      ]
+    },
+    {
+      "path": "/search/getdoctorweeklist/{usersid}/{viewslotid}",
+      "operations": [
+        {
+          "summary": "For get the week list details",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "usersid",
+              "paramType": "path",
+              "type": "string",
+              "required": true,
+              "description": "User's Id which is weekids in Serch Response"
+            },
+            {
+              "name": "viewslot",
+              "paramType": "path",
+              "type": "integer",
+              "required": true,
+              "description": "For Previous or Next Slot which is viewslot in Search Response"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__search__getdoctorweeklist__usersid__viewslotid_"
+        }
+      ]
+    },
+    {
+      "path": "/search/getdoctorweeklist/{usersid}/{viewslotid}/{workplaceid}",
+      "operations": [
+        {
+          "summary": "For get the week list details",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "usersid",
+              "paramType": "path",
+              "type": "string",
+              "required": true,
+              "description": "User's Id which is weekids in Serch Response"
+            },
+            {
+              "name": "viewslot",
+              "paramType": "path",
+              "type": "integer",
+              "required": true,
+              "description": "For Previous or Next Slot which is viewslot in Search Response"
+            },
+            {
+              "name": "workplaceid",
+              "paramType": "path",
+              "type": "integer",
+              "required": true,
+              "description": "Doctor workplace id"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__search__weeklist__usersid__viewslotid_workplaceid_"
+        }
+      ]
+    } 
+  ],
+  "models": {},
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

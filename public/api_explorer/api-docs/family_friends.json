@@ -1,0 +1,352 @@
+{
+  "apis": [
+    {
+      "path": "/family_friends",
+      "operations": [
+        {
+          "summary": "Fetch List of family_friends",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search family friends(first_name,last_name and email)",
+              "required": false,
+              "format": "string"
+            },            
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The family Friends Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort family Friends by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__familyfriends"
+        },
+        {
+          "summary": "Store familyfriends",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "FamilyfriendAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "FamilyfriendAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__familyfriends"
+        }
+      ]
+    },
+    {
+      "path": "/family_friends/{id}",
+      "operations": [
+        {
+          "summary": "Update Family friends",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Family Friends Identifier"
+            },
+            {
+              "name": "familyfriendEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "familyfriendEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__familyfriends__id_"
+        },
+        {
+          "summary": "Fetch particular familyfriend",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The familyfriend Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__familyfriends__id_"
+        },
+        {
+          "summary": "Delete familyfriend",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The familyfriend Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__familyfriends__id_"
+        }
+      ]    
+    }
+  ],
+  "models": {
+    "FamilyfriendAdd": {
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "last_name": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "email": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "relationship": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "city_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "City"
+        },
+        "country_id":{
+          "type": "integer",
+              "required": false,
+              "description": "Country"
+        },
+        "state_id":{
+          "type": "integer",
+              "required": false,
+              "description": "State"
+        },
+         "zipcode":{
+          "type": "integer",
+              "required": false,
+              "description": "zipcode"
+        },
+        "work_phone": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Work Phone number"
+        },
+        "home_phone": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Home Phone number"
+        },
+        "gender_id":{
+		  "type": "integer",
+          "required": true,
+          "description": "Gender Id"
+        },
+         "mobile":{
+		  "type": "string",
+          "required": true,
+          "description": "Mobile"
+        },
+        "address": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "address1": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "dob": {
+          "type": "string",
+          "required": true,
+          "description": "Dob"
+        }
+      },
+      "id": "FamilyfriendAdd"
+    },
+    "familyfriendEdit": {
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "last_name": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "email": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "relationship": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "city_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "City"
+        },
+        "country_id":{
+          "type": "integer",
+              "required": false,
+              "description": "Country"
+        },
+        "state_id":{
+          "type": "integer",
+              "required": false,
+              "description": "State"
+        },
+         "zipcode":{
+          "type": "integer",
+              "required": false,
+              "description": "zipcode"
+        },
+        "work_phone": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Work Phone number"
+        },
+        "home_phone": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "Home Phone number"
+        },
+        "gender_id,":{
+		      "type": "integer",
+          "required": true,
+          "description": "Gender Id"
+        },
+        "address": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+        "address1": {
+          "type": "string",
+          "required": true,
+          "description": "Location"
+        },
+         "dob": {
+          "type": "string",
+          "required": true,
+          "description": "Dob"
+        }
+      },
+      "id": "familyfriendEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

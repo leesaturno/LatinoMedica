@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <div class="row">
+                <div class="col-sm-3 edit-left">
+                    <display-template name="User/sidemenu.tpl.html"></display-template>
+                </div>
+                <div class="col-sm-9">
+                    <section class="clearfix notifications setting-page">
+                        <div class="page-head">
+                            <h1>{{"Notifications" | translate }}</h1>
+                        </div>
+                        <div class="form-content">
+                            <form name="notification" ng-submit="model.notification()">
+                                <div class="form-body">
+                                    <div class="clearfix">
+                                        <div class="col-md-12">
+                                            <div class="form-group checkbox-field">
+                                                <label for="name">{{"E-mails" | translate }}</label>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="hide" ng-model="model.formValue.is_remind_email_wellness" ng-checked="(model.formValue.is_remind_email_wellness == '1') ? true : false" ng-true-value="1" ng-false-value="0"> {{"Wellness reminders" | translate }}
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="col-md-12">
+                                            <div class="form-group checkbox-field">
+                                                <label>{{"Application Settings" | translate }}</label>
+                                                <p>{{"Download the latinomedica" | translate }}<a href="javascript:void(0)">{{"Android app" | translate }}</a>{{"
+                                                    or the" | translate }} <a href="javascript:void(0)">{{"Iphone app" | translate }}</a>.</p>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="hide" ng-model="model.formValue.is_remind_app_appointments" ng-checked="(model.formValue.is_remind_app_appointments == '1') ? true : false" ng-true-value="1" ng-false-value="0"> {{"Notify appointment reminders" | translate }}
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="hide" ng-model="model.formValue.is_remind_app_appointment_changed"  ng-checked="(model.formValue.is_remind_app_appointment_changed == '1') ? true : false" ng-true-value="1" ng-false-value="0"> {{"Notify if your appointment is reprogrammed or cancelled" | translate }}
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="hide" ng-model="model.formValue.is_remind_app_wellness" ng-checked="(model.formValue.is_remind_app_wellness == '1') ? true : false" ng-true-value="1" ng-false-value="0"> {{"Notify wellness reminders" | translate }}
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-footer appmt-btn">
+                                    <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

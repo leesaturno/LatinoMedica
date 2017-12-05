@@ -1,0 +1,416 @@
+Más..<div class="doctor-search">
+    <div class="search-block">
+        <div class="container">
+        	<div class="col-md-12 home-search">
+                <form data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:100}" class="form-inline col-md-12" name="homeSearchForm"  ng-submit="model.refinesearch()" novalidate>
+                    <div class="row">
+                        <div class="form-group speciality col-md-6">
+                            <div angucomplete-alt id="ex1" ng-model="model.doctor" placeholder="{{'Specialty, Doctors Name'| translate }}" maxlength="50" pause="100" selected-object="selectedCountry" local-data="autocomplete" search-fields="name" title-field="name" minlength="1" image-field="image" input-class="form-control form-control-small" match-class="highlight" ></div>
+                        </div>
+                        <div class="form-group city col-md-2">
+                            <select ng-model="model.city_id" class="form-control" name="city_id"  ng-options="citiesliList.id as citiesliList.name for citiesliList in citiesliLists">
+                                <option value="">{{'City'| translate }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group insurance col-md-3">
+                            <select ng-model="model.insurance_id" class="form-control" name="insurance_id"  ng-options="insurance.id as insurance.name for insurance in insurances">
+                                <option value="">{{'Insurance'| translate }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-btn col-md-1">
+                            <button class="btn btn-block btn-sblue btn-animate" type="submit"><i class="fa fa-search fa-inverse" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+				 </form>
+            </div>
+     	</div>
+  	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 doctor-search-left">
+                <h3>{{'Doctors or Specialists' | translate }}</h3>
+                <div class="row">
+                    <div class="form-inline col-md-5">
+                        <div class="form-group select-opt">
+                             <select ng-click="model.formFilter(0,0)" ng-model="model.specialty_disease_id" class="form-control" name="specialty_disease_id"  ng-options="specialtyDiseasliList.id as specialtyDiseasliList.name for specialtyDiseasliList in specialtyDiseasliLists">
+                                    <option value="">{{'Specialists'| translate }}</option>
+                             </select>
+                        </div>
+                    </div>
+                    <ul class="list-inline clearfix col-md-6">
+                        <li ng-click="model.formFilter(1,0)" ng-class="(model.gender_id == '' || model.gender_id == undefined) ? 'active' : ''">
+                            <a href="javascript:void(0)" >{{'Any gender'| translate }}</a>
+                        </li>
+                        <li ng-click="model.formFilter(1,1)" ng-class="(model.gender_id == 1) ? 'active' : ''">
+                            <a href="javascript:void(0)" >{{'Male'| translate }}</a>
+                        </li>
+                        <li ng-click="model.formFilter(1,2)" ng-class="(model.gender_id == 2) ? 'active' : ''">
+                            <a href="javascript:void(0)">{{'Female'| translate }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="pull-left" ng-if="model.specialtyDetail.name">{{ model.specialtyDetail.name | translate }} {{'and other suppliers in Venezuela'| translate }}</p>
+                <div class="search-responsive col-md-12">
+                    <div class="search-result clearfix">
+                        <div class="search-result-header clearfix">
+                        	<ul class="list-inline col-md-7">
+                                <li ng-click="model.formFilter(2,0)" ng-class="(model.appointment == '' || model.appointment == undefined) ? 'active' : ''"><a href="javascript:void(0)">{{'Any Day'| translate }}</a></li>
+                                <li ng-click="model.formFilter(2,1)" ng-class="(model.appointment == 'today') ? 'active' : ''"><a href="javascript:void(0)">{{'Today'| translate }}</a></li>
+                                <li ng-click="model.formFilter(2,2)" ng-class="(model.appointment == 'threeday') ? 'active' : ''"><a href="javascript:void(0)">{{'Next 3 days'| translate }}</a></li>
+                                <!--<li><a href="javascript:void(0)">Filter(1)</a></li>-->
+                            </ul>
+
+                            <div class="col-md-5 pull-right">
+                                <div class="week-hender">
+                                    <ul class="search-week-ul list-inline text-center">
+                                        <li class="search-left-arrow"><a href="javascript:void(0)" ng-click="prevWeek()"> <i class="fa fa-angle-left fa-2x"></i></a></li>
+                                        <li>
+                                            <ul class="list-unstyled">
+                                                <li>{{today.day}}</li>
+                                                <li>{{today.date}}</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="list-unstyled">
+                                                <li>{{day2.day}}</li>
+                                                <li>{{day2.date}}</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="list-unstyled">
+                                                <li>{{day3.day}}</li>
+                                                <li>{{day3.date}}</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="list-unstyled">
+                                                <li>{{day4.day}}</li>
+                                                <li>{{day4.date}}</li>
+                                            </ul>
+                                        </li>
+                                        <li class="search-right-arrow"><a href="javascript:void(0)" ng-click="nextWeek()"> <i class="fa fa-angle-right fa-2x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-loading-div" id="search-loading-div">
+                            <div id="loading" class="loadAng">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        <div class="search-result-div" id="search-result-div">
+                            <div class="doctor-list clearfix" ng-repeat="doctorList in searchLists" ng-if="searchRecordShow">
+                                <div class="col-md-7 doctor-detail text-center hidden-sm hidden-xs">
+                                	<div class="row">
+                                    	<div class="col-lg-6">
+                                           <div class="doctor-profile-image" ng-class="(doctorList.data.User.data.is_verified == '1') ? 'certified-tag' : ''" >
+                                                <a href="#/doctor/{{doctorList.data.User.data.username}}"><img class="img-responsive" ng-src="{{doctorList.data.User.data.attachmentable.data.thumb.medium}}" alt="doctor"/></a>
+                                            </div>
+                                            <div class="doctor-profile-details">
+                                                <p class="doctor-rating">
+                                                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctorList.starRating"></input-stars>
+
+                                                </p>
+                                                <p><span>Codigo: <a href="javascript:void(0)">{{doctorList.data.User.data.user_code}}</a></span></p>
+                                                <div class="specialist-footer clearfix">
+                                                    <div class="col-md-5">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{doctorList.data.User.data.points}}
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i> {{doctorList.data.User.data.doctor_view_count}}
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2 share">
+                                                        <a href="javascript:void(0)" class="js-share-open" data-index="{{$index}}">
+                                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                                        </a>
+                                                        <div class="social-share js-social-share" id="js-social-share{{$index}}">
+                                                        	<div><a facebook class="facebookShare" data-url='http://google.com' data-shares='shares'>{{ 'Share' | translate }}</a></div>
+                                                            <div><a twitter  data-lang="en" data-count='horizontal' data-url='http://google.com' data-via='notsosleepy' data-size="medium" data-text='Testing Twitter Share' ></a></div>
+                                                            <div gplus class="g-plus" data-size="tall" data-annotation="bubble" data-href='http://google.com' data-action='share'></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 doctor-detail-right text-left">
+                                        	<div>
+                                            	<h5><a href="#/doctor/{{doctorList.data.User.data.username}}">{{doctorList.data.display_name}}</a></h5>
+                                                <span>{{doctorList.work_place.data.location}}</span>
+                                            </div>
+                                            <div>
+                                            	<p>Especialidades</p>
+                                                <span ng-if="doctorList.data.specialties.length > 0">
+                                                    {{doctorList.data.specialties | array_to_string | translate }}
+                                                </span>
+                                            </div>
+                                            <div>
+                                            	<p>Lugar favorito de trabajo</p>
+                                                <span>{{doctorList.work_place.data.location}}</span>
+                                            </div>
+                                            <div>
+                                            	<p>Precio de primer cita</p>
+                                                <span class="highlight">
+                                                    ${{doctorList.work_place.data.price}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 doctor-booking-details doctor_{{doctorList.data.user_id}}_loadMore">
+                                    <ul class="search-week-ul list-inline text-center">
+                                        <li>
+                                            <ul class="list-unstyled" ui-if="!!doctorList[today.day].length">
+                                                <li class="hidden visible-xs detail-head">{{today.day}}</li>
+                                                <li ng-repeat="todaySlot in doctorList[today.day] track by $index">
+                                                    <span ng-show="todaySlot != '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{today.dateFormatted}}/{{todaySlot}}/{{doctorList.work_place_id}}" class="btn">{{todaySlot}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{today.dateFormatted}}/{{todaySlot}}/{{doctorList.work_place_id}}" class="btn">{{todaySlot}}</a>
+                                                        </span>
+                                                    </span>
+                                                    <span ng-show="todaySlot == '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                           <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="list-unstyled" ui-if="!!doctorList[day2.day].length">
+                                                <li class="hidden visible-xs detail-head">{{day2.day}}</li>
+                                                <li ng-repeat="Day2 in doctorList[day2.day] track by $index">
+                                                    <span ng-show="Day2 != '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day2.dateFormatted}}/{{Day2}}/{{doctorList.work_place_id}}" class="btn">{{Day2}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day2.dateFormatted}}/{{Day2}}/{{doctorList.work_place_id}}" class="btn">{{Day2}}</a>
+                                                        </span>
+                                                    </span>
+                                                    <span ng-show="Day2 == '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                           <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <ul class="list-unstyled" ui-if="!!doctorList[day3.day].length">
+                                                <li class="hidden visible-xs detail-head">{{day3.day}}</li>
+                                                <li ng-repeat="Day3 in doctorList[day3.day] track by $index">
+                                                    <span ng-show="Day3 != '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day3.dateFormatted}}/{{Day3}}/{{doctorList.work_place_id}}" class="btn">{{Day3}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day3.dateFormatted}}/{{Day3}}/{{doctorList.work_place_id}}" class="btn">{{Day3}}</a>
+                                                        </span>
+                                                    </span>
+                                                    <span ng-show="Day3 == '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                           <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="list-unstyled" ui-if="!!doctorList[day4.day].length">
+                                                <li class="hidden visible-xs detail-head">{{day4.day}}</li>
+                                                <li ng-repeat="Day4 in doctorList[day4.day] track by $index">
+                                                    <span ng-show="Day4 != '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day4.dateFormatted}}/{{Day4}}/{{doctorList.work_place_id}}" class="btn">{{Day4}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="#/appointments/booking/{{doctorList.data.user_id}}/{{day4.dateFormatted}}/{{Day4}}/{{doctorList.work_place_id}}" class="btn">{{Day4}}</a>
+                                                        </span>
+                                                    </span>
+                                                    <span ng-show="Day4 == '--'">
+                                                        <span ng-if="$index < appointmentLoadMore">
+                                                           <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                        </span>
+                                                        <span ng-if="$index >= appointmentLoadMore" class="hide showmore_{{doctorList.data.user_id}}">
+                                                            <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 doctor-detail text-center visible-sm visible-xs">
+                                	<div class="row">
+                                    	<div class="col-lg-6">
+                                          	<div class="doctor-profile-image" ng-class="(doctorList.data.User.data.is_verified == '1') ? 'certified-tag' : ''" >
+                                                <img class="img-responsive" ng-src="{{doctorList.data.User.data.attachmentable.data.thumb.medium}}" alt="doctor"/>
+                                            </div>
+                                            <div class="doctor-profile-details">
+                                                <p class="doctor-rating">
+                                                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctorList.starRating"></input-stars>
+                                                </p>
+                                                <p><span>Code: <a href="javascript:void(0)">LM-000-001</a></span></p>
+                                                <p class="specialist-footer clearfix">
+                                                    <span class="col-md-5">
+                                                    <a href="javascript:void(0)">
+                                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{doctorList.data.User.data.points}}
+                                                    </a>
+                                                    </span>
+                                                    <span class="col-md-5">
+                                                    <a href="javascript:void(0)">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i> {{'11000' | translate}}
+                                                    </a>
+                                                    </span>
+                                                    <span class="col-md-2">
+                                                    <a href="javascript:void(0)" class="share">
+                                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                                    </a>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="searchRecordShow == '0'" class="no-record-field">
+                                <p class="hor-space alert alert-danger">{{'No Doctor Found' |translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="paging col-md-12 text-right" ng-if="searchRecordShow">
+                            <paging
+                                    page="PaginateValues.current_page"
+                                    page-size="PaginateValues.per_page"
+                                    total="PaginateValues.total"
+                                    pg-href={{paginateUrl}}&page={page}
+                                    text-first="First"
+                                    text-last="Last"
+                                    text-next="&#xf105"
+                                    text-prev="&#xf104"
+                                    text-title-page="Page {page}"
+                                    text-title-first="First hover"
+                                    text-title-last="Last hover"
+                                    text-title-next="Next hover"
+                                    text-title-prev="Prev hover"
+                                    show-prev-next="true"
+                                    show-first-last="false"
+                                    ng-click="model.paginateRedirect()"
+                            >
+                            </paging>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 search-block doctor-search-right">
+                <div class="map-block col-md-12">
+                    <div map-lazy-load="https://maps.google.com/maps/api/js">
+                        <ng-map zoom="1" center="[{{cenLat}}, {{cenLong}}]" class="map-height">
+                            <marker ng-repeat="mapPosition in mappositions" id='{{mapPosition.id}}' position="{{mapPosition.lat}}, {{mapPosition.lon}}" on-click="showDetail(mapPosition)" icon="assets/img/hospital-marker.png"></marker>
+                            <info-window id="doctor-info">
+                                <div ng-non-bindable="">
+                                    <div class="dr-avatar"> <img class="img-responsive" ng-src="{{doctorInfo.avatar}}" alt="{{'Dr.'| translate }}{{doctorInfo.doctor_name}}"/> </div>
+                                    <div class="dr-heading">
+                                        <h4>{{'Dr.'| translate }}{{doctorInfo.doctor_name}}</h4>
+                                        <div class="dr-rate"><input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star-o" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctorInfo.rating"></input-stars></div>
+                                        <div class="dr-location">
+                                            <div class="address1">{{doctorInfo.address1}}</div>
+                                            <div class="address2">{{doctorInfo.address2}}</div>
+                                        </div>
+                                    </div>
+                                    <a href="#/doctor/{{doctorInfo.username}}" class="btn btn-block btn-green btn-xs">{{'Book Online'| translate }}</a>
+                                </div>
+                            </info-window>
+                        </ng-map>
+                    </div>
+                </div>
+                <div class="col-md-12 map-bottom">
+                    <span ng-if="model.specialtyDetail.name">
+                        <h5>{{ model.specialtyDetail.name | translate }}</h5>
+                        <p>{{ model.specialtyDetail.description | translate }}</p>
+                        <a href="#/users/register/doctor" class="pull-right">Leer Más..</a>
+                    </span>
+                    <h5>Especialidades</h5>
+                    <p>{{'Dentistry has several specialties specified:'| translate }}</p>
+                    <p><strong>{{'Oral Rehabilitation:.'| translate }}</strong>{{'is the part of dentistry in charge of the restoration, and that is to  recover the physiological and aesthetic function through the use of dental prostheses and other measures '| translate }}</p>
+                    <p><strong>{{'Periodontics or Periodontal.'| translate }}</strong>{{' its a branch of dentistry specialized in the diagnostic, prevention and treatment of periodontal diseases'| translate }}</p>
+                    <a href="#/users/register/doctor" class="pull-right">Leer Más..</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Start: Find Doctor -->
+                <div class="find-doctor">
+                    <h2>Find Doctors by...</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="change-location city">
+                                <h4><span>Ciudad</span></h4>
+                                <ul class="list-unstyled" ng-init="citiesliList=5" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                                    <li ng-repeat="citiesliList in citiesliLists | limitTo:citiesliList track by $index" class="search-list-iteams">
+                                        <a href="javascript:void(0)" ng-click="model.pageRedirect('city_id=' + citiesliList.id)">{{citiesliList.name}}</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn-more" ng-click="$parent.citiesliList=citiesliLists.length" ng-if="citiesliList==5">Más..</a>
+                                        <a class="btn-more" ng-click="$parent.citiesliList=5" ng-if="citiesliList!=5">Less</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="change-location specialty">
+                                <h4><span>Especialidad</span></h4>
+                                <ul class="list-unstyled" ng-init="specialtyliList=5" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                                    <li ng-repeat="specialtyliList in specialtyliLists | limitTo:specialtyliList track by $index">
+                                        <a href="javascript:void(0)" ng-click="model.pageRedirect('specialty_id=' + specialtyliList.id)">{{specialtyliList.name}}</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn-more" ng-click="$parent.specialtyliList=specialtyliLists.length" ng-if="specialtyliList==5">Más..</a>
+                                        <a class="btn-more" ng-click="$parent.specialtyliList=5" ng-if="specialtyliList!=5">Less</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="change-location insurance">
+                                <h4><span>Lenguajes</span></h4>
+                                <ul class="list-unstyled" ng-init="languageList=5" ng-scrollbars ng-scrollbars-config="scrollbarConfig">
+                                    <li ng-repeat="languageList in languagesLists | limitTo:languageList track by $index">
+                                        <a href="javascript:void(0)" ng-click="model.pageRedirect('language_id=' + languageList.id)">{{languageList.name}}</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn-more" ng-click="$parent.languageList=languageLists.length" ng-if="languageList==5">Más..</a>
+                                        <a class="btn-more" ng-click="$parent.languageList=5" ng-if="languageList!=5">Less</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p>{{'Or search by Name,'| translate }}, <span>{{'Practice'| translate }}</span>, <span>{{'Comments'| translate }}</span>, <span>{{'Hospital'| translate }}</span>, <span>{{'Language'| translate }}</span></p>
+                </div>
+                <!-- End: Find Doctor -->
+   			</div>
+		</div>
+ 	</div>
+</div>

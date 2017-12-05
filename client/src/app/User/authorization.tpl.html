@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <div class="row">
+                <div class="col-sm-3 edit-left">
+                    <display-template name="User/sidemenu.tpl.html"></display-template>
+                </div>
+                <div class="col-sm-9">
+						<section class="clearfix authorisation setting-page">
+							<div class="page-head">    
+								<h1>{{"Authorization" | translate }}</h1>
+							</div>
+							<div class="form-content">
+								<form name="authorizeddoctor_add" method="post" ng-submit="model.addDoctor(authorizeddoctor_add.$valid)" novalidate>
+									<div class="form-body">
+										<div class="clearfix">
+											<div class="col-md-8">
+												<div class="form-group" ng-class="{ 'has-error' : (authorizeddoctor_add.$submitted || authorizeddoctor_add.doctor_id.$touched) && (authorizeddoctor_add.doctor_id.$pristine || authorizeddoctor_add.doctor_id.$invalid) && (authorizeddoctor_add.doctor_id.$error.required)}">
+													<span>{{"(I) "}} {{$root.auth.user_profile.display_name}} {{" Authorize" | translate }}</span>
+													
+													<input type="text" class="form-control" name="doctor_id" id="doctor_id" placeholder="{{'Enter Doctor code'| translate}}" ng-model="model.authorizedDoctor.doctor_id" ng-required="true">
+													<span class="error" ng-show="(authorizeddoctor_add.$submitted || authorizeddoctor_add.doctor_id.$touched) && (authorizeddoctor_add.doctor_id.$pristine || authorizeddoctor_add.doctor_id.$invalid) && (authorizeddoctor_add.doctor_id.$error.required)">{{"Enter doctor code" | translate }} </span>
+												</div>
+												
+											</div>
+											<div class="col-md-4">
+												<input type="submit" class="btn pull-right btn-green btn-animate" value="{{'Authorize' | translate }}" />
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="clearfix">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group clearfix">
+                                                <label>{{'Authorized Doctors'| translate}}</label>
+                                                <div class="clearfix" ng-repeat="doctorsList in model.doctorsLists.data" ng-show="model.dataLength">
+                                                    <p class="pull-left">{{doctorsList.doctor.user_profile.display_name}}{{" | "}}<a href="javascript:void(0)">{{doctorsList.doctor.user_profile.specialties[0].name}}</a></p>
+                                                    <a class="pull-right" href="javascript:void(0)" ng-click="model.removeDoctor(doctorsList.id)" >{{"Revoke" | translate }}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="clearfix" ng-show="!model.dataLength">
+									 <p class="hor-space alert alert-danger">{{'No Record Found'|translate}}</p>
+								</div>
+								 <div class="paging clearfix text-center" ng-show="model.dataLength">
+									<uib-pagination total-items="model._metadata.total" num-pages="model._metadata.total_pages" ng-model="model.currentPage" max-size="model.maxSize" boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="model._metadata.per_page" previous-text="&#xf104;" next-text="&#xf105;" ng-change="model.paginate()"></uib-pagination>
+								</div>
+							</div>
+					</section>
+					</div>
+            </div>
+        </div>
+    </div>
+</div>

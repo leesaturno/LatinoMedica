@@ -1,0 +1,9 @@
+{
+	"name": "QuestionAnswer",
+	"class": "fa fa-2x fa fa-book",
+	"description": "By enable the plugin patients can raise a question and doctors can reply the answers.",
+	"dependencies": "",
+	"module_id": "",
+	"module_hash": "",
+	"display_order": "18"
+}

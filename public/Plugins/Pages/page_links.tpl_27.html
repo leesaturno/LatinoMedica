@@ -1,0 +1,112 @@
+<div class="col-md-2 col-xs-6 footer-cities">
+    <h3>{{'Latinomedica' | translate}}</h3>
+    <ul class="list-unstyled footer-menu" ng-scrollbars ng-scrollbars-config="scrollbarConfig" ng-init="phaseOneList=model.footerScrollCount">
+        <li ng-repeat="phase1 in model.phaseOne | limitTo:phaseOneList track by $index">
+            <a ui-sref="pages({ slug: phase1.slug })">
+                {{phase1.title | translate}}
+            </a>
+        </li>
+        <li>
+            <a ng-click="$parent.phaseOneList=model.phaseOne.length" ng-if="phaseOneList==model.footerScrollCount">Más...</a>
+            <a ng-click="$parent.phaseOneList=model.footerScrollCount" ng-if="phaseOneList!=model.footerScrollCount">Menos</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-2 col-xs-6 footer-cities">
+    <h3>{{'Search For' | translate}}</h3>
+    <ul class="list-unstyled footer-menu" ng-scrollbars ng-scrollbars-config="scrollbarConfig" ng-init="phaseTwoList=model.footerScrollCount">
+        <li ng-repeat="phase2 in model.phaseTwo | limitTo:phaseTwoList track by $index">
+            <a ui-sref="search({ slug: phase2.slug })">
+                {{phase2.title | translate}}
+            </a>
+        </li>
+        <li>
+            <a ng-click="$parent.phaseTwoList=model.phaseTwo.length" ng-if="phaseTwoList==model.footerScrollCount">Más...</a>
+            <a ng-click="$parent.phaseTwoList=model.footerScrollCount" ng-if="phaseTwoList!=model.footerScrollCount">Menos</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-2 col-xs-6 footer-cities">
+    <h3>{{'Cities' | translate}}</h3>
+    <ul class="list-unstyled footer-menu" ng-scrollbars ng-scrollbars-config="scrollbarConfig" ng-init="phaseThreeList=model.footerScrollCount">
+        <li ng-repeat="phase3 in model.phaseThree | limitTo:phaseThreeList track by $index">
+            <a ui-sref="search({ city_id: phase3.id })">
+                {{phase3.name | translate}}
+            </a>
+        </li>
+        <li>
+            <a ng-click="$parent.phaseThreeList=model.phaseThree.length" ng-if="phaseThreeList==model.footerScrollCount">Más...</a>
+            <a ng-click="$parent.phaseThreeList=model.footerScrollCount" ng-if="phaseThreeList!=model.footerScrollCount">Menos</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-3 col-xs-6 footer-featured">
+    <h3>{{'Featured Specials' | translate}}</h3>
+    <ul class="list-unstyled footer-menu" ng-scrollbars ng-scrollbars-config="scrollbarConfig" ng-init="phaseFourList=model.footerScrollCount">
+        <li ng-repeat="phase4 in model.phaseFour | limitTo:phaseFourList track by $index">
+            <a ui-sref="search({ specialty_id: phase4.id })">
+                {{phase4.name | translate}}
+            </a>
+        </li>
+        <li>
+            <a ng-click="$parent.phaseFourList=model.phaseFour.length" ng-if="phaseFourList==model.footerScrollCount">Más...</a>
+            <a ng-click="$parent.phaseFourList=model.footerScrollCount" ng-if="phaseFourList!=model.footerScrollCount">Menos</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-3 col-xs-12 ">
+    <div>
+        <h3>{{'Are you a Great Doctor?' | translate}}</h3>
+        <ul class="list-unstyled footer-menu">
+            <li>
+                <a href="#/users/practice?signin=1">{{'Join Latinomédica!' | translate}}</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">{{'Latinomédica for Business' | translate}}</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">{{'Latinomédica for health systems' | translate}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="follow-us">
+        <h3>Siguenos en</h3>
+        <ul class="list-inline social-link">
+            <li>
+                <a title="{{'Linkedin' | translate}}" ng-show="$root.settings['follow.linkedin_url']" href="{{$root.settings['follow.linkedin_url']}}" target="_blank" class="linkedin">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a title="{{'Instagram' | translate}}" ng-show="$root.settings['follow.instagram_url']" href="{{$root.settings['follow.instagram_url']}}" target="_blank" class="instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a title="{{'Facebook' | translate}}" ng-show="$root.settings['follow.facebook_url']" href="{{$root.settings['follow.facebook_url']}}" target="_blank" class="facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a title="{{'Goole Plus' | translate}}" ng-show="$root.settings['follow.google_plus_url']" href="{{$root.settings['follow.google_plus_url']}}" target="_blank" class="gplus">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a title="{{'Twitter' | translate}}" ng-show="$root.settings['follow.twitter_url']" href="{{$root.settings['follow.twitter_url']}}" target="_blank" class="twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <figure>
+        <img src="assets/img/footer-logo.png" alt="footer-logo" class="img-responsive" />
+    </figure>
+</div>
+<div class="footer-below text-center col-xs-12">
+    <span>{{'&copy; 2017' | translate }} <a href="javascript:void(0)">{{'Latinomedica' | translate }}</a>{{'. All Rights Reserved' | translate}}
+        <ul class="list-inline" ng-repeat = "fm in model.footerEnd">
+            <li><a ui-sref="pages({ slug: fm.slug })">{{fm.title | translate }}</a></li>
+        </ul>
+    </span>
+</div>

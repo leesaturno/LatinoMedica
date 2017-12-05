@@ -1,0 +1,67 @@
+<!-- Navigation -->
+<nav class="navbar header navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll visible-xs">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" id="js-header-hide-section-btn" ng-class="(menu_show == false) ? 'toggle-top':' '">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="pull-left call-us nav">
+                	<li class="text-left" ng-class="(menu_show == true) ? 'show':'hide'">
+                    	<a class="call-icon" href="javascript:void(0)">Call Us: <span>{{$root.settings['site.contact_number']}}</span></a>
+                    </li>
+                    <li class="auth-logo" ng-class="(menu_show == false) ? 'show':'hide'">
+                        <a ui-sref="home" title="{{'Logo' | translate}}"><img src="assets/img/logo-auth.png" alt="logo" class="img-responsive"/></a>
+                   </li>
+				</ul>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        	<ul class="pull-left call-us nav hidden-xs">
+			   <li ng-class="(menu_show == true) ? 'show':'hide'">
+               		<a class="call-icon" href="javascript:void(0)">Call Us: <span>{{$root.settings['site.contact_number']}}</span></a>
+               </li>
+			   <li class="auth-logo" ng-class="(menu_show == false) ? 'show':'hide'">
+               		<a ui-sref="home" title="{{'Logo' | translate}}"><img src="assets/img/logo-auth.png" alt="logo" class="img-responsive"/></a>
+               </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right fa-inverse" id="js-header-hide-section" ng-class="(menu_show == false) ? 'nav-lh':' '">
+                <li ui-sref-active="active" ng-show="!model.isAuthenticated()">
+                	<a class="login" ui-sref="login" title="{{'Log In' | translate}}">{{'Log In / Sign Up' | translate}}</a>
+                </li>
+                <li ng-if="$root.auth.id == NULL">
+					<a class="contact-icon" ui-sref="list_your_practice()" title="{{'List your practice' | translate}}">{{'List your practice' | translate}}</a>
+                </li>
+                <!--<li class="auth-user" ng-show="model.isAuthenticated()" ng-class="(menu_dropdown) ? 'show':'hide'">
+                	<span>{{$root.activityCount}}</span>
+                	<a class="login" href="#/doctor/{{$root.auth.username}}" title="{{$root.auth.username}}">{{$root.auth.username}}</a>
+                </li>-->
+                <li class="dropdown" ng-show="model.isAuthenticated()">
+                	<dashboard-settings></dashboard-settings>
+                	<!--<a href="" class=" dropdown-toggle" data-toggle="dropdown">
+                        <img ng-src="{{$root.auth.attachmentable.thumb.small}}" alt="{{$root.auth.username}}" />
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                   	<ul class="dropdown-menu">
+                    	<li><a href="#/appointments" title="View Appointments"><i class="fa fa-eye fa-fw"></i>{{ 'View Appointments' | translate }}</a></li>
+                        <li><a href="#/users/user_profile" title="Edit Profile"><i class="fa fa-pencil-square-o fa-fw"></i>{{ 'Edit Profile' | translate }}</a></li>
+                        <li><a href="#" ng-click="model.logout()"><i class="fa fa-power-off fa-fw"></i>{{ 'Sign out' | translate }}</a></li>
+                    </ul>-->
+                </li>
+                <!--<li ng-if="$root.settings['site.enabled_plugins'].indexOf('Contacts') > -1">-->
+                <li>
+					<a class="contact-icon" href="#/contactus" title="{{'Contact Us' | translate}}">{{'Contact Us' | translate}}</a>
+                </li>
+                <li ng-translate-language-select></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--<div subscription-alert ></div>-->

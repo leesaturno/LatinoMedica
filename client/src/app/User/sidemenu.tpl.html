@@ -1,0 +1,23 @@
+<ul class="list-unstyled">
+    <li ng-class="(currentState == 'UserProfile') ? 'active' : ''">
+        <a ui-sref="UserProfile()">Profile</a>
+    </li>
+	<li ng-class="(currentState == 'ChangePassword') ? 'active' : ''">
+		<a ui-sref="ChangePassword()">Password</a>
+	</li>
+    <li ng-class="(currentState == 'Notifications') ? 'active' : ''">
+        <a ui-sref="Notifications()">Notifications</a>
+    </li>
+	<li ng-if="$root.auth.role_id == ConstUserType.User" ng-class="(currentState == 'FamilyFriends') ? 'active' : ''">
+        <a ui-sref="FamilyFriends()">Family or Friends</a>
+    </li>
+    <li ng-class="(currentState == 'MyInsurances') ? 'active' : ''" >
+		<a ui-sref="MyInsurances()">Insurance</a>
+	</li>
+    <li ng-class="(currentState == 'DemographicInformation') ? 'active' : ''" >
+		<a ui-sref="DemographicInformation()">Demographic Information</a>
+	</li>
+    <li ng-class="(currentState == 'Authorization') ? 'active' : ''" ng-if="$root.auth.role_id == model.ConstUserType.User">
+		<a ui-sref="Authorization()">Authorization</a>
+	</li>
+</ul>

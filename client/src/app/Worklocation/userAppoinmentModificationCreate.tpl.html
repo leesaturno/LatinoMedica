@@ -1,0 +1,69 @@
+<section class="clearfix user-education">
+    <div class="container page-space">
+    	<figure class="page-logo">
+            <a href="#!/">
+                <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+            </a>
+        </figure>
+        <div class="form-content col-md-6 col-md-offset-3">
+            <a href="javascript:;" title="Referesh" class="pull-right text-primary" ><i class="fa fa-refresh" aria-hidden="true"></i></a>
+            <div class="page-head">
+                <h1>{{'Appointment Settings Modification Add'| translate}}</h1>
+            </div>
+            <form class="clearfix" name="appoinmentmodification_add" method="post" ng-submit="saveAppoinmentModification(appoinmentmodification_add.$valid)" novalidate>
+                <div class="form-body">
+                    <div class="form-group">
+                    	<input class="form-control" ng-model="model.appoinmentmodification_add.appoint_date" data-date-format="yyyy-MM-dd" data-start-date="{{date|date:'yyyy-MM-dd'}}" data-min-date="{{dateBlockeBefore}}"  data-autoclose="1" name="date2" bs-datepicker type="appoint_date" required="required" placeholder="Date">
+                        <div ng-show="(appoinmentmodification_add.appoint_date.$dirty && appoinmentmodification_add.appoint_date.$invalid) || appoinmentmodification_add.appoint_date.$touched">
+                        	<span class="error">{{'This field is required!'| translate }}</span>
+                        </div> 
+                    </div>
+					<div class="form-group">
+                        <label class="checkbox-field1">
+                            <input class="hide" type="checkbox" name="type" ng-model="model.appoinmentmodification_add.type" ng-change="model.ShowHide('type')" />
+                            <span></span>Make a day off
+                        </label>
+                    </div>
+                    <div class="form-group" ng-hide="model.appoinmentmodification_add.type">              
+					<div class="form-group">
+                        <label>Choose your Available Time</label>
+                        <select class="form-control"  chosen single-backstroke-delete="true" display-disabled-options="true" multiple ng-model="model.appoinmentmodification_add.appt_time" ng-options="time for time in model.timeSlot">
+                            <option value=""></option>
+                        </select>
+                    </div>
+					<!--<div class="form-group">
+                        <input type="text" class="form-control" name="lunch_at" id="lunch_at" placeholder="{{'Launch'| translate}}" ng-model="model.appoinmentmodification.lunch_at" ng-required="true" />        
+                        <div ng-show="(appoinmentmodification_add.lunch_at.$dirty && appoinmentmodification_add.lunch_at.$invalid) || appoinmentmodification_add.lunch_at.$touched" ng-messages="appoinmentmodification_add.lunch_at.$error">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>           
+                    </div>
+					<div class="form-group">
+                        <input type="text" class="form-control" name="resume_at" id="resume_at" placeholder="{{'Resume'| translate}}" ng-model="model.appoinmentmodification.resume_at" ng-required="true" />        
+                        <div ng-show="(appoinmentmodification_add.resume_at.$dirty && appoinmentmodification_add.resume_at.$invalid) || appoinmentmodification_add.resume_at.$touched" ng-messages="appoinmentmodification_add.resume_at.$error">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>           
+                    </div>
+					<div class="form-group">
+                        <input type="text" class="form-control" name="practice_close" id="practice_close" placeholder="{{'Practice Close'| translate}}" ng-model="model.appoinmentmodification.practice_close" ng-required="true" />        
+                        <div ng-show="(appoinmentmodification_add.practice_close.$dirty && appoinmentmodification_add.practice_close.$invalid) || appoinmentmodification_add.practice_close.$touched" ng-messages="appoinmentmodification_add.practice_close.$error">
+                            <span class="error">{{'This field is required!'| translate }}</span>
+                        </div>           
+                    </div> -->
+						
+					</div>
+                    <div class="form-group">
+                            <label>Active / In Active</label>
+                            <div class="switch-option">
+                                <switch id="enabled" name="enabled" ng-model="model.appoinmentmodification_add.is_active" on="Yes" off="No" class="green"></switch>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="form-footer education-btn appmt-btn">
+                    <button ng-disabled="appoinmentmodification_add.$invalid" class="btn btn-green btn-animate wid-230 mr5 confirm" type="submit">{{'Save'| translate }}</button>
+                    <a href="#/user/workplaces/{{model.locationid}}/appoinmentmodification" class="btn btn-animate wid-230 cancel">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

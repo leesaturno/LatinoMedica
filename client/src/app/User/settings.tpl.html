@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12" ng-controller="UserSettingsController as model">
+            <nav-menu></nav-menu>
+            <div class="row" >
+                <div class="col-sm-3 edit-left">
+                    <ul class="list-unstyled">
+                        <li class="active" ng-click="getTemplate('User/user_profile.tpl.html')">Profile</li>
+                        <li ng-click="getTemplate('User/change_password.tpl.html')">Password</li>
+                        <li>
+                            <a ui-sref="Notifications()">Notifications</a>
+                        </li>
+                        <li ng-click="getTemplate('User/family_friends.tpl.html')">
+                            <a ui-sref="FamilyFriends()">Family or Friends</a>
+                        </li>
+                        <li ng-click="getTemplate('User/my_insurances.tpl.html')">Insurance</li>
+                        <li ng-click="getTemplate('User/demographic.tpl.html')">Demographic Information</li>
+                        <li ng-click="getTemplate('User/authorization.tpl.html')">Authorization</li>
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <display-template name="{{displayTemplate}}"></display-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

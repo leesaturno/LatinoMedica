@@ -1,0 +1,189 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="row">
+            <div class="col-md-12">
+                <nav-menu></nav-menu>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="ajustes">
+                        <div class="appointment-block pad-63">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12" role="navigation">
+                                        <div class="appointment-header clearfix">
+                                            <h1 class="pull-left">{{'Appointments'|translate}} </h1>
+                                            <div class="appointment-list pull-left">
+                                                <div class="pull-left all-appointment">
+                                                    <a href="#/appointments/all"> {{'All'| translate}} </a>
+                                                </div>
+                                                <!--<ul class="nav navbar-nav" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                                                    <li ng-class="{active: $route.current.activetab == 'today'}"><a href="#/appointments/today"> {{'Today'| translate}} </a></li>
+                                                    <li ng-class="{active: $route.current.activetab == 'week'}"><a href="#/appointments/week"> {{'Week'| translate}} </a></li>
+                                                    <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#/appointments/month"> {{'Month'| translate}} </a></li>
+                                                </ul>-->
+                                                <ul class="nav navbar-nav">
+                                                    <li><a href="#/appointments/pending-approval"> {{'Pending Approval'| translate}} </a></li>
+                                                    <li><a href="#/appointments/approved"> {{'Approved'| translate}} </a></li>
+                                                    <li><a href="#/appointments/cancelled"> {{'Cancelled'| translate}} </a></li>
+                                                    <li><a href="#/appointments/rejected"> {{'Rejected'| translate}} </a></li>
+                                                </ul>
+                                                 <!--<uibgroup-export islength="appointmentsLength"></uibgroup-export>-->
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!--<div class="col-md-12 table-block">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>{{'Appointment Info'| translate}}</th>
+                                                        <th ng-if="$root.auth.role_id == model.ConstUserType.Doctor">{{'Patient\'s Name'| translate}}</th>
+                                                        <th ng-if="$root.auth.role_id == model.ConstUserType.User">{{'Doctor\'s Name'| translate}}</th>
+                                                        <th>{{'Appointment Date'| translate}}</th>
+                                                        <th>{{'Appointment Time'| translate}}</th>
+                                                        <th>{{'Status'| translate}}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="appointment in appointments">
+                                                        <td>
+                                                            <a href="#/appointment/{{appointment.id}}" title="{{ 'View Details' | translate }}" class="btn btn-green btn-animate btn-xs">
+                                                                {{ 'Details' | translate }}
+                                                                <i class="fa fa-angle-double-right fa-fw"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                                                            {{appointment.User.user_profile.display_name}}
+                                                            </a>
+                                                        </td>
+                                                        <td ng-if="$root.auth.role_id == model.ConstUserType.User">
+                                                            <a href="#/doctor/{{appointment.doctor_user.username}}">
+                                                                {{appointment.doctor_user.user_profile.display_name}}
+                                                            </a>
+                                                        </td>
+                                                        <td>{{appointment.appointment_date | dateFormat}}</td>
+                                                        <td>{{appointment.appointment_time}}</td>
+                                                        <td>{{appointment.appointment_status.name}}</td>
+                                                        <tr ng-show="_metadata.total === 0">
+                                                            <td colspan="6" class="text-center">
+                                                                <p class="hor-space alert alert-danger">{{'No Record Found' |translate}}</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="paging clearfix text-center" ng-show="_metadata.total > 0">
+                                            <uib-pagination previous-text="&#xf104" next-text="&#xf105" total-items="_metadata.total" num-pages="_metadata.total_pages"
+                                                ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"
+                                                rotate="false" items-per-page="_metadata.per_page" ng-change="paginate()"></uib-pagination>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="citas">
+                    <uibgroup-export islength="appointmentsLength"></uibgroup-export>
+                    <div ng-repeat="appointment_formatted in appointment_formatteds|limitTo:appointment_formatteds_year.length track by $index">
+                        <p>{{appointment_formatteds_year[$index]}}</p>
+                        <div class="clearfix" ng-repeat="appointment in appointment_formatted track by $index">
+                            <div class="col-sm-6">
+                                <a href="#/appointment/{{appointment.value.id}}" class="appointment-result">
+                                    <p>
+                                        <img src="assets/img/calendar.png" alt="calendar" ng-if="appointment.upComing == '1'" />
+                                        <img src="assets/img/tick-icon.png" alt="tick" ng-if="appointment.upComing == '0'" />
+                                        {{'Appointment with :'| translate}}
+                                        <span ng-if="$root.auth.role_id == model.ConstUserType.User">{{appointment.value.doctor_user.user_profile.display_name}}</span>
+                                        <span ng-if="$root.auth.role_id == model.ConstUserType.Doctor">{{appointment.value.User.user_profile.display_name}}</span>
+                                        <span ng-if="$root.auth.role_id == model.ConstUserType.User" class="doc-name">{{appointment.value.doctor_user.user_profile.specialties[0].name}}</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <p>{{appointment.value.appointment_time}}</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p>{{appointment.value.appointment_date}}</p>
+                            </div>					    
+                            <div class="col-sm-2 citas-location">
+                                <p>{{appointment.value.workplace.location}}</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p ng-if="appointment.value.appointment_status_id == 1">{{'PendingApproval' |translate}}</p>
+                                <p ng-if="appointment.value.appointment_status_id == 2">{{'Approved' |translate}}</p>
+                                <p ng-if="appointment.value.appointment_status_id == 3">{{'Closed' |translate}}</p>
+                                <p ng-if="appointment.value.appointment_status_id == 4">{{'Cancelled' |translate}}</p>
+                                <p ng-if="appointment.value.appointment_status_id == 5">{{'Rejected' |translate}}</p>
+                                <p ng-if="appointment.value.appointment_status_id == 6">{{'Expired' |translate}}</p>
+                            </div>
+                            <div class="col-sm-1 apps-coming" ng-if="appointment.upComing == '1'">
+                                <a href="javascript:void(0)" ng-click="appointstatuschange('cancel', appointment.id)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="col-sm-1 apps-coming expired" ng-if="appointment.upComing == '0'">
+                                <a href="javascript:void(0)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-center" ng-if="appointment_formatteds_year[$index] == year_condition">
+                            <a href="#/search" class="btn btn-animate btn-green" ng-if="$root.auth.role_id == model.ConstUserType.User">{{'Make an appointment now'| translate}}</a>
+                        </p>
+                    </div>
+                    
+                    <div ng-show="_metadata.total === 0">
+                        <p class="hor-space alert alert-danger">{{'No Record Found' |translate}}</p>
+                    </div>
+                    <div class="paging clearfix text-center" ng-show="_metadata.total > 0">
+                        <uib-pagination total-items="_metadata.total" num-pages="_metadata.total_pages" ng-model="currentPage" max-size="maxSize" boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="_metadata.per_page" previous-text="&#xf104;" next-text="&#xf105;" ng-change="paginate()"></uib-pagination>
+                    </div>
+                    <!--<div class="expired">
+                        <p>{{'2016'| translate}}</p>
+                        <div class="clearfix">
+                            <div class="col-sm-6">
+                                <p class="text-left">
+                                    <img src="assets/img/tick-icon.png" alt="calendar" />{{'Appointment with :'| translate}}
+                                    <span>{{'Dr. Julio Castro | '| translate}}</span>
+                                    <a href="javascript:void(0)">{{'Dentist'| translate}}</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p>{{'4:30 pm'| translate}}</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p>{{'Tuesday:11/10/2016'| translate}}</p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p>{{'Clinica Maracay'| translate}}</p>
+                            </div>
+                            <div class="col-sm-1 text-center">
+                                <a href="javascript:void(0)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="col-sm-6">
+                                <p class="text-left">
+                                    <img src="assets/img/tick-icon.png" alt="calendar" />{{'Appointment with :'| translate}}
+                                    <span>{{'Dr. Julio Castro | '| translate}}</span>
+                                    <a href="javascript:void(0)">{{'Dentist'| translate}}</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p>{{'4:30 pm'| translate}}</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p>{{'Tuesday:11/10/2016'| translate}}</p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p>{{'Clinica Maracay'| translate}}</p>
+                            </div>
+                            <div class="col-sm-1 text-center">
+                                <a href="javascript:void(0)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

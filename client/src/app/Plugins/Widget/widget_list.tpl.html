@@ -1,0 +1,41 @@
+<section class="clearfix pad-63 appmt-table">
+     <div class="container">
+        <div class="page-head clearfix">    
+            <h1 class="pull-left">{{'My Widgets'|translate}}</h1>
+            <div class="pull-right search-table-field">
+                <a href="#/widget/add" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add Widget'|translate}}</a>
+            </div>
+        </div>
+        <div class="table-block">
+            <!-- for table -->
+            <div class="table-responsive">
+                 <table class="table table-hover">
+                      <thead>
+                      <tr>
+                           <th width="500">{{'S.No'| translate}}</th>
+                           <th width="500">{{'Website'| translate}}</th>
+                           <th width="500">{{'Action'| translate}}</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr ng-repeat="widget in widgets">
+                           <td> {{$index+1}}</td>
+                           <td> {{widget.website_name}}</td>
+                           <td class="action-btn">
+                                <a href="javascript:void(0)" ng-click="showCode(widget.id)" bs-modal="showCode" data-content="<iframe src='{{modelSiteUrl}}/#/doctor/{{$root.auth.username}}?widget={{widget.website_key}}' width='100%' height='500px'></iframe>  Copy and Paste the code Where you Want" title="Widget Code for: {{widget.website_name}}" class="btn blue"> <i class="fa fa-code"></i> Get Code </a>
+                                <a href="#/doctor/{{$root.auth.username}}?widget={{widget.website_key}}" target="_blank" class="btn green"> <i class="fa fa-desktop"></i> View</a>
+                                <a href="javascript:void(0)" ng-click="widgetDelete(widget.id)" class="btn red"> <i class="fa fa-trash"></i> Delete </a>
+                           </td>
+                      </tr>
+                      <tr ng-show="paginates.total == 0">
+                           <td colspan="3"><p class="hor-space alert alert-danger text-center">{{'No Widgets available'| translate}}</p></td>
+                      </tr>
+                      </tbody>
+                 </table>
+            </div>
+            <div bs-modal></div>
+        </div>
+     </div>
+</section>
+
+

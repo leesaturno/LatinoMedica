@@ -1,0 +1,38 @@
+<section class="clearfix">
+    <div class="container page-space">
+    	<figure class="page-logo">
+            <a href="#!/">
+                <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+            </a>
+        </figure>
+        <div class="user-login form-content col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="page-head">
+                <h1>{{'Edit Education'| translate}}</h1>
+            </div>
+            <form role="form" class="clearfix" name="educationAdd" ng-submit="model.userEducationEdit(educationAdd.$valid)" novalidate>
+                <div class="form-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="education" id="education" placeholder="{{'Education'| translate}}" ng-model="model.user_education.education"
+ng-required="true" ng-minlength="3"/>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.education.$touched) && (educationAdd.education.$pristine || educationAdd.education.$invalid) && (educationAdd.education.$error.required)">{{'Enter Education'| translate }} </span>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.education.$touched) && (educationAdd.education.$pristine || educationAdd.education.$invalid) && (educationAdd.education.$error.minlength)">{{'Minimum length is 3'| translate}}</span>
+                    </div>
+                    <div class="form-group">
+                       <input type="text" class="form-control" name="location" id="location" placeholder="{{'Location'| translate}}" ng-model="model.user_education.location" ng-required="true" ng-minlength="1"/>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.location.$touched) && (educationAdd.location.$pristine || educationAdd.location.$invalid) && (educationAdd.location.$error.required)">{{'Enter Location'| translate }} </span>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.location.$touched) && (educationAdd.location.$pristine || educationAdd.location.$invalid) && (educationAdd.location.$error.minlength)">{{'Minimum length is 1'| translate}}</span>
+                    </div>
+                    <div class="form-group">
+                       <input type="text" class="form-control" name="organization" id="organization" placeholder="{{'Organization'| translate}}" ng-model="model.user_education.organization" ng-required="true" ng-minlength="1"/>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.organization.$touched) && (educationAdd.organization.$pristine || educationAdd.organization.$invalid) && (educationAdd.organization.$error.required)">{{'Enter Organization'| translate }} </span>
+                        <span class="error" ng-show="(educationAdd.$submitted || educationAdd.organization.$touched) && (educationAdd.organization.$pristine || educationAdd.organization.$invalid) && (educationAdd.organization.$error.minlength)">{{'Minimum length is 1'| translate}}</span>
+                    </div>
+                </div>
+                <div class="form-footer education-btn appmt-btn">
+                    <button class="btn btn-green btn-animate wid-230 mr5 confirm" type="submit">{{'Update'| translate }}</button>
+                    <a href="#/user/education" class="btn btn-animate wid-230 cancel">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

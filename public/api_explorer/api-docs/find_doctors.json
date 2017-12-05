@@ -1,0 +1,233 @@
+{
+  "apis": [
+    {
+      "path": "/find_doctors",
+      "operations": [
+        {
+          "summary": "Fetch List of find_doctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search family friends(first_name,last_name and email)",
+              "required": false,
+              "format": "string"
+            },            
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The family Friends Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort family Friends by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__finddoctors"
+        },
+        {
+          "summary": "Store finddoctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "FinddoctorsAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "FinddoctorsAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__finddoctors"
+        }
+      ]
+    },
+    {
+      "path": "/find_doctors/{id}",
+      "operations": [
+        {
+          "summary": "Update find_doctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The find_doctors Identifier"
+            },
+            {
+              "name": "finddoctorsEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "finddoctorsEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__finddoctors__id_"
+        },
+        {
+          "summary": "Fetch particular finddoctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The finddoctors Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__finddoctors__id_"
+        },
+        {
+          "summary": "Delete finddoctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The finddoctors Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__finddoctors__id_"
+        }
+      ]    
+    }
+  ],
+  "models": {
+    "FinddoctorsAdd": {
+      "properties": {
+        "user_id":{
+          "type": "integer",
+              "required": false,
+              "description": "User"
+        },
+        "city_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "City"
+        },
+        "specialty_id":{
+          "type": "integer",
+              "required": false,
+              "description": "State"
+        }
+      },
+      "id": "FinddoctorsAdd"
+    },
+    "finddoctorsEdit": {
+      "properties": {
+        "user_id":{
+          "type": "integer",
+              "required": false,
+              "description": "User"
+        },
+        "city_id":{
+		      "type": "integer",
+          "required": false,
+          "description": "City"
+        },
+        "specialty_id":{
+          "type": "integer",
+              "required": false,
+              "description": "State"
+        }
+      },
+      "id": "finddoctorsEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

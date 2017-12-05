@@ -1,0 +1,2282 @@
+<?xml version="1.0" standalone="yes" ?>
+
+<mm_report>
+	<mm_reportname>	ResultsReport2.xml</mm_reportname>
+	<mm_reportdate>04/12/17 20:33:15</mm_reportdate>
+	<mm_reportlocation>D:\\xampp8.2\htdocs\abssalvador\public\</mm_reportlocation>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[   <h1>{{"Book Your Appointment" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="410" mm_rangemax="413" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"Have you used" | translate }} {{$root.settings['site.name']}} {{"before" | translate }} {{"?"}}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="731" mm_rangemax="734" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h4>{{"Have you used" | translate }} {{$root.settings['site.name']}} {{"before" | translate }} {{"?"}}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="796" mm_rangemax="799" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h4>{{"Have you used" | translate }} {{$root.settings['site.name']}} {{"before" | translate }} {{"?"}}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="822" mm_rangemax="825" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"We will use the information from your last visit" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="863" mm_rangemax="866" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <span></span>{{"I'm new in" | translate }} {{$root.settings['site.name']}} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1252" mm_rangemax="1255" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <span></span>{{"I have used" | translate }} {{$root.settings['site.name']}} {{" before" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1678" mm_rangemax="1681" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <span></span>{{"I have used" | translate }} {{$root.settings['site.name']}} {{" before" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1741" mm_rangemax="1744" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h2 class="form-login-heading">{{"Log in or create an account" | translate }}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2295" mm_rangemax="2298" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Access your" | translate }} {{$root.settings['site.name']}} {{"account" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2416" mm_rangemax="2419" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h5>{{"Access your" | translate }} {{$root.settings['site.name']}} {{"account" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2479" mm_rangemax="2482" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (loginForm.email.$error.required)">{{"Enter Email" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3291" mm_rangemax="3294" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (loginForm.email.$error.email)">{{"Enter your email" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3544" mm_rangemax="3547" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (loginForm.password.$error.required)">{{"Enter Password" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4561" mm_rangemax="4564" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (loginForm.password.$error.minlength)">{{"Minimum length is 6" | translate}}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4833" mm_rangemax="4836" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (loginForm.password.$error.maxlength)">{{"Maximum length is 40" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5109" mm_rangemax="5112" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <input type="checkbox" class="hide" />{{"keep me signed in" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="5510" mm_rangemax="5513" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-block" type="submit">{{"Log In" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5930" mm_rangemax="5933" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...class="text-muted" target="_blank">{{"Forget your Password?" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6187" mm_rangemax="6190" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h2 class="form-login-heading">{{"Create your account" | translate }}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6708" mm_rangemax="6711" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <span>{{"This will help you handle your appointments" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6791" mm_rangemax="6794" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Cellphone" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7012" mm_rangemax="7015" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.required)">{{"Enter Mobile Number" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8091" mm_rangemax="8094" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.pattern)">{{"Enter Valid Mobile Number Without Character" |...]]></mm_displaystr>
+		<mm_data mm_rangemin="8356" mm_rangemax="8359" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.minlength)">{{"Minimum Length is 8" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8647" mm_rangemax="8650" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.maxlength)">{{"Maximum Length is 12" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8914" mm_rangemax="8917" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Insert your E-mail address" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9390" mm_rangemax="9393" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.email.$error.required)">{{"Please enter your E-mail id" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="9836" mm_rangemax="9839" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.email.$error.email)">{{"Enter valid E-mail" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10106" mm_rangemax="10109" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Confirm your E-mail address" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10759" mm_rangemax="10762" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.confirm_email.$error.required)">{{"Please re-enter your E-mail id" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="11270" mm_rangemax="11273" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.confirm_email.$error.email)">{{"Enter valid E-mail" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="11579" mm_rangemax="11582" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (model.email != model.confirm_email)">{{"E-mail Mismatch" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="11860" mm_rangemax="11863" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Please, send me emails with preventive health care remainders. recommended" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="12663" mm_rangemax="12666" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Create a Password" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13222" mm_rangemax="13225" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.required)">{{"Enter Password" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13718" mm_rangemax="13721" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.minlength)">{{"Minimum length is 6" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13991" mm_rangemax="13994" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.maxlength)">{{"Maximum length is 20" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="14269" mm_rangemax="14272" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.confirmPassword.$error.required)">{{"Please enter confirm password" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="15221" mm_rangemax="15224" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(signupForm.confirmPassword.$error.minlength)">{{"Minimum length is 6" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15542" mm_rangemax="15545" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(signupForm.confirmPassword.$error.maxlength)">{{"Maximum length is 20" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15852" mm_rangemax="15855" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (model.password != model.confirm_password)">{{"Password Mismatch" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16149" mm_rangemax="16152" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label class="col-sm-12 form-name">{{"Name" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16542" mm_rangemax="16545" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.required)">{{"Please enter your first name" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="17270" mm_rangemax="17273" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17570" mm_rangemax="17573" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.pattern)">{{"Enter Valid name without number" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="17858" mm_rangemax="17861" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.required)">{{"Please enter your last name" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="18646" mm_rangemax="18649" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="18941" mm_rangemax="18944" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.pattern)">{{"Enter valid name without number" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="19225" mm_rangemax="19228" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Date of birth" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19529" mm_rangemax="19532" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.date.$error.required)">{{"Enter date" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="20625" mm_rangemax="20628" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.date.$error.pattern)">{{"Enter Valid date Without Character" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="20885" mm_rangemax="20888" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.date.$error.minlength)">{{"Minimum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="21171" mm_rangemax="21174" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.date.$error.maxlength)">{{"Maximum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="21442" mm_rangemax="21445" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.month.$error.required)">{{"Enter Month" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="22496" mm_rangemax="22499" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.month.$error.pattern)">{{"Enter Valid Month Without Character" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="22761" mm_rangemax="22764" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.month.$error.minlength)">{{"Minimum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23052" mm_rangemax="23055" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.month.$error.maxlength)">{{"Maximum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23327" mm_rangemax="23330" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.year.$error.required)">{{"Enter year" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="24457" mm_rangemax="24460" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.year.$error.pattern)">{{"Enter Valid year Without Character" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="24717" mm_rangemax="24720" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.year.$error.minlength)">{{"Minimum Length is 4" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="25003" mm_rangemax="25006" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.year.$error.maxlength)">{{"Maximum Length is 4" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="25274" mm_rangemax="25277" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Gender" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="25750" mm_rangemax="25753" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select from the list" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26021" mm_rangemax="26024" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.gender_id.$error.required)">{{"Select a Gender" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26478" mm_rangemax="26481" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Please read and agree to The Terms of Use and Privacy Policy" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="27111" mm_rangemax="27114" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.termCondition.$error.required)">{{"Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="27579" mm_rangemax="27582" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"I have read and agree to" | translate }} {{$root.settings['site.name']}} {{"Contract" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="28177" mm_rangemax="28180" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ {{"I have read and agree to" | translate }} {{$root.settings['site.name']}} {{"Contract" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="28253" mm_rangemax="28256" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.contract.$error.required)">{{"Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="28649" mm_rangemax="28652" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Join Now" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29006" mm_rangemax="29009" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <label class="form-name">{{"Will you use your health insurance?" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29635" mm_rangemax="29638" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <option value=''>{{"Please Select" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29932" mm_rangemax="29935" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <option value='Yes'>{{"Yes" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30027" mm_rangemax="30030" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value='No'>{{"No" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30111" mm_rangemax="30114" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (stepone.check_insurance_id.$error.required)">{{"Please select" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30418" mm_rangemax="30421" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select your insurance" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30947" mm_rangemax="30950" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Select a insurance" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="31304" mm_rangemax="31307" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[   <h4>{{"Apointment Slots finished insurance" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="31485" mm_rangemax="31488" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <label class="form-name">{{"What'\s the reason of your visit?" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="31928" mm_rangemax="31931" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select your reason" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32328" mm_rangemax="32331" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(stepone.specialty_disease_id.$error.required)">{{"Select a Reason" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32680" mm_rangemax="32683" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <label class="form-name">{{"Have you seen this doctor before?" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32858" mm_rangemax="32861" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <span></span>{{"I am a new patient" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="33256" mm_rangemax="33259" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <span></span>{{"I am an existing patient of this practice" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="33682" mm_rangemax="33685" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green" type="submit">{{"Book for Free" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34086" mm_rangemax="34089" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...{{$root.auth.user_profile.first_name}}</strong> {{"Doctor will not able to schedule an appointment"...]]></mm_displaystr>
+		<mm_data mm_rangemin="34491" mm_rangemax="34494" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p><a href="#/doctor/{{doctorProfile.User.data.username}}">{{"Read reviews" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36159" mm_rangemax="36162" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"Patient" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36950" mm_rangemax="36953" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"Reason for your Visit" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="37171" mm_rangemax="37174" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_appt_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="safe-booking col-md-12"><i class="fa fa-lock" aria-hidden="true"></i>{{"Safe booking" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="37493" mm_rangemax="37496" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_appt_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Book Your Appointment" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="392" mm_rangemax="395" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label class="col-sm-12 form-name">{{"who's is going to see the Doctor?" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1138" mm_rangemax="1141" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.formValue.is_guest_appointment" value="1">{{"Myself" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1455" mm_rangemax="1458" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.formValue.is_guest_appointment" value="2">{{"A family member" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1835" mm_rangemax="1838" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.formValue.is_guest_appointment" value="3">{{"Other person" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="2224" mm_rangemax="2227" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"First Name Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3232" mm_rangemax="3235" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Minimum 3 character required" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="3546" mm_rangemax="3549" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Maximum 25 Character" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3869" mm_rangemax="3872" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Last Name Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4590" mm_rangemax="4593" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Minimum 1 character required" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="4899" mm_rangemax="4902" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Maximum 20 Character" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5218" mm_rangemax="5221" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& model.formValue.is_guest_appointment == '1'">{{"Enter a valid name without numbers" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="5527" mm_rangemax="5530" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Family member or friend" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8133" mm_rangemax="8136" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select from the list of family member or friend" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8507" mm_rangemax="8510" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Add a new Family of Friend" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8833" mm_rangemax="8836" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Enter Name"| translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10226" mm_rangemax="10229" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Enter Relationship"| translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="11515" mm_rangemax="11518" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Enter age" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12862" mm_rangemax="12865" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Enter Valid age Without Character" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="13190" mm_rangemax="13193" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Minimum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13544" mm_rangemax="13547" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...== '2' && model.formValue.family_member == null">{{"Maximum Length is 2" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13884" mm_rangemax="13887" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select Gender"| translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="14585" mm_rangemax="14588" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (steptwo.phone.$error.required)">{{"Enter Phone Number" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23714" mm_rangemax="23717" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (steptwo.phone.$error.minlength)">{{"Minimum 8 digits" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23960" mm_rangemax="23963" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (steptwo.phone.$error.maxlength)">{{"Maximum 12 digits" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="24204" mm_rangemax="24207" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (steptwo.phone.$error.pattern)">{{"Enter a valid phone number" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="24447" mm_rangemax="24450" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <label class="form-name">{{"Appointment time" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="25035" mm_rangemax="25038" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-block btn-green" type="submit">{{"Book for Free" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26758" mm_rangemax="26761" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <strong><i class='fa fa-ban'></i> {{$root.auth.user_profile.dr_title}} {{$root.auth.user_profile.first_name}}</strong>{{"Doctor ]]></mm_displaystr>
+		<mm_data mm_rangemin="27200" mm_rangemax="27203" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p><a href="#/doctor/{{doctorProfile.User.data.username}}">{{"Read reviews" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="28915" mm_rangemax="28918" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"Patient" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29705" mm_rangemax="29708" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"Reason for your Visit" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29926" mm_rangemax="29929" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_booking_patient_info.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="safe-booking col-md-12"><i class="fa fa-lock" aria-hidden="true"></i>{{"Safe booking" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30699" mm_rangemax="30702" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_booking_patient_info.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_view.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button type="button" class="btn btn-red" ng-click="showModal()">{{"Close" | translate}}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4924" mm_rangemax="4927" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_view.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\appointment_view.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button type="submit" class="btn btn-green">{{"Add Rating" | translate}}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6209" mm_rangemax="6212" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\appointment_view.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\booking_breadcrum.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <li ng-class="(stepStatus >= '1') ? 'active':''"><a href="javascript:void(0);">{{"Patient Info" | translate }}</a></li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="108" mm_rangemax="111" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\booking_breadcrum.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\booking_breadcrum.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <li ng-class="(stepStatus >= '2') ? 'active':''"><a href="javascript:void(0);">{{"Appointment Info" | translate }}</a></li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="233" mm_rangemax="236" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\booking_breadcrum.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\booking_breadcrum.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <!--<li ng-class="(stepStatus >= '3') ? 'active':''"><a href="javascript:void(0);">{{"Details" | translate }}</a></li>--> ]]></mm_displaystr>
+		<mm_data mm_rangemin="366" mm_rangemax="369" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\booking_breadcrum.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Appointments\booking_breadcrum.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <li ng-class="(stepStatus == '4') ? 'active':''"><a href="javascript:void(0);">{{"You Finished" | translate }}</a></li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="489" mm_rangemax="492" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Appointments\booking_breadcrum.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h1 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Surprised! Find a Doctor" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="334" mm_rangemax="337" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h3 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Your Medical Directory" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="462" mm_rangemax="465" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h5 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{"Only medical and health professionals" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="588" mm_rangemax="591" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"City" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1559" mm_rangemax="1562" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Health insurance" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2016" mm_rangemax="2019" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h2>{{"Are you a Doctor Five Star?" | translate }}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2874" mm_rangemax="2877" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"List your practice to reach millions of patients" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2951" mm_rangemax="2954" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <li>{{"Attract and attract new patients" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3098" mm_rangemax="3101" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <li>{{"Build and strengthen their online reputation" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3184" mm_rangemax="3187" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <li>{{"Provide premium patient experience" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3282" mm_rangemax="3285" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="#/users/register/doctor" class="btn" ng-if="!$root.auth">{{"List your practice in" | translate }} {{$root.settings['site.name']}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3455" mm_rangemax="3458" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h2>{{"Get the application" | translate }} {{$root.settings['site.name']}}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5443" mm_rangemax="5446" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <li>{{"Check the map of doctors in your insurance network" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5593" mm_rangemax="5596" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <li>{{"See patient comments to help you choose the right doctor" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5697" mm_rangemax="5700" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <li>{{"See schedule any doctor available, and click to book instantly" | translate }}</li> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5807" mm_rangemax="5810" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h2>{{"Featured Specialists" | translate }}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7373" mm_rangemax="7376" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h2 data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">{{"Find Doctor by" | translate }}{{"..."}}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="33462" mm_rangemax="33465" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h2 data-uk-scrollspy="{cls:'uk-animation-fade', delay:100}">{{"Find Doctor by" | translate }}{{"..."}}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="33495" mm_rangemax="33498" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4><span>{{"City" | translate }}</span></h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="33746" mm_rangemax="33749" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.citiesliList=citiesliLists.length" ng-if="citiesliList==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34370" mm_rangemax="34373" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.citiesliList=citiesliLists.length" ng-if="citiesliList==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34393" mm_rangemax="34396" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.citiesliList=9" ng-if="citiesliList!=9">{{"Less" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34518" mm_rangemax="34521" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4><span>{{"Specialty" | translate }}</span></h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34874" mm_rangemax="34877" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.specialtyliList=specialtyliLists.length" ng-if="specialtyliList==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="35535" mm_rangemax="35538" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.specialtyliList=specialtyliLists.length" ng-if="specialtyliList==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="35558" mm_rangemax="35561" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.specialtyliList=9" ng-if="specialtyliList!=9">{{"Less" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="35689" mm_rangemax="35692" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4><span>{{"Insurance" | translate }}</span></h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36045" mm_rangemax="36048" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.insurance=insurances.length" ng-if="insurance==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36652" mm_rangemax="36655" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.insurance=insurances.length" ng-if="insurance==9">{{"More" | translate }}{{"..."}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36675" mm_rangemax="36678" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="btn-more" ng-click="$parent.insurance=9" ng-if="insurance!=9">{{"Less" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36794" mm_rangemax="36797" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Or search by Name" | translate }}{{","}}...]]></mm_displaystr>
+		<mm_data mm_rangemin="36976" mm_rangemax="36979" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"Or search by Name" | translate }}{{","}} <span>{{"Practice" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="37012" mm_rangemax="37015" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...search by Name" | translate }}{{","}} <span>{{"Practice" | translate }}</span>{{","}}...]]></mm_displaystr>
+		<mm_data mm_rangemin="37026" mm_rangemax="37029" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...<span>{{"Practice" | translate }}</span>{{","}} <span>{{"Procedure" | translate }}</span>...]]></mm_displaystr>
+		<mm_data mm_rangemin="37060" mm_rangemax="37063" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }}</span>{{","}} <span>{{"Procedure" | translate }}</span> {{" or Clinic" |...]]></mm_displaystr>
+		<mm_data mm_rangemin="37074" mm_rangemax="37077" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...<span>{{"Procedure" | translate }}</span> {{" or Clinic" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="37110" mm_rangemax="37113" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h2 class="text-center">{{"Patients are losing patience when trying to access your attention" | translate }}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="38126" mm_rangemax="38129" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="text-center">{{"See why we are the perfect partner for health systems" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="38256" mm_rangemax="38259" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Home\home.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="text-center"><a class="btn" href="javascript:void(0)">{{"Join us and our partners" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="40192" mm_rangemax="40195" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Home\home.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Compose Message"| translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="344" mm_rangemax="347" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="ComposeMessage()"><i class="fa fa-pencil" aria-hidden="true"></i> {{"Write" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="590" mm_rangemax="593" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="Message()"><i class="fa fa-comment" aria-hidden="true"></i> {{"Received" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="786" mm_rangemax="789" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="SentMessage()"><i class="fa fa-comments" aria-hidden="true"></i> {{"Sent" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="986" mm_rangemax="989" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" ng-click="model.messageDelete()"><i class="fa fa-trash" aria-hidden="true"></i> {{"Delete" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1216" mm_rangemax="1219" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"User" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1689" mm_rangemax="1692" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select User" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2300" mm_rangemax="2303" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (composeMessage.to_user_id.$error.required)">{{"Select User" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2652" mm_rangemax="2655" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Subject" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2875" mm_rangemax="2878" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (composeMessage.subject.$error.required)">{{"Enter subject" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3597" mm_rangemax="3600" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Message" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3862" mm_rangemax="3865" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (composeMessage.message.$error.required)">{{"Enter message" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4586" mm_rangemax="4589" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messagecompose.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4939" mm_rangemax="4942" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messagecompose.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Messages" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="337" mm_rangemax="340" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="replyMessage()"><i class="fa fa-pencil" aria-hidden="true"></i> {{"Write" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="591" mm_rangemax="594" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="Message()"><i class="fa fa-comment" aria-hidden="true"></i> {{"Received" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="799" mm_rangemax="802" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="SentMessage()"><i class="fa fa-comments" aria-hidden="true"></i> {{"Sent" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1011" mm_rangemax="1014" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" ng-click="model.messageDelete()"><i class="fa fa-trash" aria-hidden="true"></i> {{"Delete" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1253" mm_rangemax="1256" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <span class=""><a href="javascript:void(0)" ng-click="model.messageReplyBox(message.id)">{{"Reply" | translate}}</a></span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3336" mm_rangemax="3339" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <span class=""><a href="javascript:void(0)" ng-click="model.messageReplyBox(message.id)">{{"Reply" | translate}}</a></span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4590" mm_rangemax="4593" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"Reply Message" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5065" mm_rangemax="5068" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label>{{"Subject" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5235" mm_rangemax="5238" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (replyMessage.message.$error.required)">{{"Enter Subject" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5871" mm_rangemax="5874" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label>{{"Message" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6064" mm_rangemax="6067" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (replyMessage.message.$error.required)">{{"Enter message" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6700" mm_rangemax="6703" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6930" mm_rangemax="6933" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\messages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="hor-space alert alert-danger">{{"No Record Found" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7341" mm_rangemax="7344" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\messages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Sent Messages" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="337" mm_rangemax="340" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="ComposeMessage()"><i class="fa fa-pencil" aria-hidden="true"></i> {{"Write" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="598" mm_rangemax="601" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="Message()"><i class="fa fa-comment" aria-hidden="true"></i> {{"Received" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="806" mm_rangemax="809" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a ui-sref="SentMessage()"><i class="fa fa-comments" aria-hidden="true"></i> {{"Sent" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1018" mm_rangemax="1021" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" ng-click="model.messageDelete()"><i class="fa fa-trash" aria-hidden="true"></i> {{"Delete" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1260" mm_rangemax="1263" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Messages\sentmessages.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="hor-space alert alert-danger">{{"No Record Found" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4014" mm_rangemax="4017" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Messages\sentmessages.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>QuestionAnswer\questions_list.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h1 class="pull-left">{{"My Questions" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="249" mm_rangemax="252" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Plugins\QuestionAnswer\questions_list.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>QuestionAnswer\questions_list.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="#/questions/add" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{"Add Question" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="475" mm_rangemax="478" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Plugins\QuestionAnswer\questions_list.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>QuestionAnswer\questions_list.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <td colspan="5"><p class="hor-space alert alert-danger text-center">{{"No Questions available" | translate }}</p></td> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2964" mm_rangemax="2967" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Plugins\QuestionAnswer\questions_list.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>QuestionAnswer\questions_list.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Specialty" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3773" mm_rangemax="3776" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Plugins\QuestionAnswer\questions_list.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>Search\search.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p><span>{{"Code" | translate }}: <a href="javascript:void(0)">{{doctorList.data.User.data.user_code}}</a></span></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8526" mm_rangemax="8529" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\Search\search.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[   <h1>{{"Authorization" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="519" mm_rangemax="522" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <span>{{"(I) "}} {{$root.auth.user_profile.display_name}} {{" Authorize" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1140" mm_rangemax="1143" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <span>{{"(I) "}} {{$root.auth.user_profile.display_name}} {{" Authorize" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1192" mm_rangemax="1195" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(authorizeddoctor_add.doctor_id.$error.required)">{{"Enter doctor code" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1705" mm_rangemax="1708" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...">{{doctorsList.doctor.user_profile.display_name}}{{" | "}}<a...]]></mm_displaystr>
+		<mm_data mm_rangemin="2631" mm_rangemax="2634" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\authorization.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="pull-right" href="javascript:void(0)" ng-click="model.removeDoctor(doctorsList.id)" >{{"Revoke" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2881" mm_rangemax="2884" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\authorization.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.is_seen_before" value="1">{{"I'm new in latinomedica" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1426" mm_rangemax="1429" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.is_seen_before" value="0">{{"I have used Latinomedica before" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1609" mm_rangemax="1612" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <span>{{"This will help you handle your appointments" | translate}}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1976" mm_rangemax="1979" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label class="col-sm-12 form-name"><span class="red">*</span>{{"who's is going to see the Doctor?"| translate}}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19733" mm_rangemax="19736" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.is_member" value="1">{{"Myself" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="19941" mm_rangemax="19944" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.is_member" value="2">{{"A family member" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="20102" mm_rangemax="20105" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="radio" ng-model="model.is_member" value="3">{{"Other person" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="20272" mm_rangemax="20275" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select from the list of family member or friend"| translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="20773" mm_rangemax="20776" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select from the list of family member or friend"| translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23486" mm_rangemax="23489" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\booking_register.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select from the list of family member or friend"| translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26072" mm_rangemax="26075" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\booking_register.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h1>{{"Demographic information" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="512" mm_rangemax="515" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label for="name">{{"Race(choose one or more)" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="880" mm_rangemax="883" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label for="name">{{"Ethnicity" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1490" mm_rangemax="1493" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label for="name">{{"Preferred Language" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2093" mm_rangemax="2096" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Latinomedica is currently available in " |...]]></mm_displaystr>
+		<mm_data mm_rangemin="2155" mm_rangemax="2158" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...in " | translate }} <a href="javascript:void(0)">{{"English" | translate }} </a>{{"and" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="2243" mm_rangemax="2246" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} </a>{{"and" | translate }} <a...]]></mm_displaystr>
+		<mm_data mm_rangemin="2274" mm_rangemax="2277" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} <a href="javascript:void(0)">{{"Spanish" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2326" mm_rangemax="2329" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <option value="">{{"Select Language" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2760" mm_rangemax="2763" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <label for="name">{{"Zip code (Optional)" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3106" mm_rangemax="3109" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\demographic.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3477" mm_rangemax="3480" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\demographic.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\doctor_filter.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h1 class="pull-left">{{"Your team" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="147" mm_rangemax="150" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\doctor_filter.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\doctor_filter.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <option value="">{{"City" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="491" mm_rangemax="494" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\doctor_filter.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\doctor_filter.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Specialists" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1287" mm_rangemax="1290" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\doctor_filter.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\doctor_filter.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button type="submit" class="btn btn-lg btn-primary">{{"Submit" | translate}}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1772" mm_rangemax="1775" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\doctor_filter.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\doctor_filter.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-lg btn-warning" type="button" ng-click="closeModal()">{{"Cancel" | translate}}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1888" mm_rangemax="1891" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\doctor_filter.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Family or Friends" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="582" mm_rangemax="585" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <p class="pull-right">{{"Add new" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="876" mm_rangemax="879" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"First Name" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1549" mm_rangemax="1552" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.first_name.$error.required)">{{"First Name Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2101" mm_rangemax="2104" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.first_name.$error.minlength)">{{"Minimum 3 character required" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="2390" mm_rangemax="2393" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.first_name.$error.maxlength)">{{"Maximum 25 Character" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2688" mm_rangemax="2691" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.first_name.$error.pattern)">{{"Enter a valid name without numbers" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="2976" mm_rangemax="2979" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Last Name" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3538" mm_rangemax="3541" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.last_name.$error.required)">{{"Last Name Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4083" mm_rangemax="4086" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.last_name.$error.minlength)">{{"Minimum 1 Character" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4367" mm_rangemax="4370" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.last_name.$error.maxlength)">{{"Maximum 20 Character" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4652" mm_rangemax="4655" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.last_name.$error.pattern)">{{"Enter a valid name without numbers" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="4936" mm_rangemax="4939" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Relationship" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5614" mm_rangemax="5617" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.relationship.$error.required)">{{"Enter relation"| translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6119" mm_rangemax="6122" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"E-mail" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6645" mm_rangemax="6648" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.email.$error.required)">{{" Enter Email" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7151" mm_rangemax="7154" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.email.$error.email)">{{"Enter valid email" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7409" mm_rangemax="7412" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label for="cell">{{"Cellphone" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8057" mm_rangemax="8060" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.mobile.$error.required)">{{"Enter mobile Number" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8586" mm_rangemax="8589" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.mobile.$error.minlength)">{{"Minimum 8 digits" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8884" mm_rangemax="8887" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.mobile.$error.maxlength)">{{"Maximum 12 digits" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9179" mm_rangemax="9182" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.mobile.$error.pattern)">{{"Enter a valid mobile number" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="9473" mm_rangemax="9476" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label for="homemobile">{{"Home Phone(Optional)" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9834" mm_rangemax="9837" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label for="workmobile">{{"Work mobile(Optional)" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10338" mm_rangemax="10341" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="col-md-12">{{"Address(Optional)" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10874" mm_rangemax="10877" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"City" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12178" mm_rangemax="12181" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"State" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12824" mm_rangemax="12827" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Country" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13489" mm_rangemax="13492" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="col-md-12">{{"Gender" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="14452" mm_rangemax="14455" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select Gender" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15165" mm_rangemax="15168" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.gender_id.$error.required)">{{"Select a Gender" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15536" mm_rangemax="15539" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="col-md-12">{{"Date of birth" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15964" mm_rangemax="15967" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (familyfriends.dob.$error.required)">{{"Select DOB" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17292" mm_rangemax="17295" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" ng-if="typeid == 1" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17779" mm_rangemax="17782" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" ng-if="typeid == 2" type="submit">{{"Update" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17899" mm_rangemax="17902" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Family or Friends Created" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="18201" mm_rangemax="18204" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{friendsList.dob | ageFilter}} {{"years" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19086" mm_rangemax="19089" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" class="pull-left" ng-click="editFamilyfriend(friendsList.id)">{{"Edit" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19374" mm_rangemax="19377" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\family_friends.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <p class="hor-space alert alert-danger">{{"No Family Added" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="20539" mm_rangemax="20542" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\family_friends.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\header.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...aria-haspopup="true" aria-expanded="false">{{"Welcome" | translate }},...]]></mm_displaystr>
+		<mm_data mm_rangemin="488" mm_rangemax="491" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\header.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h1 data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">{{" Doctors thrive with" | translate }} {{$root.settings['site.name']}}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="271" mm_rangemax="274" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Subscribe now!" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="445" mm_rangemax="448" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a Doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="535" mm_rangemax="538" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)">{{"What is" | translate }} {{$root.settings['site.name']}}{{"?"}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="986" mm_rangemax="989" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)">{{"What is" | translate }} {{$root.settings['site.name']}}{{"?"}}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1044" mm_rangemax="1047" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" ng-click="gotoDiv('doctorsjoin')">{{"Why join?" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1185" mm_rangemax="1188" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" ng-click="gotoDiv('howitworks')">{{"How does it work?" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1346" mm_rangemax="1349" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="pull-right btn" href="javascript:void(0)" ng-click="gotoDiv('joinlationmedica')">{{"List your practice" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1533" mm_rangemax="1536" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h2>{{"Throughout the country, Doctors rely on" | translate }} {{$root.settings['site.name']}}</h2> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1772" mm_rangemax="1775" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h4>{{"Your coleagues already registered" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1876" mm_rangemax="1879" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"See who is using" | translate }} {{$root.settings['site.name']}} {{"in your area:" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1950" mm_rangemax="1953" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"See who is using" | translate }} {{$root.settings['site.name']}} {{"in your area:" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2018" mm_rangemax="2021" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <div class="input-group-addon hidden-xs">{{"Show me" | translate }}</div> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2358" mm_rangemax="2361" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Select specialty" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2554" mm_rangemax="2557" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <option value="">{{"City" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3120" mm_rangemax="3123" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-block" type="submit">{{"Go" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3306" mm_rangemax="3309" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="col-md-12"><a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Subscribe Now!" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3771" mm_rangemax="3774" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"How will patients find you" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4035" mm_rangemax="4038" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Create your profile" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4179" mm_rangemax="4182" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Your Own Search List" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4976" mm_rangemax="4979" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Patients can find it on our website and through the application" | translate }} {{$root.settings['site.name']}}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5053" mm_rangemax="5056" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Online reservations 24/7" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="5670" mm_rangemax="5673" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Patients can view their availability and book...]]></mm_displaystr>
+		<mm_data mm_rangemin="5751" mm_rangemax="5754" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Custom profile of Latinomedica" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6263" mm_rangemax="6266" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Your profile of" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="6350" mm_rangemax="6353" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} {{$root.settings['site.name']}} {{"is personalized with your insurance on the...]]></mm_displaystr>
+		<mm_data mm_rangemin="6417" mm_rangemax="6420" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Professional pictures" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7052" mm_rangemax="7055" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Headshots and photos of the office enhance your...]]></mm_displaystr>
+		<mm_data mm_rangemin="7130" mm_rangemax="7133" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Unlimited Locations" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7773" mm_rangemax="7776" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"List several practice locations in your profile to help patients find the most convenient" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7849" mm_rangemax="7852" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <h4 class="media-heading">{{"Patient Feedback" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8459" mm_rangemax="8462" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Build and Protect Your Online Reputation with Verified Reviews of Real Patients" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8532" mm_rangemax="8535" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Interested? Get more information today" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9452" mm_rangemax="9455" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="javascript:void(0)" class="btn" ng-click="gotoDiv('joinlationmedica')">{{"Register for a FREE demonstration" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9607" mm_rangemax="9610" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h4 class="media-heading">{{"Register immediately" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10722" mm_rangemax="10725" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Patients fill their papers online - all you have...]]></mm_displaystr>
+		<mm_data mm_rangemin="10803" mm_rangemax="10806" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h4 class="media-heading">{{"Email reminders and text" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="11490" mm_rangemax="11493" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"His patients receive appointment reminders," |...]]></mm_displaystr>
+		<mm_data mm_rangemin="11575" mm_rangemax="11578" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} {{$root.settings['site.name']}} {{"reducing no-shows and the time spent by your...]]></mm_displaystr>
+		<mm_data mm_rangemin="11670" mm_rangemax="11673" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4>{{"This features make latinomedica work for you" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="11902" mm_rangemax="11905" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h4 class="media-heading">{{"Calendar Latinomedica" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12238" mm_rangemax="12241" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Manage availability without problems. You control your schedule and patients can choose when booking" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12320" mm_rangemax="12323" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h4 class="media-heading">{{"Account Activity" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="12986" mm_rangemax="12989" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"I'll remind you to confirm appointments and send other useful updates." | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13063" mm_rangemax="13066" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <h4 class="media-heading">{{"Get synchronized" | translate }}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="13699" mm_rangemax="13702" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Our technology reads your practice management...]]></mm_displaystr>
+		<mm_data mm_rangemin="13776" mm_rangemax="13779" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"Why do Doctors join Latinomedica's?" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="14879" mm_rangemax="14882" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Building Patient Loyalty" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15056" mm_rangemax="15059" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Strengthen relationships with patients by...]]></mm_displaystr>
+		<mm_data mm_rangemin="15129" mm_rangemax="15132" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...by offering"}} {{$root.settings['site.name']}} {{"first-class comfort - from simple booking and...]]></mm_displaystr>
+		<mm_data mm_rangemin="15218" mm_rangemax="15221" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Attract the patients you need" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15444" mm_rangemax="15447" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Your profile of" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="15522" mm_rangemax="15525" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} {{$root.settings['site.name']}} {{"is personalized with your insurance, the...]]></mm_displaystr>
+		<mm_data mm_rangemin="15589" mm_rangemax="15592" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Improve attendance" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="15944" mm_rangemax="15947" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"reminders improve attendance by 60%" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16203" mm_rangemax="16206" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"You are always up to date" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16360" mm_rangemax="16363" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Reminders by SMS Booking You can be located Users or potential itinerants" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16594" mm_rangemax="16597" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"High Refunds" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="16789" mm_rangemax="16792" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"95% of" | translate }} {{$root.settings['site.name']}} {{"patients are commercially insured or pay in cash" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17016" mm_rangemax="17019" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"95% of" | translate }} {{$root.settings['site.name']}} {{"patients are commercially insured or pay in cash" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17074" mm_rangemax="17077" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Large search presence" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17244" mm_rangemax="17247" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"120 million annual searches of doctors show" | translate }} {{$root.settings['site.name']}} {{"in the best results" | translate }}.</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17468" mm_rangemax="17471" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"120 million annual searches of doctors show" | translate }} {{$root.settings['site.name']}} {{"in the best results" | translate }}.</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17563" mm_rangemax="17566" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Maximize your availability" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="17901" mm_rangemax="17904" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Fill in the last-minute openings on your calendar...]]></mm_displaystr>
+		<mm_data mm_rangemin="17980" mm_rangemax="17983" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...| translate }} {{$root.settings['site.name']}} {{",you are there for your patients when they need...]]></mm_displaystr>
+		<mm_data mm_rangemin="18132" mm_rangemax="18135" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Strengthen your reputation" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="18316" mm_rangemax="18319" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"protects and improves its presence on the web with verified reviews of real patients" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="18427" mm_rangemax="18430" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Accommodate urgent needs" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="18768" mm_rangemax="18771" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"The typical" | translate }} {{$root.settings['site.name']}} {{"patient visits a doctor in 24 hours" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19003" mm_rangemax="19006" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"The typical" | translate }} {{$root.settings['site.name']}} {{"patient visits a doctor in 24 hours" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19066" mm_rangemax="19069" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Be available 24/7" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19223" mm_rangemax="19226" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"45% of" | translate }} {{$root.settings['site.name']}} {{"appointments are booked after hours" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19445" mm_rangemax="19448" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"45% of" | translate }} {{$root.settings['site.name']}} {{"appointments are booked after hours" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19503" mm_rangemax="19506" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Capture more comments" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19660" mm_rangemax="19663" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"The average physician score after one year in" | translate }} {{$root.settings['site.name']}} {{"is 4.68 out of 5 stars" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19890" mm_rangemax="19893" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"The average physician score after one year in" | translate }} {{$root.settings['site.name']}} {{"is 4.68 out of 5 stars" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="19987" mm_rangemax="19990" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Get verified reviews" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="20131" mm_rangemax="20134" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"The average provider has 40 qualifications after one year in" | translate }} {{$root.settings['site.name']}}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="20360" mm_rangemax="20363" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="21386" mm_rangemax="21389" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="21800" mm_rangemax="21803" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="22214" mm_rangemax="22217" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="22628" mm_rangemax="22631" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"helps me achieve what I set out to do as a doctor" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="23042" mm_rangemax="23045" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and...]]></mm_displaystr>
+		<mm_data mm_rangemin="24173" mm_rangemax="24176" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and...]]></mm_displaystr>
+		<mm_data mm_rangemin="24583" mm_rangemax="24586" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and...]]></mm_displaystr>
+		<mm_data mm_rangemin="24993" mm_rangemax="24996" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and...]]></mm_displaystr>
+		<mm_data mm_rangemin="25403" mm_rangemax="25406" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{$root.settings['site.name']}} {{"is the only one that offers patients a quick and...]]></mm_displaystr>
+		<mm_data mm_rangemin="25813" mm_rangemax="25816" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"Join" | translate }} {{$root.settings['site.name']}}{{"!"}}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26859" mm_rangemax="26862" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h3>{{"Join" | translate }} {{$root.settings['site.name']}}{{"!"}}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="26914" mm_rangemax="26917" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label>{{"First Name" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="27610" mm_rangemax="27613" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.required)">{{"Please enter your first name" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="28106" mm_rangemax="28109" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="28410" mm_rangemax="28413" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.first_name.$error.pattern)">{{"Enter Valid name without number" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="28702" mm_rangemax="28705" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label>{{"Last Name" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29112" mm_rangemax="29115" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.required)">{{"Please enter your last name" | translate }}...]]></mm_displaystr>
+		<mm_data mm_rangemin="29601" mm_rangemax="29604" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.minlength)">{{"Minimum length is 3" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="29900" mm_rangemax="29903" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.last_name.$error.pattern)">{{"Enter valid name without number" | translate...]]></mm_displaystr>
+		<mm_data mm_rangemin="30188" mm_rangemax="30191" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Direct Phone number" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="30749" mm_rangemax="30752" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.required)">{{"Enter Phone Number" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="31239" mm_rangemax="31242" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.maxlength)">{{"Maximum length is 12" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="31513" mm_rangemax="31516" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.minlength)">{{"Minimum length is 8" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="31788" mm_rangemax="31791" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.phone.$error.pattern)">{{"Enter Valid Mobile Number Without Character"|...]]></mm_displaystr>
+		<mm_data mm_rangemin="32060" mm_rangemax="32063" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Your Email" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32294" mm_rangemax="32297" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.email.$error.required)">{{"Please enter your mail id"| translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32702" mm_rangemax="32705" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.email.$error.email)">{{"Enter valid email"| translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="32977" mm_rangemax="32980" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Password" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="33621" mm_rangemax="33624" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.required)">{{"Please enter password" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34064" mm_rangemax="34067" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.minlength)">{{"Minimum length is 6" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34319" mm_rangemax="34322" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.password.$error.maxlength)">{{"Maximum length is 20" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34572" mm_rangemax="34575" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Confirm Password" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="34872" mm_rangemax="34875" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.confirmPassword.$error.required)">{{"Please enter confirm password" |...]]></mm_displaystr>
+		<mm_data mm_rangemin="35366" mm_rangemax="35369" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(signupForm.confirmPassword.$error.minlength)">{{"Minimum length is 6" | translate}}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="35656" mm_rangemax="35659" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...(signupForm.confirmPassword.$error.maxlength)">{{"Maximum length is 20" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="35936" mm_rangemax="35939" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (model.password != model.confirm_password)">{{"Password Mismatch" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36203" mm_rangemax="36206" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label>{{"Specialty" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="36642" mm_rangemax="36645" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.specialty_id.$error.required)">{{"Please select specialty" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="37589" mm_rangemax="37592" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Postal Code" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="38058" mm_rangemax="38061" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.postal_code.$error.required)">{{"Enter Postal Code" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="38552" mm_rangemax="38555" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.postal_code.$error.minlength)">{{"Minimum length is 3" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="38849" mm_rangemax="38852" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.postal_code.$error.maxlength)">{{"Maximum length is 10" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="39147" mm_rangemax="39150" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"City'| translate}}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="39699" mm_rangemax="39702" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"City'| translate}}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="40229" mm_rangemax="40232" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.city_id.$error.required)">{{"Choose City"| translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="40550" mm_rangemax="40553" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label class="form-name">{{"Hobbies'}}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="41015" mm_rangemax="41018" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.hobbies.$error.required)">{{"Please enter your hobbies"| translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="41438" mm_rangemax="41441" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Please read and agree to" | translate }} <em>{{"The terms of Use and privace policy" | translate }}</em> ]]></mm_displaystr>
+		<mm_data mm_rangemin="42989" mm_rangemax="42992" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ {{"Please read and agree to" | translate }} <em>{{"The terms of Use and privace policy" | translate }}</em> ]]></mm_displaystr>
+		<mm_data mm_rangemin="43037" mm_rangemax="43040" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...&& (signupForm.termCondition.$error.required)">{{"Required" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="43469" mm_rangemax="43472" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\list_your_practice.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Begin" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="43738" mm_rangemax="43741" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\list_your_practice.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\login.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <input type="checkbox" class="hide" />{{"keep me signed in" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="2976" mm_rangemax="2979" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\login.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\login.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="forgot-password text-center"><a href="#/users/forgot_password" class="text-muted">{{"Forget your Password?" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3376" mm_rangemax="3379" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\login.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h3>{{"Hi, Maria Castillo!" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="489" mm_rangemax="492" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Click below to find a doctor and to make an appointemnt instaltly .Its completely free!" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="573" mm_rangemax="576" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a href="#/search" class="btn btn-animate btn-green">{{"Find Doctors" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="774" mm_rangemax="777" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h4 class="pull-left">{{"Appointment with a" | translate }} {{team.specialty.name}}</h4> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1282" mm_rangemax="1285" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Need a doctor? Make an appointment now and add a doctor to your medical team" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1998" mm_rangemax="2001" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...eam.city.id}}&specialty_id={{team.specialty.id}}">{{"Search" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2294" mm_rangemax="2297" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p><a href="javascript:void(0)" ng-click="showDoctorList()">{{"Find a Doctor" | translate }}</a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3148" mm_rangemax="3151" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="pull-left"><a href="javascript:void(0)">{{"Already have one? Sign In" | translate }} </a></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3607" mm_rangemax="3610" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h5>{{"Recommendations for you" | translate }}</h5> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3870" mm_rangemax="3873" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <span>{{"Completed" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3996" mm_rangemax="3999" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <span class="sr-only">{{"20% Complete" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4300" mm_rangemax="4303" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Eyesight test" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="4741" mm_rangemax="4744" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    {{"Skin test" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="5029" mm_rangemax="5032" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Anual checkup" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="5318" mm_rangemax="5321" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     {{"Dental cleaning" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="5613" mm_rangemax="5616" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    {{"Medical record" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="5908" mm_rangemax="5911" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <span>{{"No upcoming appointments" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6252" mm_rangemax="6255" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <h3>{{"Answer to your messages" | translate }}</h3> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6395" mm_rangemax="6398" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\medical_team.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Rate the best answer" | translate }}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7758" mm_rangemax="7761" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\medical_team.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Choose a medical insurance" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2768" mm_rangemax="2771" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Choose a dental plan" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="3866" mm_rangemax="3869" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Choose a eyesight plan" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4954" mm_rangemax="4957" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <option value="">{{"Choose a medical insurance" | translate }}</option> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6980" mm_rangemax="6983" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...octorinsurance_add.insurance_id.$error.required)">{{"Select medical insurance" | translate }}</span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="7420" mm_rangemax="7423" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...rinsurance_add.allowed_patients.$error.required)">{{"Enter patient count" | translate }} </span> ]]></mm_displaystr>
+		<mm_data mm_rangemin="8762" mm_rangemax="8765" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9293" mm_rangemax="9296" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Insurance Lists" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="9797" mm_rangemax="9800" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[  <p class="pull-left">{{insuranceList.insurance.name}}{{" | "}}{{insuranceList.allowed_patients}}</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10108" mm_rangemax="10111" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\my_insurances.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <a class="pull-right" href="javascript:void(0)" ng-click="model.removeInsurance(insuranceList.id)" >{{"Revoke" | translate }}</a> ]]></mm_displaystr>
+		<mm_data mm_rangemin="10313" mm_rangemax="10316" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\my_insurances.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <h1>{{"Notifications" | translate }}</h1> ]]></mm_displaystr>
+		<mm_data mm_rangemin="566" mm_rangemax="569" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[     <label for="name">{{"E-mails" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="1111" mm_rangemax="1114" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...: false" ng-true-value="1" ng-false-value="0"> {{"Wellness reminders" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="1540" mm_rangemax="1543" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <label>{{"Application Settings" | translate }}</label> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2177" mm_rangemax="2180" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[    <p>{{"Download the latinomedica" | translate }}<a href="javascript:void(0)">{{"Android app" | translate }}</a>{{" ]]></mm_displaystr>
+		<mm_data mm_rangemin="2277" mm_rangemax="2280" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"Download the latinomedica" | translate }}<a href="javascript:void(0)">{{"Android app" | translate }}</a>{{" ]]></mm_displaystr>
+		<mm_data mm_rangemin="2350" mm_rangemax="2353" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p>{{"Download the latinomedica" | translate }}<a href="javascript:void(0)">{{"Android app" | translate }}</a>{{" ]]></mm_displaystr>
+		<mm_data mm_rangemin="2384" mm_rangemax="2387" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ or the" | translate }} <a href="javascript:void(0)">{{"Iphone app" | translate }}</a>.</p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="2493" mm_rangemax="2496" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...: false" ng-true-value="1" ng-false-value="0"> {{"Notify appointment reminders" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="2930" mm_rangemax="2933" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...: false" ng-true-value="1" ng-false-value="0"> {{"Notify if your appointment is reprogrammed or...]]></mm_displaystr>
+		<mm_data mm_rangemin="3580" mm_rangemax="3583" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...: false" ng-true-value="1" ng-false-value="0"> {{"Notify wellness reminders" | translate }} ]]></mm_displaystr>
+		<mm_data mm_rangemin="4234" mm_rangemax="4237" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\notifications.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button> ]]></mm_displaystr>
+		<mm_data mm_rangemin="4814" mm_rangemax="4817" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\notifications.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\user_settings.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[...aria-haspopup="true" aria-expanded="false">{{"Welcome" | translate }},...]]></mm_displaystr>
+		<mm_data mm_rangemin="168" mm_rangemax="171" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\user_settings.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+	<mm_reportitem>
+		<mm_file>User\user_view.tpl.html</mm_file>
+		<mm_displaystr><![CDATA[ <p class="pull-left"><span>{{"Code" | translate }}: <a href="javascript:void(0)">{{model.user.user_code}}</a></span></p> ]]></mm_displaystr>
+		<mm_data mm_rangemin="6029" mm_rangemax="6032" mm_filename="D:\xampp8.2\htdocs\abssalvador\client\src\app\User\user_view.tpl.html" mm_replaced="false" mm_matchedtextdirty="false" />
+	</mm_reportitem>
+</mm_report>

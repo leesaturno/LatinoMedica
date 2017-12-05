@@ -1,0 +1,41 @@
+<section class="clearfix">
+    <div class="container page-space questions_add">
+    	<figure class="page-logo">
+            <a href="#!/">
+                <img src="assets/img/logo.png" alt="logo" class="img-responsive center-block"/>
+            </a>
+        </figure>
+        <div class="form-content col-md-6 col-md-offset-3">
+            <div class="page-head">
+          		<h1>{{'Add Question'| translate}}</h1>
+            </div>
+            <form name="formValue" method="post" ng-submit="model.questionAdd(formValue.$valid)" novalidate>
+				<div class="form-body">
+                    <div ng-class="{ 'has-error' : (formValue.$submitted || formValue.specialty_id.$touched) && (formValue.specialty_id.$pristine || formValue.specialty_id.$invalid) && (formValue.specialty_id.$error.required)}">
+                        <div class="form-group select-opt">
+                            <select class="form-control" name="specialty_id" ng-model="model.formValue.specialty_id" selectpicker ng-required="true">
+                                <option value="">Specialty</option>
+                                <option ng-repeat="specialty in specialties" value="{{specialty.id}}">{{specialty.name}}</option>
+                            </select>
+                            <span class="error" ng-show="(formValue.$submitted || formValue.specialty_id.$touched) && (formValue.specialty_id.$pristine || formValue.specialty_id.$invalid) && (formValue.specialty_id.$error.required)">{{'Choose Specialty'| translate }} </span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="question" id="question" placeholder="{{'Question'| translate}}" ng-model="model.formValue.question" ng-required="true"/>
+                            <span class="error" ng-show="(formValue.$submitted || formValue.question.$touched) && (formValue.question.$pristine || formValue.question.$invalid) && (formValue.question.$error.required)">{{'Question Required'| translate }} </span>
+                        </div>
+                        <div class="m-t-15">
+                            <label>Active / In Active</label>
+                            <div class="switch-option">
+                                <switch id="enabled" name="enabled" ng-model="model.formValue.is_active" on="Yes" off="No" class="green"></switch>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-footer education-btn appmt-btn">
+                    <button class="btn btn-green btn-animate" type="submit">{{'Add'| translate }}</button>
+                    <a href="#/questions" class="btn cancel">{{'Cancel'| translate }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

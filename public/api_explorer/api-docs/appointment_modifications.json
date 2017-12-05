@@ -1,0 +1,315 @@
+{
+  "apis": [
+    {
+      "path": "/appointments/modifications",
+      "operations": [
+        {
+          "summary": "Fetch List of Appointment Modificaitons",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "description": "Give which page to be loaded",
+              "required": false
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search Appointment Modificaiton",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "type": "string",
+              "description": "filter list of Appointment Modificaiton",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Appointment Modificaiton Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort Appointment Modificaitons by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "work_place_id",
+              "paramType": "query",
+              "type": "integer",
+              "description": "The work place Identifier",
+              "required": false,
+              "format": "int64"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get_appointment_modificaitons"
+        }
+      ]
+    },
+    {
+      "path": "/appointments/modifications/delete/{id}",
+      "operations": [
+        {
+          "summary": "Delete Appointment Modificaiton",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Delete Appointment Modificaiton Details from List"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "DELETE",
+          "nickname": "delete__appointment_modification__id"
+        }
+      ]
+    },
+    {
+      "path": "/appointments/modifications/add",
+      "operations": [
+        {
+          "summary": "Add Appointment Modificaiton Details",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "AppointmentModificationAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "AppointmentModificationAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__appointment_modification"
+        }
+      ]
+    },
+	{
+      "path": "/appointments/modifications/edit/{id}",
+      "operations": [
+        {
+          "summary": "Edit Appointment Modification",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit Appointment Modification Details from List"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__appointments__modification__edit__id"
+        },
+		{
+          "summary": "Update Appointment Modificaiton",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit Appointment Modification Details from List"
+            },
+            {
+              "name": "AppointmentModificationEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "AppointmentModificationEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__appointments__modifications__id"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "AppointmentModificationAdd": {
+      "properties": {
+        "appoint_date": {
+          "type": "date",
+          "required": true,
+          "description": "Date"
+        },
+        "type": {
+          "type": "integer",
+          "required": false,
+          "description": "Make a Day off"
+        },
+        "is_two_session": {
+          "type": "integer",
+          "required": false,
+          "description": "Practice operates in two sessions"
+        },
+        "practice_open": {
+          "type": "string",
+          "required": false,
+          "description": "Practice open time"
+        },
+		"lunch_at": {
+          "type": "string",
+          "required": false,
+          "description": "Lunch at time"
+        },
+		"resume_at": {
+          "type": "string",
+          "required": false,
+          "description": "Resume at time"
+        },
+		"practice_close": {
+          "type": "string",
+          "required": false,
+          "description": "Practice close time"
+        },
+        "work_place_id": {
+          "type": "integer",
+          "format": "int64",
+          "required": false,
+          "description": "Id of workplace"
+        }  
+      },
+      "id": "AppointmentModificationAdd"
+    },
+    "AppointmentModificationEdit": {
+      "properties": {
+        "appoint_date": {
+          "type": "date",
+          "required": true,
+          "description": "Date"
+        },
+        "type": {
+          "type": "integer",
+          "required": false,
+          "description": "Make a Day off"
+        },
+        "is_two_session": {
+          "type": "integer",
+          "required": false,
+          "description": "Practice operates in two sessions"
+        },
+        "practice_open": {
+          "type": "string",
+          "required": false,
+          "description": "Practice open time"
+        },
+		"lunch_at": {
+          "type": "string",
+          "required": false,
+          "description": "Lunch at time"
+        },
+		"resume_at": {
+          "type": "string",
+          "required": false,
+          "description": "Resume at time"
+        },
+		"practice_close": {
+          "type": "string",
+          "required": false,
+          "description": "Practice close time"
+        },
+        "work_place_id": {
+          "type": "integer",
+          "format": "int64",
+          "required": false,
+          "description": "Id of workplace"
+        }
+      },
+      "id": "AppointmentModificationEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

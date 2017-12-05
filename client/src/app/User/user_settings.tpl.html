@@ -1,0 +1,59 @@
+<li class="dropdown arrow-icon">
+	<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{"Welcome" | translate }}, {{$root.auth.user_profile.display_name}}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu arrow arrow-right">
+    	<li>
+        	<ul class="list-unstyled">
+            	<li class="col-sm-3 col-xs-6">
+                    <h2>{{'Profile Details' | translate}}</h2>
+                    <ul class="list-unstyled">
+                    	<li><a ui-sref="MyAppointments()" title="{{'Dashboard' | translate}}"><i class="fa fa-pencil-square-o fa-fw"></i>{{'Dashboard' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/doctor/{{$root.auth.username}}" title="{{'View Profile' | translate}}"><i class="fa fa-eye fa-fw"></i>{{'View Profile' | translate}}</a></li>
+                        <li><a href="#/users/change_password" title="{{'Change Password' | translate}}"><i class="fa fa-lock fa-fw"></i>{{'Change Password' | translate}}</a></li>                     <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/users/user_profile" title="{{'Settings' | translate}}"><i class="fa fa-cog"></i>{{'Settings' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/messages" title="{{'Messages' | translate}}"><i class="fa fa-commenting-o"></i>{{'Messages' | translate}}</a></li>  
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor && $root.settings['site.enabled_plugins'].indexOf('UserEducations') > -1"><a href="#/user/education" title="{{'My Educations' | translate}}"><i class="fa fa-book fa-fw"></i>{{'My Educations' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/user/badges" title="{{'Badges' | translate}}"><i class="fa fa-graduation-cap fa-fw"></i>{{'Badges' | translate}}</a></li>  
+                    </ul>
+                    <h2 ng-if="$root.auth.role_id == model.ConstUserType.Doctor">{{'Work Places' | translate}}</h2>
+                    <ul class="list-unstyled" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                    	<li><a href="#/user/workplaces"><i class="fa fa-location-arrow fa-fw"></i>{{ 'My Workplaces' | translate }}</a></li>
+                    </ul>
+               	</li>
+            	 <!--<li class="col-sm-3 col-xs-6">
+                    <h2>{{'Appointment Details' | translate}}</h2>
+                    <ul class="list-unstyled">
+                    	<li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/user/calendar" title="{{'My Calendar' | translate}}"><i class="fa fa-calendar fa-fw"></i>{{'My Calendar' | translate}}</a></li>
+                       <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/appointments/modifications" title="{{'Appointment Modifications' | translate}}"><i class="fa fa-edit fa-fw"></i>{{'Appointment Modifications' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/appointments/settings" title="{{'Appointment Settings' | translate}}"><i class="fa fa-gear fa-fw"></i>{{'Appointment Settings' | translate}}</a></li> 
+                        <li><a href="#/appointments/all" title="{{'My Appointments' | translate}}"><i class="fa fa-envelope-o fa-fw"></i>{{'My Appointments' | translate}}</a></li>
+                    </ul>
+              	</li>-->
+            	<li class="col-sm-3 col-xs-6">
+                    <h2>{{'Facilities' | translate}}</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#/appointments/all" title="{{'My Appointments' | translate}}"><i class="fa fa-envelope-o fa-fw"></i>{{'My Appointments' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor && $root.auth.is_trial == 1 && $root.settings['site.enabled_plugins'].indexOf('Subscriptions') > -1 || $root.auth.role_id == model.ConstUserType.Doctor && $root.auth.is_paypal_cancel == 1 &&  $root.auth.subscription_end < currentDate && $root.settings['site.enabled_plugins'].indexOf('Subscriptions') > -1"><a href="#/subscribe/plans" title="{{'Subscription Plans' | translate}}"><i class="fa fa-clone fa-fw"></i>{{'Subscription Plans' | translate}}</a></li>    
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor && $root.auth.is_trial == 0 && $root.settings['site.enabled_plugins'].indexOf('Subscriptions') > -1"><a href="#/subscribe/list" title="{{'Subscribe Details' | translate}}"><i class="fa fa-clone fa-fw"></i>{{'My Subscription' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/user/specialties" title="{{'My Specialties' | translate}}"><i class="fa fa-user-md fa-fw"></i>{{'My Specialties' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/user/insurances" title="{{'My Insurances' | translate}}"><i class="fa fa-retweet fa-fw"></i>{{'My Insurances' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/user/languages" title="{{'My Languages' | translate}}"><i class="fa fa-language fa-fw"></i>{{'My Languages' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor"><a href="#/photos" title="{{'My Clinic Photos' | translate}}"><i class="fa fa-hospital-o fa-fw"></i>{{'My Clinic Photos' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Doctor && $root.settings['site.enabled_plugins'].indexOf('IcalCalendar') > -1"><a href="#/ical/list" title="{{'Ical List' | translate}}"><i class="fa fa-link fa-fw"></i>{{'Ical' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.User"><a href="#/" title="{{'Book a new appointment' | translate}}"><i class="fa fa-plus fa-fw"></i>{{'Book a new appointment' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.User && $root.settings['site.enabled_plugins'].indexOf('UserFavorites') > -1"><a href="#/user/favorite" title="{{'My Doctors' | translate}}"><i class="fa fa-user-md fa-fw"></i>{{'My Doctors' | translate}}</a></li>
+                        <li><a href="#/questions" ng-if="$root.auth.role_id == model.ConstUserType.User && $root.settings['site.enabled_plugins'].indexOf('QuestionAnswer') > -1" title="{{'Questions' | translate}}"><i class="fa fa-book fa-fw"></i>{{'Questions' | translate}}</a></li>
+                        <li><a href="#/answers" ng-if="$root.auth.role_id == model.ConstUserType.Doctor && $root.settings['site.enabled_plugins'].indexOf('QuestionAnswer') > -1" title="{{'Answers' | translate}}"><i class="fa fa-book fa-fw"></i>{{'Answers' | translate}}</a></li>
+                        <li ng-if="$root.auth.role_id == model.ConstUserType.Admin"><a href="ag-admin/#/dashboard" title="{{'Admin Dashboard' | translate}}"><i class="fa fa-clone fa-fw"></i>{{'Admin Dashboard' | translate}}</a></li>
+                    </ul>
+              	</li>
+            	<li class="col-sm-3 col-xs-6">                    
+                    <h2>{{'Exit' | translate}}</h2>
+                    <ul class="list-unstyled">
+                    	<li><a href="#" ng-click="dashboardlogout()"><i class="fa fa-power-off fa-fw"></i>{{ 'Sign out' | translate }}</a></li>
+                    </ul>
+              	</li>
+       		</ul>
+        </li>
+    </ul>
+</li>

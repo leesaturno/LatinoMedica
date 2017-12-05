@@ -1,0 +1,35 @@
+<section class="clearfix pad-63 checklist-content">
+    <div class="container">
+        <div class="page-head">    
+            <h1>{{'My Specialties'| translate}}</h1>
+        </div>
+    </div>
+    <div class="container remove-width">
+        <div class="form-content">
+            <form name="specialityUpdate" ng-submit="model.mySpeciality(specialityUpdate)" novalidate>
+                <div class="form-heading">
+                    <h2>{{'Select Your Specialties'| translate}}</h2>
+                </div>
+                <div class="form-body clearfix">
+                    <div class="form-group col-md-4" ng-repeat="specialty in specialties">
+                        <label class="checkbox-field">
+                            <input class="hide" type="checkbox" checklist-model="user.specialty_ids" checklist-value="specialty.id" ng-change="check(specialty.id, checked)"id="{{specialty.name}}">
+                            <span class="custom-check check-green"></span>
+                            <span><label for="{{specialty.name}}">{{specialty.name}}</label></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <div class="row">
+                        <div class="text-center">
+                            <button class="btn btn-green btn-animate" type="submit">{{'Update'| translate }}</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<div oc-lazy-load='loadSeo'>
+    <user-profile-seo></user-profile-seo>
+</div>

@@ -1,0 +1,246 @@
+{
+  "apis": [
+    {
+      "path": "/user_profiles",
+      "operations": [
+        {
+          "summary": "Edit User Profile",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "user_id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit User Profile"
+            },
+            {
+              "name": "is_allow_appointments",
+              "paramType": "query",
+              "type": "boolean",
+              "required": false,
+              "description": "Is allow appoinments"
+            },
+            {
+              "name": "identification_number",
+              "paramType": "query",
+              "type": "string",
+              "format": "string",
+              "required": false,
+              "description": "Identification Number"
+            },
+            {
+              "name": "no_insurance_patients",
+              "paramType": "query",
+              "type": "integer",
+              "format": "int64",
+              "required": false,
+              "description": "Insurance patients"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__user_profiles__user_id__edit"
+        }
+      ]
+    },
+    {
+      "path": "/user_profiles",
+      "operations": [
+        {
+          "summary": "Update User Profile",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "user_id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "Edit User profile details"
+            },
+            {
+              "name": "ProfileEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "ProfileEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "POST__user_profiles__user_id_"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "ProfileEdit": {
+      "properties": {
+        "user_id": {
+          "format": "int64",
+          "type": "integer",
+          "required": true,
+          "description": "The User identifier"
+        },
+        "first_name": {
+          "type": "string",
+          "required": true,
+          "description": "First Name"
+        },
+        "last_name": {
+          "type": "string",
+          "required": true,
+          "description": "Last Name"
+        },
+		"gender_id":{
+		  "type": "integer",
+          "required": true,
+          "description": "Gender"
+		},
+		"dr_title":{
+		  "type": "string",
+          "required": true,
+          "description": "Dr Title (For Doc Only)"
+		},
+		"practice_name":{
+		  "type": "string",
+          "required": true,
+          "description": "Practice Name (For Doc Only)"
+		},
+		"notification_type_id":{
+		  "type": "integer",
+          "required": true,
+          "description": "Notification Type (For Doc Only)"
+		},
+		"booking_instructions":{
+		  "type": "string",
+          "required": true,
+          "description": "Booking Instructino (For Doc Only)"
+		},
+		"about_me":{
+		  "type": "string",
+          "required": true,
+          "description": "About Me (For Doc Only)"
+		},
+		"board_certifications":{
+		  "type": "string",
+          "required": true,
+          "description": "Board Certificates (For Doc Only)"	
+		},
+		"memberships":{
+		  "type": "string",
+          "required": true,
+          "description": "Memberships (For Doc Only)"
+		},
+		"awards":{
+		  "type": "string",
+          "required": true,
+          "description": "Awards (For Doc Only)"
+		},
+		"phone":{
+		  "type": "string",
+          "required": true,
+          "description": "Phone"
+		},
+		"address":{
+		  "type": "string",
+          "required": true,
+          "description": "Address"
+		},
+		"city_id":{
+		  "type": "integer",
+          "required": false,
+          "description": "City"
+		},
+		"country_id":{
+		  "type": "intgeger",
+          "required": false,
+          "description": "Country"
+		},
+		"postal_code":{
+		  "type": "inetger",
+          "required": true,
+          "description": "Postal Code"
+		},
+    "is_allow_appointments": {
+        "format": "int64",
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ],
+        "required": false,
+        "description": "If User need to allow  appointments then value = 1 else value = 0"
+    },
+    "identification_number":{
+		  "type": "string",
+      "required": false,
+      "description": "Identification Number"
+		},
+		"no_insurance_patients":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},
+    	"facebook_handle":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},
+    	"twitter_handle":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},
+    	"race":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},
+    	"ethnicity":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},
+    	"preferred_lang":{
+		  "type": "string",
+      "required": false,
+      "description": "Insurance Patients"
+		},      
+		"hospital_affiliation":{
+		  "type": "string",
+      "required": false,
+      "description": "hospital_affiliation"
+		}
+  },
+      "id": "ProfileEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

@@ -1,0 +1,237 @@
+{
+  "apis": [
+    {
+      "path": "/auth/facebook",
+      "operations": [
+        {
+          "summary": "Facebook Users",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Facebook",
+              "paramType": "body",
+              "required": true,
+              "type": "Facebook",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__auth_facebook"
+        }
+      ]
+    },
+    {
+      "path": "/auth/google",
+      "operations": [
+        {
+          "summary": "Google Users",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Google",
+              "paramType": "body",
+              "required": true,
+              "type": "Google",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__auth_google"
+        }
+      ]
+    },
+    {
+      "path": "/auth/linkedin",
+      "operations": [
+        {
+          "summary": "Linkedin Users",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Linkedin",
+              "paramType": "body",
+              "required": true,
+              "type": "Linkedin",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__auth_linkedin"
+        }
+      ]
+    },
+    {
+      "path": "/auth/twitter",
+      "operations": [
+        {
+          "summary": "Twitter Users",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Twitter",
+              "paramType": "body",
+              "required": true,
+              "type": "Twitter",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__auth_twitter"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Facebook": {
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "required": true,
+          "description": "Facebook app id"
+        },
+        "secret_key": {
+          "type": "string",
+          "required": true,
+          "description": "Facebook secret id"
+        },
+        "code": {
+          "type": "string",
+          "required": true,
+          "description": "Authenticated code"
+        },
+        "redirectUri": {
+          "type": "string",
+          "required": true,
+          "description": "Redirect url"
+        }
+      },
+      "id": "Facebook"
+    },
+    "Google": {
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "required": true,
+          "description": "Google app id"
+        },
+        "secret_key": {
+          "type": "string",
+          "required": true,
+          "description": "Google secret id"
+        },
+        "code": {
+          "type": "string",
+          "required": true,
+          "description": "Authenticated code"
+        },
+        "redirectUri": {
+          "type": "string",
+          "required": true,
+          "description": "Redirect url"
+        }
+      },
+      "id": "Google"
+    },
+    "Linkedin": {
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "required": true,
+          "description": "Linkedin app id"
+        },
+        "secret_key": {
+          "type": "string",
+          "required": true,
+          "description": "Linkedin secret id"
+        },
+        "code": {
+          "type": "string",
+          "required": true,
+          "description": "Authenticated code"
+        },
+        "redirectUri": {
+          "type": "string",
+          "required": true,
+          "description": "Redirect url"
+        }
+      },
+      "id": "Linkedin"
+    },
+    "Twitter": {
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "required": true,
+          "description": "Twitter app id"
+        },
+        "secret_key": {
+          "type": "string",
+          "required": true,
+          "description": "Twitter secret id"
+        },
+        "code": {
+          "type": "string",
+          "required": true,
+          "description": "Authenticated code"
+        },
+        "redirectUri": {
+          "type": "string",
+          "required": true,
+          "description": "Redirect url"
+        }
+      },
+      "id": "Twitter"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

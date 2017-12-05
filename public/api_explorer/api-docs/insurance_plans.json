@@ -1,0 +1,208 @@
+{
+  "apis": [
+    {
+      "path": "/insurance_plans",
+      "operations": [
+        {
+          "summary": "Fetch Insurance plans",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "filter",
+              "paramType": "query",
+              "type": "string",
+              "description": "filter list of insurance plans",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Give which page to be loaded",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "type",
+              "paramType": "query",
+              "type": "string",
+              "description": "Display Insurance plans By Listing Type",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "field",
+              "paramType": "query",
+              "type": "string",
+              "description": "Give Whatever Fields Needed by &quot;Comma Seperator&quot;",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search Insurance plans",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Insurance Company Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort insurance plans by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__insurances"
+        },
+         {
+          "summary": "Store insurance plans",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "InsurancePlanAdd",
+              "paramType": "body",
+              "required": true,
+              "type": "InsurancePlanAdd",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__insuranceplans"
+        },
+        {
+          "summary": "Update insurance plans",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "InsurancePlanEdit",
+              "paramType": "body",
+              "required": true,
+              "type": "InsurancePlanEdit",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__insuranceplans"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "InsurancePlanAdd": {
+      "properties": {
+        "patient_id":{
+		      "type": "integer",
+          "required": true,
+          "description": "Patient Id"
+        },
+        "medical_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Medical insurance id"
+        },
+        "eye_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Eye insurance id"
+        },
+          "dental_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Dental insurance id"
+        },       
+         "timestamps": {
+          "type": "string",
+          "required": true,
+          "description": "timestamps"
+        }      
+      },
+      "id": "InsurancePlanAdd"
+    },
+     "InsurancePlanEdit": {
+      "properties": {
+        "patient_id":{
+		      "type": "integer",
+          "required": true,
+          "description": "Patient Id"
+        },
+        "medical_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Medical insurance id"
+        },
+        "eye_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Eye insurance id"
+        },
+          "dental_insurance_id": {
+          "type": "integer",
+          "required": false,
+          "description": "Dental insurance id"
+        },       
+         "timestamps": {
+          "type": "string",
+          "required": true,
+          "description": "timestamps"
+        }      
+      },
+      "id": "InsurancePlanEdit"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

@@ -1,0 +1,831 @@
+<div class="user-view clearfix" >
+    <div class="user-map-location">
+        <div class="maps js-maps-show clearfix">
+            <div style="width: 100%; float:left; height: 100%">
+                <form class="form-inline clearfix container">
+                	<div class="clearfix">
+                        <h3 class="pull-left">Google Maps</h3>
+                        <i class="fa fa-close pull-right" ng-click="mapFilterClose(1)"></i>
+                    </div>
+                	<div class="row">
+                        <div class="form-group col-sm-3 col-md-2">
+                            <ul class="list-inline">
+                                <li ng-class="(travelMode == 'DRIVING')? 'active': ''" ng-click="driveModeChanged('DRIVING')"><a class="map-car" href="javascript:void(0)"></a></li>
+                                <!--<li ng-class="(travelMode == 'TRANSIT')? 'active': ''" ng-click="driveModeChanged('TRANSIT')"><a class="map-bus" href="javascript:void(0)"></a></li>-->
+                                <li ng-class="(travelMode == 'WALKING')? 'active': ''" ng-click="driveModeChanged('WALKING')"><a class="map-walking" href="javascript:void(0)"></a></li>
+                                <li ng-class="(travelMode == 'BICYCLING')? 'active': ''" ng-click="driveModeChanged('BICYCLING')"><a class="map-bike" href="javascript:void(0)"></a></li>
+                            </ul>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4">
+                            <label>{{'Origin'| translate }}</label>
+                            <input ng-model="originBox" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4">
+                            <label>{{'Destination'| translate }}</label>
+                            <select ng-model="destinationBox" class="form-control" ng-options="workplace.location as workplace.location for workplace in workplaces" on-change="showRoute(workplace)">
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-2">
+                            <input type="button" class="btn btn-animate btn-green" ng-click="mapChanged(travelMode)" value="{{'Calculate Route'| translate }}" />
+                        </div>
+                    </div>
+                </form>
+                <div class="direction-map" ng-if="mapCenter">
+                    <ng-map zoom="15" center="[{{latitude}}, {{longitude}}]" style="height:90%"
+                        on-click="logLatLng()">
+                        <marker ng-repeat="workplace in workplaces" id='{{workplace.id}}' position="{{workplace.latitude}}, {{workplace.longitude}}" on-click="showRoute(workplace)" icon="assets/img/hospital-marker.png"></marker>
+                        <directions draggable="true" panel="directions-panel" travel-mode="{{travelMode}}" waypoints="{{waypoints}}" origin="{{origin}}"
+                            destination="{{destination}}">
+                        </directions>
+                    </ng-map>
+                </div>
+                <div class="hide" ng-if="mapCenter">
+                    Directions path length: {{map.directionsRenderers[0].directions.routes[0].overview_path.length}}
+                </div>
+                <div ng-if="!mapCenter" class="container">
+                    <p class="hor-space alert alert-danger">{{'Sorry No Locations.' |translate}}</p>
+                </div>
+            </div>
+            <div ng-if="mapCenter" id="directions-panel" class="hide" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
+            </div>
+        </div>
+        <div class="maps-image clearfix" ng-click="mapFilterClose(2)" ng-if="staticMapImage != ''">
+        	<img src="#" class="img-responsive js-maps-image">
+        </div>
+        <div class="maps-image js-maps-image clearfix" ng-if="staticMapImage == ''">
+            <div class="no-map">
+                <h4 class="text-center">{{'No map location found !' |translate}}</h4>
+            </div>
+        </div>
+    </div>
+	<div id="printSpeciality">
+        <div class="user-profile col-md-12" mapscroll ng-class="{posfixed:boolChangeClass}">
+            <div class="container">
+                <div class="media">
+                    <div class="pull-left" ng-class="(model.user.is_verified == '1') ? 'certified-tag' : ''" >
+                        <a href="#/doctor/{{model.user.username}}" title="{{model.user.username}}" class="thumbnail">
+                            <img ng-if="model.user.user_avatar_source_id != model.ConstSocialLogin.Twitter && model.user.user_avatar_source_id != model.ConstSocialLogin.Github"
+                                ng-src="{{model.user.attachmentable.thumb.large}}" title="{{model.user.username}}" class="" alt="{{model.user.username}}">
+                            <img ng-if="model.user.user_avatar_source_id == model.ConstSocialLogin.Twitter || model.user.user_avatar_source_id == model.ConstSocialLogin.Github"
+                                ng-src="{{model.user.attachmentable.thumb.large}}" title="{{model.user.username}}" class="" alt="{{model.user.username}}"
+                                height="{{model.thumb.large.height}}" width="{{model.thumb.large.width}}">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3>{{'Dr.'| translate }}{{model.user.user_profile.first_name}} {{model.user.user_profile.last_name}}</h3>
+                        <p><span ng-if="model.user.user_profile.specialties.length > 0" ng-repeat="specialty in model.user.user_profile.specialties">
+                                    {{$first ? '' : $last ? ' and ' : ', '}} {{specialty.name | translate }}
+                                </span></p>
+                        <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                            ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                        <p class="pull-left"><span>{{"Code" | translate }}: <a href="javascript:void(0)">{{model.user.user_code}}</a></span></p>
+                        <ul class="list-inline bottom-list pull-right">
+                            <li ng-if="$root.settings['site.enabled_plugins'].indexOf('Photos') > -1">
+                                <clinic-photos></clinic-photos>
+                            </li>
+                            <li class="read-reviews" ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1">
+                                <a class="btn" href="javascript:void(0)" ng-click="gotoAnchor('VerifiedPatientReviews')" title="{{'Verified Patient Reviews'| translate  }}">
+                                    {{'Read patient reviews'| translate }}
+                                </a>
+                            </li>
+                            <li>
+                                <span>{{'Practices' | translate }} </span><a class="btn" href="javascript:void(0)">{{'Immediate and primary' | translate }}</a>
+                            </li>
+                            <li>
+                                <a class="btn" href="javascript:void(0)" ng-click="printDiv('printSpeciality');" title="{{'Print' | translate }}">{{'Print' | translate }}</a>
+                            </li>
+                            <li>
+                                <p ng-if="$root.settings['site.enabled_plugins'].indexOf('UserFavorites') > -1 && $root.auth.role_id == model.ConstUserType.User && model.isAuthenticated()">
+                                    <span favorite-add></span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="qualify-exp">
+                        <h3 ng-if="$root.settings['site.enabled_plugins'].indexOf('UserEducations') > -1">{{'Qualifications and experience' | translate }}</h3>
+                        <div class="row education" ng-if="$root.settings['site.enabled_plugins'].indexOf('UserEducations') > -1">
+                            <div class="col-md-4">
+                                <h4>{{'Education' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <div ng-if="model.user.user_profile.educations.length > 0" class="row" ng-repeat="education in model.user.user_profile.educations">
+                                    <div class="col-sm-6">
+                                        <h4>{{'Accomplishments' | translate }}</h4>
+                                        <p>{{education.education}}</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4>{{'Universities' | translate }}</h4>
+                                        <p>{{education.organization}}</p>
+                                    </div>
+                                </div>
+                                <div class="row" ng-if="model.user.user_profile.educations.length == 0">
+                                    <div class="col-sm-12">
+                                        <p class="alert alert-danger">
+                                            {{'Education not yet added' | translate }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>{{'Hospital affiliation' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <span>
+                                    {{model.user.user_profile.hospital_affiliation}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>{{'Languages spoken at the consulting room ' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="list-unstyled field-data" ng-if="model.user.user_profile.languages.length > 0">
+                                    <li class="sg-para3 sg-navy language" ng-repeat="language in model.user.user_profile.languages" ng-class="($index > 1) ? 'hide js-showmore-language' : ''"> 
+                                        {{language.name}}
+                                    </li>
+                                    <li><a href="javascript:void(0)" class="seeall-btn show" ng-click="showMoreLanguage()">{{'See all...' | translate }}</a></li>
+                                </ul>
+                                <p class="alert alert-danger" ng-if="model.user.user_profile.languages.length == 0">
+                                    {{'Language not yet added' | translate }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>{{'Postgraduate Specialization' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <span ng-if="model.user.user_profile.specialties.length > 0" ng-repeat="specialty in model.user.user_profile.specialties">
+                                    {{$first ? '' : $last ? ' and ' : ', '}} {{specialty.name}}
+                                </span>
+                                <p class="alert alert-danger" ng-if="model.user.user_profile.specialties.length == 0">
+                                    {{'Specialty not yet added' | translate }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>{{'Insurances inside the network' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <span ng-if="model.user.insured_patients.data.length > 0" ng-repeat="patient in model.user.insured_patients.data">
+                                    {{$first ? '' : $last ? ' and ' : ', '}} {{patient.insurance.name | capitalize}}
+                                </span>
+                                <p class="alert alert-danger" ng-if="model.user.insured_patients.data.length == 0">
+                                    {{'Insurances not yet added' | translate }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>{{'Latinomédica Awards' | translate }}</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="list-inline" ng-if="model.userBadges.length > 0">
+                                    <li ng-repeat="badges in model.userBadges"><img class="img-responsive" ng-src="{{badges.thumb.small}}" /></li>
+                                </ul>
+                                <p class="alert alert-danger" ng-if="model.userBadges.length == 0">
+                                    {{'Awards not yet added' | translate }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="patient-reviews row">-->
+                    <div class="patient-reviews row" ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > - 1">
+                        <div class="" id="VerifiedPatientReviews">
+                            <h3 class="text-center">{{'Patient verification and reviews'| translate }}</h3>
+                            <!--<div class="add-review pull-right" ng-show="model.isAuthenticated()">
+                                <a href="#/user/review/add/{{model.user.id}}" class="btn btn-green btn-animate"><i class="fa fa-plus-circle fa-fw"></i>{{'Add Review'|translate  }}</a>
+                            </div>-->
+                            <!-- Add Review if the login user is patient -->
+                            <div ng-if="isvisited">
+                                <div ng-if="reviewEnable">
+                                    <div class="col-md-12">
+                                        <rating-stars></rating-stars>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="!reviewEnable">
+                                <div class="no-review">
+                                    <div ng-if="$root.auth.role_id == model.ConstUserType.Doctor" class="alert alert-danger">
+                                        {{'Doctor not able to add review' | translate }}
+                                    </div>
+                                    <div ng-if="$root.auth.role_id == model.ConstUserType.User" class="alert alert-danger">
+                                        <div ng-if="alreadyadded">
+                                            {{'You are not able to add more than one review for a doctor' | translate }}
+                                        </div>
+                                        <div ng-if="!isvisited">
+                                            {{'You are not able to add the review. Need to visit the doctor atleast once.' | translate }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-review row" ng-repeat="review in doctorReviews" ng-if="doctorReviews.length > 0">
+                                <div class="col-sm-4 profile-review-author">
+                                    <h4>{{ review.created_at | dateFormat }}</h4>
+                                    <span>{{'by '| translate  }} {{review.pet_name}}</span>
+                                    <p>{{'(Verified Patient)' | translate }}</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row separate-reviews">
+                                        <div class="col-sm-4">
+                                            <p>{{'General Opinion'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                            ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p>{{'Patient Care'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                            ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p>{{'Waiting Time'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="overAllRating"
+                            ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > -1"></input-stars>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix review-msg">
+                                        <p>{{review.review}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-info" ng-if="doctorReviews.length == 0">
+                                {{'Not yet reviewed'| translate }}
+                            </div>
+                            <div class="paging clearfix text-center" ng-show="meta.pagination.total > 0">
+                                <uib-pagination previous-text="&#xf104" next-text="&#xf105" total-items="_metadata.total" num-pages="meta.pagination.total_pages"
+                                    ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"
+                                    rotate="false" items-per-page="meta.pagination.per_page" ng-change="paginate()"></uib-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="description-right">
+                         <div class="clinic-slider">
+                             <ul class="list-unstyled" ng-if="imageDisplay">
+                                <li class="mySlides clearfix" id="mySlides{{$index}}" ng-repeat="clinicimage in clinicphotos">
+                                    <img ng-repeat="clinicimageThumb in clinicimage" class="img-responsive col-xs-4" ng-src="{{clinicimageThumb.thumb}}"/>
+                                </li>
+                             </ul>
+                             <div class="no-clinic" ng-if="!imageDisplay">
+                                <h4 class="text-center">{{'No Clinic images found !' | translate }}</h4>
+                             </div>
+                         </div>
+                        <!-- <h3>{{'Make an appointment' | translate }}</h3>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <p>{{'Choose doctors address or medical consultation center for the appointment' | translate }}</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            {{'Clínica La Fontana, Calle Páez, La Victoria -  Aragua.' | translate }}
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            {{'Whats the reason for your visit?' | translate }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                    {{'Tooth decay' | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            {{'Health Insurance' | translate }}
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div> -->
+                        <h3>{{'Available times for the appointment' | translate }}</h3>
+                        <div class="appmt-details">
+                            <div class="" ng-repeat="searchLists in worklocationLists">
+                                <h5 class="text-center">{{searchLists.worklocationName}}</h5>
+                                <div class="search-responsive" id="{{searchLists.worklocationId}}">
+                                    <div class="search-result" ng-if="searchLists.week_hender">
+                                        <h5 class="text-center">{{model.siteCurrency}} {{searchLists.worklocationPrice}}</h5>
+                                        <div class="week-hender">
+                                            <ul class="search-week-ul list-inline text-center">
+                                                <li class="search-left-arrow">
+                                                    <a href="javascript:void(0)" ng-click="prevWeek(searchLists.worklocationId, $index)"> <i class="fa fa-angle-left fa-2x"></i></a>
+                                                </li>
+                                                <li>
+                                                    <ul class="list-unstyled">
+                                                        <li>{{searchLists.days.today.day}}</li>
+                                                        <li>{{searchLists.days.today.date}}</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="list-unstyled">
+                                                        <li>{{searchLists.days.day2.day}}</li>
+                                                        <li>{{searchLists.days.day2.date}}</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="list-unstyled">
+                                                        <li>{{searchLists.days.day3.day}}</li>
+                                                        <li>{{searchLists.days.day3.date}}</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="bor-none">
+                                                    <ul class="list-unstyled">
+                                                        <li>{{searchLists.days.day4.day}}</li>
+                                                        <li>{{searchLists.days.day4.date}}</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="search-right-arrow">
+                                                    <a href="javascript:void(0)" ng-click="nextWeek(searchLists.worklocationId, $index)">
+                                                        <i class="fa fa-angle-right fa-2x"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="doctor-list clearfix">
+                                            <div class="doctor-booking-details">
+                                                <ul class="search-week-ul list-inline text-center" ng-if="searchLists.workslots.length != 0">
+                                                    <li>
+                                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[searchLists.days.today.day].length">
+                                                            <li ng-repeat="todaySlot in searchLists.workslots[searchLists.days.today.day] track by $index">
+                                                                <span ng-show="todaySlot != '--'">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.today.dateFormatted}}/{{todaySlot}}/{{searchLists.worklocationId}}" class="btn">{{todaySlot}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.today.dateFormatted}}/{{todaySlot}}/{{searchLists.worklocationId}}" class="btn">{{todaySlot}}</a>
+                                                                    </span>
+                                                                </span>
+                                                                <span ng-show="todaySlot == '--'" class="hide">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                                    </span>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[searchLists.days.day2.day].length">
+                                                            <li ng-repeat="Day2 in searchLists.workslots[searchLists.days.day2.day] track by $index">
+                                                                <span ng-show="Day2 != '--'">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day2.dateFormatted}}/{{Day2}}/{{searchLists.worklocationId}}" class="btn">{{Day2}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day2.dateFormatted}}/{{Day2}}/{{searchLists.worklocationId}}" class="btn">{{Day2}}</a>
+                                                                    </span>
+                                                                </span>
+                                                                <span ng-show="Day2 == '--'" class="hide">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                                    </span>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[searchLists.days.day3.day].length">
+                                                            <li ng-repeat="Day3 in searchLists.workslots[searchLists.days.day3.day] track by $index">
+                                                                <span ng-show="Day3 != '--'">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day3.dateFormatted}}/{{Day3}}/{{searchLists.worklocationId}}" class="btn">{{Day3}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day3.dateFormatted}}/{{Day3}}/{{searchLists.worklocationId}}" class="btn">{{Day3}}</a>
+                                                                    </span>
+                                                                </span>
+                                                                <span ng-show="Day3 == '--'" class="hide">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                                    </span>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[searchLists.days.day4.day].length">
+                                                            <li ng-repeat="Day4 in searchLists.workslots[searchLists.days.day4.day] track by $index">
+                                                                <span ng-show="Day4 != '--'">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day4.dateFormatted}}/{{Day4}}/{{searchLists.worklocationId}}" class="btn">{{Day4}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="#/appointments/booking/{{model.user.id}}/{{searchLists.days.day4.dateFormatted}}/{{Day4}}/{{searchLists.worklocationId}}" class="btn">{{Day4}}</a>
+                                                                    </span>
+                                                                </span>
+                                                                <span ng-show="Day4 == '--'" class="hide">
+                                                                    <span ng-if="$index < searchLists.appointmentLoadMore">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                                    </span>
+                                                                <span ng-if="$index >= searchLists.appointmentLoadMore" class="hide showmore js-showmore{{searchLists.worklocationId}}">
+                                                                        <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                                    </span>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="search-week-ul list-inline text-center" ng-if="searchLists.workslots.length == 0">
+                                                    <li>
+                                                        <div class="alert alert-danger ng-binding ng-scope" >
+                                                            {{'No Slots Available' | translate }}
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="showlessmore" ng-if="searchLists.show_button">
+                                                    <span class="showmore_btn js-showmore_btn{{searchLists.worklocationId}} show">
+                                                        <button ng-click="loadMore(searchLists.worklocationId)" class="btn btn-dk-blue">More&nbsp;<i class="fa fa-angle-down"></i></button>
+                                                    </span>
+                                                    <span class="showless_btn js-showless_btn{{searchLists.worklocationId}} hide">
+                                                        <button ng-click="showLess(searchLists.worklocationId)" class="btn btn-red">Less&nbsp;<i class="fa fa-angle-up"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor-description">
+                <h3 class="text-center">{{'Doctor\'s Description' | translate }}</h3>
+                <div ng-bind-html="model.user.user_profile.about_me" ng-if="model.user.user_profile.about_me != ''"></div>
+                <div class="alert alert-danger" ng-if="model.user.user_profile.about_me == ''">
+                    {{'No Description Added' | translate }}
+                </div>
+                <!--
+                <div class="doc-descrip">
+                    <figure>
+                        <img src="assets/img/doctor-description.jpg" alt="doctor-description" class="img-responsive"/>
+                        <figcaption>{{'Servicio Odontológico Integral' | translate }}</figcaption>
+                    </figure>
+                    <h3>{{'Limpieza bucal con fluorización, revisión y diagnóstico con radiografía ' | translate }}</h3>
+                    <p>{{'¿Sabías qué un cepillado después de cada comida, una visita periódica al dentista, una limpieza bucal… son algunos de los elementos claves para garantizar una buena higiene bucal?' | translate }}</p>
+                    <ul class="list-inline row">
+                        <li class="col-sm-4">
+                            <figure>
+                                <img src="assets/img/description-one.jpg" alt="description-one" class="img-responsive"/>
+                            </figure>
+                        </li>
+                        <li class="col-sm-4">
+                            <figure>
+                                <img src="assets/img/description-two.jpg" alt="description-two" class="img-responsive"/>
+                            </figure>
+                        </li>
+                        <li class="col-sm-4">
+                            <figure>
+                                <img src="assets/img/description-three.jpg" alt="description-three" class="img-responsive"/>
+                            </figure>
+                        </li>
+                    </ul>
+                    <p>{{'Ofrece los últimos tratamientos en estética dental y ortodoncia invisible. Disponen de servicio de radiología para evitar traslados a otros centros y un equipo de odontólogos multidisciplinar e internacional.' | translate }}</p>
+                </div>-->
+            </div>
+            <div class="ask-questions">
+                <div class="page-head">
+                    <h1>{{'Ask the Doctor'| translate }}</h1>
+                </div>
+                <div class="doctor-questions">
+                    <doctor-profile-questions></doctor-profile-questions>
+                </div>
+            </div>
+        </div>
+        <div class="container appmt-details">
+            <!--<h2 class="text-center">Book Appointment</h2>-->
+            <!--<div class="col-md-8 col-lg-7 pull-right" ng-repeat="searchLists in worklocationLists">
+                <h2 class="text-center">{{searchLists.worklocationName}} - <span>{{today.year}}</span></h2>
+                <div class="search-responsive" id="{{searchLists.worklocationId}}">
+                    <div class="search-result">
+                        <div class="week-hender">
+                            <ul class="search-week-ul list-inline text-center">
+                                <li class="search-left-arrow">
+                                    <a href="javascript:void(0)" ng-click="prevWeek(searchLists.worklocationId)"> <i class="fa fa-angle-left fa-2x"></i></a>
+                                </li>
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>{{today.day}}</li>
+                                        <li>{{today.date}}</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>{{day2.day}}</li>
+                                        <li>{{day2.date}}</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>{{day3.day}}</li>
+                                        <li>{{day3.date}}</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>{{day4.day}}</li>
+                                        <li>{{day4.date}}</li>
+                                    </ul>
+                                </li>
+                                <li class="search-right-arrow">
+                                    <a href="javascript:void(0)" ng-click="nextWeek(searchLists.worklocationId)"> <i class="fa fa-angle-right fa-2x"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="doctor-list clearfix">
+                            <div class="doctor-booking-details">
+                                <ul class="search-week-ul list-inline text-center">
+                                    <li>
+                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[today.day].length">
+                                            <li ng-repeat="todaySlot in searchLists.workslots[today.day] track by $index">
+                                                <span ng-show="todaySlot != '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{today.date}}/{{todaySlot}}" class="btn">{{todaySlot}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{today.date}}/{{todaySlot}}" class="btn">{{todaySlot}}</a>
+                                                    </span>
+                                                </span>
+                                                <span ng-show="todaySlot == '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="javascript:void(0)" class="btn">{{todaySlot}}</a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[day2.day].length">
+                                            <li ng-repeat="Day2 in searchLists.workslots[day2.day] track by $index">
+                                                <span ng-show="Day2 != '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day2.date}}/{{Day2}}" class="btn">{{Day2}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day2.date}}/{{Day2}}" class="btn">{{Day2}}</a>
+                                                    </span>
+                                                </span>
+                                                <span ng-show="Day2 == '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day2}}</a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[day3.day].length">
+                                            <li ng-repeat="Day3 in searchLists.workslots[day3.day] track by $index">
+                                                <span ng-show="Day3 != '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day3.date}}/{{Day3}}" class="btn">{{Day3}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day3.date}}/{{Day3}}" class="btn">{{Day3}}</a>
+                                                    </span>
+                                                </span>
+                                                <span ng-show="Day3 == '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day3}}</a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-unstyled" ui-if="!!searchLists.workslots[day4.day].length">
+                                            <li ng-repeat="Day4 in searchLists.workslots[day4.day] track by $index">
+                                                <span ng-show="Day4 != '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day4.date}}/{{Day4}}" class="btn">{{Day4}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="#/appointments/booking/{{model.user.id}}/{{day4.date}}/{{Day4}}" class="btn">{{Day4}}</a>
+                                                    </span>
+                                                </span>
+                                                <span ng-show="Day4 == '--'">
+                                                    <span ng-if="$index < appointmentLoadMore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                    </span>
+                                                <span ng-if="$index >= appointmentLoadMore" class="hide showmore">
+                                                        <a href="javascript:void(0)" class="btn">{{Day4}}</a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="showlessmore" ng-if="searchLists[today.day].length > appointmentLoadMore || searchLists[day1.day].length > appointmentLoadMore || searchLists[day2.day].length > appointmentLoadMore || searchLists[day3.day].length > appointmentLoadMore || searchLists[day4.day].length > appointmentLoadMore || searchLists[day5.day].length > appointmentLoadMore || searchLists[day6.day].length > appointmentLoadMore || searchLists[day7.day].length > appointmentLoadMore">
+                                    <span class="showmore_btn show">
+                                        <button ng-click="loadMore()" class="btn btn-dk-blue">More&nbsp;<i class="fa fa-angle-down"></i></button>
+                                    </span>
+                                    <span class="showless_btn hide">
+                                        <button ng-click="showLess()" class="btn btn-red">Less&nbsp;<i class="fa fa-angle-up"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="col-md-4 col-lg-5">
+                <div class="qualify-exp">
+                    <h3>{{'Qualifications and Experience'| translate  }}</h3>
+                    <div class="form-group clearfix specialty">
+                        <label>{{'Specialties'| translate }}</label>
+                        <ul class="list-unstyled field-data">
+                            <li class="sg-para3 sg-navy specialty" ng-repeat="specialty in model.user.user_profile.specialties">
+                                {{specialty.name}}
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="form-group clearfix language">
+                        <label>{{'Languages Spoken'| translate }}</label>
+                        <ul class="list-unstyled field-data">
+                            <li class="sg-para3 sg-navy language" ng-repeat="language in model.user.user_profile.languages">
+                                {{language.name}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group clearfix education" ng-if="$root.settings['site.enabled_plugins'].indexOf('UserEducations') > -1">
+                        <label>{{'Education'| translate }}</label>
+                        <ul class="list-unstyled field-data">
+                            <li class="sg-para3 sg-navy" ng-repeat="education in model.user.user_profile.educations">
+                                {{education.education}} - {{education.location}} - {{education.organization}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group clearfix certificate">
+                        <label>{{'Board Certifications'| translate }}</label>
+                        <div class="field-data" hm-read-more hm-text="{{model.user.user_profile.board_certifications}}" hm-limit="500" hm-more-text="read more"
+                            hm-less-text="read less" hm-dots-class="dots" hm-link-class="links">
+                        </div>
+                    </div>
+                    <div class="form-group clearfix statement">
+                        <label>{{'Professional Statement'| translate }}</label>
+                        <div class="field-data" hm-read-more hm-text="{{model.user.user_profile.about_me}}" hm-limit="500" hm-more-text="read more"
+                            hm-less-text="read less" hm-dots-class="dots" hm-link-class="links">
+                        </div>
+                    </div>
+                    <div class="form-group clearfix membership">
+                        <label>{{'Memberships'| translate }}</label>
+                        <div class="field-data">
+                            {{model.user.user_profile.memberships}}
+                        </div>
+                    </div>
+                    <div class="form-group clearfix awards">
+                        <label>{{'Latinomedica Awards'| translate }}</label>
+                         <div ng-repeat="badges in model.userBadges">
+                                <div class="col-sm-6 col-md-3" > 
+                                    <div class="thumbnail">                         
+                                        <img class="img-responsive" style="max-width:100%" ng-src="{{badges.thumb.small}}">
+    
+                                    </div> 
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="col-md-12 book-instruction">
+                <h3>{{'Booking Instructions'| translate }}</h3>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {{model.user.user_profile.booking_instructions}}
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="col-md-12 patient-reviews">
+                <div ng-if="$root.settings['site.enabled_plugins'].indexOf('UserReviews') > - 1">
+                    <div class="col-md-12">
+                        <div class="" id="VerifiedPatientReviews">
+                            <h3 class="pull-left">{{'Patient verification and reviews'| translate }}</h3>
+                            <div class="clearfix"></div>
+                            <div ng-if="isvisited">
+                                <div ng-if="reviewEnable">
+                                    <div class="col-md-12">
+                                        <rating-stars></rating-stars>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="!reviewEnable">
+                                <div class="no-review">
+                                    <div ng-if="$root.auth.role_id == model.ConstUserType.Doctor" class="alert alert-danger">
+                                        Doctor not able to add review
+                                    </div>
+                                    <div ng-if="$root.auth.role_id == model.ConstUserType.User" class="alert alert-danger">
+                                        <div ng-if="alreadyadded">
+                                            You are not able to add more than one review for a doctor
+                                        </div>
+                                        <div ng-if="!isvisited">
+                                            You are not able to add the review. Need to visit the doctor atleast once.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-review row" ng-repeat="review in doctorReviews" ng-if="doctorReviews.length > 0">
+                                <div class="col-md-5 col-lg-6 profile-review-author">
+                                    <h4>{{ review.created_at | dateFormat }}</h4>
+                                    <span>{{'by '| translate  }} {{review.pet_name}}</span>
+                                    <span>{{'(Verified Patient)' | translate }}</span>
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row separate-reviews">
+                                        <div class="col-md-4">
+                                            <p>{{'Overall Rating'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star-o" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="review.bedside_rate"></input-stars>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>{{'Bedside Manner'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star-o" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="review.bedside_rate"></input-stars>
+                                            <rating-stars></rating-stars>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>{{'Wait Time'| translate }}</p>
+                                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star-o" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="review.waittime_rate"></input-stars>
+                                            <rating-stars></rating-stars>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix review-msg">
+                                        <p>{{review.review}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-info" ng-show="metadata.total === 0">{{'Not yet reviewed'| translate }}</div>
+                            <div class="paging clearfix text-center" ng-show="meta.pagination.total > 0">
+                                <uib-pagination previous-text="&#xf104" next-text="&#xf105" total-items="_metadata.total" num-pages="meta.pagination.total_pages"
+                                    ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"
+                                    rotate="false" items-per-page="meta.pagination.per_page" ng-change="paginate()"></uib-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="col-md-12 socialshare">
+                <a facebook class="facebookShare" data-url='http://google.com' data-shares='shares'>{{ 'Share' | translate }}</a>
+                <a twitter  data-lang="en" data-count='horizontal' data-url='http://google.com' data-via='notsosleepy' data-size="medium" data-text='Testing Twitter Share' ></a>
+                <div gplus class="g-plus" data-size="tall" data-annotation="bubble" data-href='http://google.com' data-action='share'></div>
+            </div>
+            <div class="col-md-12 doctor-hobbies">
+                <h3>{{'Hobbies'| translate }}</h3>
+                <div ng-bind-html="model.user.user_profile.hobbies"></div>
+            </div>
+            <div class="col-md-12 doctor-html-content">
+                <h3>{{'Html Content'| translate }}</h3>
+                <div ng-bind-html="model.user.user_profile.html_info | trustedhtml"></div>
+            </div>
+            <div class="col-md-12 Maps">
+                <h3>Google Maps</h3>
+                <location-directions></location-directions>
+            </div>-->
+        </div>
+	</div>
+</div>
+<!-- Start: Contact -->
+<!--<div class="contact-block text-center">
+        <div class="container">
+            <div class="col-md-7 footer-logo">
+                <img src="assets/img/footer-logo.png" alt="logo" />
+                <p>{{'Need help booking online? (1234) 123-1234' | translate }}</p>
+            </div>
+            <div class="col-md-5 text-right">
+                <a class="btn btn-red" href="javascript:void(0);">{{'SERVICE@ABS.COM' | translate }}</a>
+            </div>
+        </div>
+    </div>-->
+<!-- End: Contact -->

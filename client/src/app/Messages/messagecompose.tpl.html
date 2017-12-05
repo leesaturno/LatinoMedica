@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <section class="clearfix checklist-content setting-page messages">
+            <div>
+                <div class="page-head">    
+                    <h1>{{"Compose Message"| translate }}</h1>
+                </div>
+                <ul class="list-inline text-center">
+                    <li>
+                        <a ui-sref="ComposeMessage()"><i class="fa fa-pencil" aria-hidden="true"></i> {{"Write" | translate }}</a>
+                    </li>
+                    <li class="received">
+                        <a ui-sref="Message()"><i class="fa fa-comment" aria-hidden="true"></i> {{"Received" | translate }}</a>
+                    </li>
+                    <li class="sent">
+                        <a ui-sref="SentMessage()"><i class="fa fa-comments" aria-hidden="true"></i> {{"Sent" | translate }}</a>
+                    </li>
+                    <li class="delete">
+                        <a href="javascript:void(0)" ng-click="model.messageDelete()"><i class="fa fa-trash" aria-hidden="true"></i> {{"Delete" | translate }}</a>
+                    </li>
+                </ul>
+                <div class="remove-width">
+                    <div class="form-content">
+                        <form name="composeMessage" method="post" ng-submit="model.message_compose(composeMessage.$valid)" novalidate>
+                            <div class="form-body clearfix" >
+                                <div class="form-group">
+                                    <label>{{"User" | translate }}</label>
+                                     <div class="form-group select-opt" ng-class="{ 'has-error' : (composeMessage.$submitted || composeMessage.to_user_id.$touched) && (composeMessage.to_user_id.$pristine || composeMessage.to_user_id.$invalid) && (composeMessage.to_user_id.$error.required)}">
+                                    <select class="form-control" name="to_user_id" id="to_user_id" ng-model="model.compose_message.to_user_id" ng-options="key as value for (key , value) in model.userLists" ng-required="true">
+                                        <option value="">{{"Select User" | translate }}</option>
+                                    </select>
+                                          <span class="error" ng-show="(composeMessage.$submitted || composeMessage.to_user_id.$touched) && (composeMessage.to_user_id.$pristine || composeMessage.to_user_id.$invalid) && (composeMessage.to_user_id.$error.required)">{{"Select User" | translate }}</span>
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>{{"Subject" | translate }}</label>
+                                    <div class="form-group" ng-class="{ 'has-error' : (composeMessage.$submitted || composeMessage.subject.$touched) && (composeMessage.subject.$pristine || composeMessage.subject.$invalid) && (composeMessage.subject.$error.required)}">
+                                    <input type="text" class="form-control" name="subject" id="subject" ng-model="model.compose_message.subject" ng-required="true">
+                                        <span class="error" ng-show="(composeMessage.$submitted || composeMessage.subject.$touched) && (composeMessage.subject.$pristine || composeMessage.subject.$invalid) && (composeMessage.subject.$error.required)">{{"Enter subject" | translate }} </span>
+                                    
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>{{"Message" | translate }}</label>
+                                    <div class="form-group" ng-class="{ 'has-error' : (composeMessage.$submitted || composeMessage.message.$touched) && (composeMessage.message.$pristine || composeMessage.message.$invalid) && (composeMessage.message.$error.required)}">
+                                    <textarea class="form-control" name="message" id="message" ng-model="model.compose_message.message" ng-required="true"></textarea>
+                                        <span class="error" ng-show="(composeMessage.$submitted || composeMessage.message.$touched) && (composeMessage.message.$pristine || composeMessage.message.$invalid) && (composeMessage.message.$error.required)">{{"Enter message" | translate }} </span>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-footer appmt-btn">
+                                <button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </section>
+		</div>
+	</div>
+</div>

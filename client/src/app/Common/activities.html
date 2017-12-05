@@ -1,0 +1,18 @@
+<section class="contest-block">
+    <div class="container" ng-controller="AcitivitiesController">
+        <div class="clearfix">
+            <div class="panel-heading">
+                <h3 style="display:inline;">{{'Activities'|translate}}</h3>
+            </div>
+            <div ng-repeat="activity in activities">
+                <p> <span ng-bind-html="activity.contest_status">{{activity.contest_status}}</span> <span ng-bind-html="activity.contestuser_status">{{activity.contestuser_status}}</span> <span ng-bind-html="activity.message">{{activity.message}}</span>
+                    <span
+                        ng-bind-html="activity.contestuser_newentry">{{activity.contestuser_newentry}}</span>
+                        <hr> </p>
+            </div>
+            <div class="text-center" ng-show="!loader && activities.length">
+                <uib-pagination ng-hide="!activities.length " total-items="total_items" max-size="maxSize " items-per-page="items_per_page" ng-model="current_page " class="pagination-sm " boundary-links="true" num-pages="no_of_pages " ng-click="activityPaginate() "></uib-pagination>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+<div class="appointment-block pad-63">
+    <div class="container">
+        <div class="page-head app-view clearfix">  
+            <h1 class="pull-left">{{'The appointment is scheduled for' | translate }} {{appointment.appointment_date | appointmentDate}} {{appointment.appointment_time}}</h1>
+        	<a href="#/appointments/all" class="btn btn-green pull-right"><i class="fa fa-chevron-left"></i>Back</a>
+        </div>
+        <form class="form-horizontal appmt-view view-main">
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.User">
+                <label class="col-sm-3 col-md-2">{{'Doctor' | translate }}</label>
+                <span class="col-sm-9 col-md-10 name">
+                	<a href="#/doctor/{{appointmentUser.username}}">{{appointmentUser.user_profile.dr_title}} {{appointmentUser.user_profile.first_name}} {{appointmentUser.user_profile.last_name}}</a>
+                </span>
+            </div>
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                <label class="col-sm-3 col-md-2">{{'Patient Name' | translate }}</label>
+                <span class="col-sm-9 col-md-10 name">{{appointmentUser.user_profile.first_name}} {{appointmentUser.user_profile.last_name}}</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-md-2">{{'Gender' | translate }}</label>
+                <span class="col-sm-9 col-md-10">{{appointmentUser.user_profile.gender.name}}</span>
+            </div>
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.User">
+                <label class="col-sm-3 col-md-2">{{'Where' | translate }}</label>
+                <span class="col-sm-9 col-md-10"><span ng-if="appointmentUser.user_profile.address">{{appointmentUser.user_profile.address}} <span ng-if="appointmentUser.user_profile.city.name">{{appointmentUser.user_profile.city.name}}, </span> <span ng-if="appointmentUser.user_profile.country.name">{{appointmentUser.user_profile.country.name}},</span><span ng-if="appointmentUser.user_profile.postal_code"> {{appointmentUser.user_profile.postal_code}}<span></span></span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-md-2">{{'Patient Note' | translate }}</label>
+                <span class="col-sm-9 col-md-10" ng-if="appointment.patient_note">{{appointment.patient_note}}</span>
+                <span class="col-sm-9 col-md-10" ng-if="!appointment.patient_note">--</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-md-2">{{'Doctor Note' | translate }}</label>
+                <span class="col-sm-9 col-md-10" ng-if="appointment.doctor_note">{{appointment.doctor_note}}</span>
+                <span class="col-sm-9 col-md-10" ng-if="!appointment.doctor_note">--</span>
+            </div>
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                <label class="col-sm-3 col-md-2">{{'Patient Status' | translate }}</label>
+                <span class="col-sm-9 col-md-10" ng-if="appointment.is_seen_before == 1"> Already Seen </span>
+                <span class="col-sm-9 col-md-10" ng-if="appointment.is_seen_before == 0"> New Patient </span>
+            </div>
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                <label class="col-sm-3 col-md-2">{{'Reason for visit' | translate }}</label>
+                <span class="col-sm-9 col-md-10">{{appointment.specialty_diseas.name}}</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-md-2">{{'Appointment Status' | translate }}</label>
+                <span class="col-sm-9 col-md-10 label label-warning">{{appointment.appointment_status.name}}</span>
+            </div>
+            <div class="form-group" ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                <p ng-if="appointment.appointment_status_id == model.ConstAppointmentStatus.PendingApproval && appointmentDateTime >= todayDateTime"> <button ng-click="changeappointstatus('confirm')" class="btn btn-green btn-animate"> {{'Confirm Appointment' | translate }} </button> </p>
+                <p ng-if="appointment.appointment_status_id == model.ConstAppointmentStatus.PendingApproval && appointmentDateTime >= todayDateTime"><button ng-click="changeappointstatus('decline')" class="btn btn-danger btn-animate"> {{'Decline Appointment' | translate }} </button> </p>
+            </div>
+            <div class="form-group appmt-view-btn" ng-if="$root.auth.role_id == model.ConstUserType.User">
+                <p ng-if="appointmentDateTime >= todayDateTime &&  appointment.appointment_status_id != model.ConstAppointmentStatus.Cancelled"> 
+                    <button ng-click="changeappointstatus('cancel')" class="btn btn-danger btn-animate"> 
+                        {{'Cancel Appointment' | translate }} 
+                    </button> 
+                </p>
+            </div>
+			<button type="button" class="btn btn-red" ng-click="showModal()">{{"Close" | translate}}</button>
+        </form>
+        <div ng-if="$rootScope.auth.role_id == ConstUserType.Doctor" class="appview-review">
+            <div class="patient-reviews row" ng-if="model.reviewRate.isvisited && model.reviewRate.appointment_id == appointment.id">
+                <div class="col-sm-12">
+                    <h4>{{'Your Rating'| translate }}</h4>
+                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" ng-model="model.reviewRate.rate" readonly="true"></input-stars>
+                </div>
+            </div>
+            <div class="patient-reviews row" ng-if="!model.reviewRate.isvisited">
+                <form class="form-horizontal appmt-view" ng-submit="patientReviewAdd(appointment.user_id,appointment.id)">
+                    <!-- content here -->
+                    <div class="row separate-reviews">                                    
+                        <div class="col-sm-12">
+                            <h4>{{'Rating'| translate }}</h4>
+                            <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" ng-model="model.reviewRate.rate"></input-stars>
+                        </div>
+                    </div>   
+                    <button type="submit" class="btn btn-green">{{"Add Rating" | translate}}</button>   
+                </form>
+            </div>
+        </div>        
+    </div>
+</div>

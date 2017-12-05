@@ -1,0 +1,61 @@
+<div ng-if="featuredDoctorsLength">
+    <slick lazy-load='ondemand' data="featuredDoctors" responsive="responsiveSlick" slides-to-show=5 slides-to-scroll=1 class="slider lazy slick-slider">
+        <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">                	
+            <img src="assets/img/left-slick.png" alt="Previous" class="img-responsive" />
+        </button>
+        <div class="specialist-list image" ng-repeat="doctors in featuredDoctors">
+            <div class="border-right">
+                <div class="green-box">
+                    <figure class="avatar">
+                        <div ng-class="(doctors.is_verified == '1') ? 'certified-tag' : ''" >
+                            <a href="#/doctor/{{doctors.username}}"><img data-lazy="{{doctors.attachments.data.thumb.large}}"
+                                alt="specialists" class="img-responsive img-circle" /></a>
+                        </div>
+                    </figure>
+                    <img data-lazy="assets/img/specialist-logo.png" alt="specialist-logo" class="img-responsive avatar-logo" />
+                </div>
+                <div class="specialist-detail">
+                    <h4>
+                        <a href="#/doctor/{{doctors.username}}">
+                            {{doctors.user_profile.data.display_name}}
+                        </a>
+                    </h4>
+                    <p>{{ doctors.user_profile.data.practice_name | translate}}</p>
+                    <span ng-if="doctors.user_profile.data.specialties.length > 0">{{ doctors.user_profile.data.specialties[0].name | translate}}</span>
+                    <div class="rating">
+                        <div class="specialist-rating">
+                            <div class="specialist-rating2" >
+								<input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctors.overall_avg_rating"></input-stars>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialist-footer clearfix">
+                    <div class="col-md-5">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{doctors.points}}
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-eye" aria-hidden="true"></i> {{doctors.doctor_view_count}}
+                        </a>
+                    </div>
+                    <div class="col-md-2 share">
+                        <a href="javascript:void(0)" class="js-share-open" data-index="{{$index}}" >
+                            <i class="fa fa-share-alt" aria-hidden="true" ></i>
+                        </a>
+                        <div class="social-share js-social-share" id="js-social-share{{$index}}">
+                            <div><a facebook class="facebookShare" data-url='http://google.com' data-shares='shares'>{{ 'Share' | translate }}</a></div>
+                            <div><a twitter  data-lang="en" data-count='horizontal' data-url='http://google.com' data-via='notsosleepy' data-size="medium" data-text='Testing Twitter Share' ></a></div>
+                            <div gplus class="g-plus" data-size="tall" data-annotation="bubble" data-href='http://google.com' data-action='share'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">
+            <img src="assets/img/right-slick.png" alt="Next" class="img-responsive" />
+        </button>
+    </slick>
+</div>

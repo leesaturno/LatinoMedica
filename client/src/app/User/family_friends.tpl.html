@@ -1,0 +1,198 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <div class="row">
+                <div class="col-sm-3 edit-left">
+                    <display-template name="User/sidemenu.tpl.html"></display-template>
+                </div>
+                <div class="col-sm-9">
+                    <section class="clearfix family-friends setting-page" id="friendtop">
+                        <div class="page-head">
+                            <h1>{{"Family or Friends" | translate }}</h1>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-body">
+                                <div class="clearfix">
+                                    <p class="pull-right">{{"Add new" | translate }}</p>
+                                </div>
+                                <form name="familyfriends" method="post" ng-submit="model.friendsAdd(familyfriends.$valid)" novalidate>
+                                    <div class="clearfix">
+                                        <div class="col-md-6">
+                                            <div class="form-group" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.first_name.$touched) && (familyfriends.first_name.$pristine || familyfriends.first_name.$invalid) && (familyfriends.first_name.$error.required)}">
+                                                <label>{{"First Name" | translate }}</label>
+                                                <input type="text" class="form-control" name="first_name" id="first_name" ng-required="true" ng-model="model.familyFriends.first_name" ng-minlength="3" ng-maxlength="25" ng-pattern="/^[a-z A-Z]*$/">
+                                                <span class="error" ng-show="(familyfriends.$submitted || familyfriends.first_name.$touched) && (familyfriends.first_name.$pristine || familyfriends.first_name.$invalid) && (familyfriends.first_name.$error.required)">{{"First Name Required" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.first_name.$touched) && (familyfriends.first_name.$pristine || familyfriends.first_name.$invalid) && (familyfriends.first_name.$error.minlength)">{{"Minimum 3 character required" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.first_name.$touched) && (familyfriends.first_name.$pristine || familyfriends.first_name.$invalid) && (familyfriends.first_name.$error.maxlength)">{{"Maximum 25 Character" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.first_name.$touched) && (familyfriends.first_name.$pristine || familyfriends.first_name.$invalid) && (familyfriends.first_name.$error.pattern)">{{"Enter a valid name without numbers" | translate }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.last_name.$touched) && (familyfriends.last_name.$pristine || familyfriends.last_name.$invalid) && (familyfriends.last_name.$error.required)}">
+                                            <div class="form-group">
+                                                <label>{{"Last Name" | translate }}</label>
+                                                <input type="text" class="form-control" name="last_name" id="last_name" ng-required="true" ng-model="model.familyFriends.last_name" ng-minlength="1" ng-maxlength="20" ng-pattern="/^[a-z A-Z]*$/">
+                                                 <span class="error" ng-show="(familyfriends.$submitted || familyfriends.last_name.$touched) && (familyfriends.last_name.$pristine || familyfriends.last_name.$invalid) && (familyfriends.last_name.$error.required)">{{"Last Name Required" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.last_name.$touched) && (familyfriends.last_name.$pristine || familyfriends.last_name.$invalid) && (familyfriends.last_name.$error.minlength)">{{"Minimum 1 Character" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.last_name.$touched) && (familyfriends.last_name.$pristine || familyfriends.last_name.$invalid) && (familyfriends.last_name.$error.maxlength)">{{"Maximum 20 Character" | translate }}</span>
+                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.last_name.$touched) && (familyfriends.last_name.$pristine || familyfriends.last_name.$invalid) && (familyfriends.last_name.$error.pattern)">{{"Enter a valid name without numbers" | translate }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="col-md-6">
+                                            <div class="form-group" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.relationship.$touched) && (familyfriends.relationship.$pristine || familyfriends.relationship.$invalid) && (familyfriends.relationship.$error.required)}">
+                                                <label>{{"Relationship" | translate }}</label>
+                                                <input type="text" class="form-control" name="relationship" id="relationship" ng-required="true" ng-model="model.familyFriends.relationship">
+                                                <span class="error" ng-show="(familyfriends.$submitted || familyfriends.relationship.$touched) && (familyfriends.relationship.$pristine || familyfriends.relationship.$invalid) && (familyfriends.relationship.$error.required)">{{"Enter relation"| translate }} </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.email.$touched) && (familyfriends.email.$pristine || familyfriends.email.$invalid) && (familyfriends.email.$error.required)}">
+                                                <label>{{"E-mail" | translate }}</label>{{"(Optional)" | translate }}
+                                                <input type="text" class="form-control" name="email" id="email" ng-model="model.familyFriends.email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$/">                                                
+                        <span class="error" ng-show="(familyfriends.$submitted) && (familyfriends.email.$pristine || familyfriends.email.$invalid) && (familyfriends.email.$error.email)">{{"Enter valid email" | translate }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="col-md-4">
+                                            <div class="form-group" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.mobile.$touched) && (familyfriends.mobile.$pristine || familyfriends.mobile.$invalid) && (familyfriends.mobile.$error.required)}">
+                                                <label for="cell">{{"Cellphone" | translate }}</label>{{"(Optional)" | translate }}
+                                                <input type="text" class="form-control" id="cell" name="mobile" id="mobile" ng-model="model.familyFriends.mobile" ng-minlength="8" ng-maxlength="12" ng-pattern="/^[0-9]*$/">  
+                                                 <span class="error" ng-show="(familyfriends.$submitted || familyfriends.mobile.$touched) && (familyfriends.mobile.$pristine || familyfriends.mobile.$invalid) && (familyfriends.mobile.$error.minlength)">{{"Minimum 8 digits" | translate }}</span>
+                                                 <span class="error" ng-show="(familyfriends.$submitted || familyfriends.mobile.$touched) && (familyfriends.mobile.$pristine || familyfriends.mobile.$invalid) && (familyfriends.mobile.$error.maxlength)">{{"Maximum 12 digits" | translate }}</span>
+                                                 <span class="error" ng-show="(familyfriends.$submitted || familyfriends.mobile.$touched) && (familyfriends.mobile.$pristine || familyfriends.mobile.$invalid) && (familyfriends.mobile.$error.pattern)">{{"Enter a valid mobile number" | translate }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="homemobile">{{"Home Phone" | translate }}</label>{{"(Optional)" | translate }}
+                                                <input type="text" class="form-control" id="homemobile" ng-model="model.familyFriends.home_phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="workmobile">{{"Work Mobile" | translate }}</label>{{"(Optional)" | translate }}
+                                                <input type="text" class="form-control" id="workmobile" ng-model="model.familyFriends.work_phone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix address">
+                                        <div class="">
+                                            <div class="col-md-12"><label>{{"Address" | translate }}</label>{{"(Optional)" | translate }}</div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Physical address" ng-model="model.familyFriends.address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="#apt, unit" ng-model="model.familyFriends.address1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group select-opt" >
+                                                    <select class="form-control" name="city_id" id="city_id" ng-model="model.familyFriends.city_id" ng-options="city.id as city.name for city in cityArray">  
+                                                        <option value="">{{"City" | translate }}</option>   
+                                                    </select>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group select-opt" >
+                                                    <select class="form-control" name="state_id" id="state_id" ng-model="model.familyFriends.state_id" ng-options="state.id as state.name for state in stateArray">  
+                                                        <option value="">{{"State" | translate }}</option>   
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group select-opt" >
+                                                    <select class="form-control" name="country_id" id="country_id" ng-model="model.familyFriends.country_id" ng-options="country.id as country.name for country in countryArray">  
+                                                        <option value="">{{"Country" | translate }}</option>   
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="{{'Postal Code' | translate }}" ng-model="model.familyFriends.zipcode" ng-minlength="3" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="">
+                                            <label class="col-md-12">{{"Gender" | translate }}</label>
+                                            <div class="col-md-4">
+                                                <div class="form-group select-opt" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.gender_id.$touched) && (familyfriends.gender_id.$pristine || familyfriends.gender_id.$invalid) && (familyfriends.gender_id.$error.required)}">
+                                                    <select class="form-control" name="gender_id" id="gender_id" ng-model="model.familyFriends.gender_id" ng-required="true" ng-options="gender.id as gender.name for gender in genderArray">  
+                                                        <option value="">{{"Select Gender" | translate }}</option>
+                                                    </select>
+                                                    <span class="error" ng-show="(familyfriends.$submitted || familyfriends.gender_id.$touched) && (familyfriends.gender_id.$pristine || familyfriends.gender_id.$invalid) && (familyfriends.gender_id.$error.required)">{{"Select a Gender" | translate }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="">
+                                            <label class="col-md-12">{{"Date of birth" | translate }}</label>
+                                            <div class="col-md-6">
+                                                <div class="form-group" ng-class="{ 'has-error' : (familyfriends.$submitted || familyfriends.dob.$touched) && (familyfriends.dob.$pristine || familyfriends.dob.$invalid) && (familyfriends.dob.$error.required)}">
+                                                    <div class="input-group" >
+                                                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>                                                       
+                                                        <input class="form-control" ng-model="model.familyFriends.dob" data-date-format="yyyy-MM-dd"                    data-max-date="{{model.dateBlockeBefore}}" data-autoclose="1" name="dob"
+                                                            bs-datepicker type="text" ng-required="true" placeholder="Date"
+                                                            ng-model="dob">
+                                                        <span class="error" ng-show="(familyfriends.$submitted || familyfriends.dob.$touched) && (familyfriends.dob.$pristine || familyfriends.dob.$invalid) && (familyfriends.dob.$error.required)">{{"Select DOB" | translate }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer appmt-btn">
+                                        <button class="btn btn-green btn-animate" ng-if="typeid == 1" type="submit">{{"Save" | translate }}</button>
+										<button class="btn btn-green btn-animate" ng-if="typeid == 2" type="submit">{{"Update" | translate }}</button>
+                                    </div>
+                        		</form>
+                        	</div>
+                            <div class="created-block">
+                                <div class="page-head">
+                                    <h1>{{"Family or Friends Created" | translate }}</h1>
+                                </div>
+                                <div class="created-family">
+                                    <div>
+                                        <div class="row" ng-if="noRecords" ng-repeat="friendsList in friendsLists">
+                                            <div class="col-sm-5">
+                                                <p>{{friendsList.first_name}}</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p>{{friendsList.relationship | capitalize}}</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p>{{friendsList.dob | ageFilter}} {{"years" | translate }}</p>
+                                            </div>
+                                            <div class="col-sm-3">
+                                               <a href="javascript:void(0)" class="pull-left" ng-click="editFamilyfriend(friendsList.id)">{{"Edit" | translate }}</a>
+                                            <a href="javascript:void(0)" class="pull-right" ng-click="removeFamilyfriend(friendsList.id)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="paging clearfix text-center" ng-if="noRecords">
+                                            <uib-pagination total-items="_metadata.total" num-pages="_metadata.total_pages" ng-model="currentPage" max-size="maxSize"
+                                                boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="_metadata.per_page"
+                                                previous-text="&#xf104;" next-text="&#xf105;" ng-change="paginate(currentPage)"></uib-pagination>
+                                        </div>
+                                        <div>
+                                            <div class="col-sm-12" ng-if="!noRecords">
+                                                <p class="hor-space alert alert-danger">{{"No Family Added" | translate }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

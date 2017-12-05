@@ -1,0 +1,418 @@
+{
+  "apis": [
+    {
+      "path": "/rentals",
+      "operations": [
+        {
+          "summary": "Get the list of rentals",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "page",
+              "paramType": "query",
+              "type": "integer",
+              "description": "Page number for filtering",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "enum": [
+                "upcoming",
+                "waiting for review",
+                "past",
+                "waiting for acceptance",
+                "rejected",
+                "expired",
+                "All"
+              ],
+              "type": "integer",
+              "description": "filter list of rental",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The Rental Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort Rental by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals"
+        },
+        {
+          "summary": "Store Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "AddRental",
+              "paramType": "body",
+              "required": true,
+              "type": "AddRental",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "POST",
+          "nickname": "post__rentals"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}/edit",
+      "operations": [
+        {
+          "summary": "Edit Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id__edit"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}",
+      "operations": [
+        {
+          "summary": "Update Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            },
+            {
+              "name": "EditRental",
+              "paramType": "body",
+              "required": true,
+              "type": "EditRental",
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "PUT",
+          "nickname": "put__rentals__id_"
+        },
+        {
+          "summary": "Show Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id_"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}/paynow",
+      "operations": [
+        {
+          "summary": "Pay Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id__paynow"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}/reject",
+      "operations": [
+        {
+          "summary": "Reject Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id__reject"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}/cancel",
+      "operations": [
+        {
+          "summary": "Cancel Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id__cancel"
+        }
+      ]
+    },
+    {
+      "path": "/rentals/{id}/confirm",
+      "operations": [
+        {
+          "summary": "Confirm Rental",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "paramType": "path",
+              "type": "integer",
+              "format": "int64",
+              "required": true,
+              "description": "The Rental Identifier"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__rentals__id__confirm"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "AddRental": {
+      "properties": {
+        "item_userable_id": {
+          "type": "integer",
+          "required": true,
+          "description": "The Item Identifier"
+        },
+        "item_userable_type": {
+          "type": "string",
+          "required": true,
+          "description": "The Item Type"
+        },
+        "item_rental_start_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Starting Date"
+        },
+        "item_rental_end_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Ending Date"
+        },
+        "deposit": {
+          "type": "integer",
+          "required": true,
+          "description": "Deposit Amount"
+        },
+        "coupon_code": {
+          "type": "string",
+          "description": "Coupon Code",
+          "required": false
+        }
+      },
+      "id": "AddRental"
+    },
+    "EditRental": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "description": "The Rental identifier"
+        },
+        "item_userable_id": {
+          "type": "integer",
+          "required": true,
+          "description": "The Item Identifier"
+        },
+        "item_userable_type": {
+          "type": "string",
+          "required": true,
+          "description": "The Item Type"
+        },
+        "item_rental_start_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Starting Date"
+        },
+        "item_rental_end_date": {
+          "type": "string",
+          "format": "date-time",
+          "required": true,
+          "description": "Ending Date"
+        },
+        "deposit": {
+          "type": "integer",
+          "required": true,
+          "description": "Deposit Amount"
+        },
+        "coupon_code": {
+          "type": "string",
+          "description": "Coupon Code",
+          "required": false
+        }
+      },
+      "id": "EditRental"
+    }
+  },
+  "swaggerVersion": "1.2",
+  "apiVersion": "1",
+  "basePath": "http://abssalvador.localhost/api"
+}

@@ -1,0 +1,32 @@
+<section class="clearfix">
+     <div class="page-head">
+          <div class="container">
+               <h1>{{'Email Template' | translate}}</h1>
+          </div>
+     </div>
+     <div class="container">
+          <div class="form-content">
+               <form name="template" method="post" ng-submit="model.mailTemplateupdate(template)" novalidate>
+                    <div class="form-heading">
+                         <h2><span>{{'Edit' | translate}} {{model.template.name| translate}}</span></h2>
+                    </div>
+                    <div class="form-body">
+                         <div class="form-group">
+                              <label>{{model.template.info | translate}}</label>
+                         </div>
+                         <div class="form-group">
+                              <input type="text" name="subject" class="form-control" ng-model="model.template.subject">
+                         </div>
+                         <div class="form-group">
+                              <label class="checkbox-field">
+                                   <textarea name="sms_content" class="form-control" ng-model="model.template.body_content"></textarea>
+                              </label>
+                         </div>
+                    </div>
+                    <div class="form-footer">
+                         <button class="btn btn-blue btn-animate btn-block" type="submit">{{'Update'| translate }}</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+</section>

@@ -1,0 +1,42 @@
+<section class="clearfix pad-63 appmt-table user-badge">
+	<div class="container" ng-if="isDoctorAccount">
+        <div class="page-head">    
+            <h1>{{'Upload Badges'|translate}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <form ng-upload method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <upload-image entry="" class=""></upload-image>
+                    </div>
+                </form>
+            </div>   
+        </div>
+        <div class="page-head">    
+            <h1>{{'Badges'|translate}}</h1>
+        </div>
+		<div growl></div>
+        <div class="row">
+            <div ng-if="userBadges.length" ng-repeat="badge in userBadges">
+				<div class="col-sm-6 col-md-3" > 
+                    <div class="thumbnail">
+					    <img class="img-responsive" style="max-width:100%" src="{{badge.thumb.small}}">
+                        <div class="caption">
+                            <p><a ng-click="deleteBadges(badge.id)" title="Delete" class="pull-right" href="javascript:void(0);">
+                            	<i class="fa fa-trash-o error" aria-hidden="true"></i></a>
+                            </p>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+            <div ng-if="!userBadges.length">
+                <div class="col-sm-12" > 
+                    <p class="text-center text-danger"> {{'No record(s) found'| translate }}</p>
+                </div>
+            </div>            
+        </div>
+	</div>
+    <div class="container" ng-if="!isDoctorAccount">
+        <h1>Sorry,this is Patient Account</h1>
+    </div>
+</section>

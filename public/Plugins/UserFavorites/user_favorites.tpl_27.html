@@ -1,0 +1,51 @@
+<section class="clearfix pad-63 appmt-table">
+    <div class="container">
+        <div class="page-head">
+            <h1>{{'My Doctors'| translate}}</h1>
+        </div>
+        <div class="table-block">
+            <!-- for table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <!--<thead>
+                        <tr>
+                            <th> Sno </th>
+                            <th width="500">{{'Doctor Details'| translate}}</th>
+                            <th>{{'Image'| translate}}</th>
+                            <th>{{'Action'| translate}}</th>
+                        </tr>
+                    </thead>-->
+                    
+                    <tbody>
+                        <tr ng-repeat="doctor in doctorDetails">
+                            <!--<td> {{$index+1}} </td>-->
+                            <td class="fav-img">
+                                 <a href="#/doctor/{{doctor.doctor_user.username}}">
+                                    <img ng-src="{{doctor.doctor_user.attachmentable.thumb.medium}}" class="img-responsive">
+                                </a>
+                            </td>
+                            <td width="300">
+                                <div class="dr-details">
+                                    <h1>
+                                    	{{doctor.doctor_user.user_profile.dr_title}} {{doctor.doctor_user.user_profile.first_name}} {{doctor.doctor_user.user_profile.last_name}}
+                                    </h1>
+                                    <h3>{{doctor.doctor_user.user_profile.practice_name}}</h3>
+                                    <p>{{doctor.doctor_user.user_profile.phone}}</p>
+                                </div>
+                            </td>
+                            <td class="action-btn favourite_btn">
+                                <a href="#/doctor/{{doctor.doctor_user.username}}" class="btn green"><i class="fa fa-eye"></i></a>
+                                <a href="javascript:void(0)" class="btn red" ng-click="remove_favorite(doctor.id)"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr ng-show="_metadata.total === 0">
+                            <td colspan="5" class="text-center">
+                                <p class="hor-space alert alert-danger">{{'No Favorite Added' |translate}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

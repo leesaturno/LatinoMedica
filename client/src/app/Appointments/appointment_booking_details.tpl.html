@@ -1,0 +1,83 @@
+<section class="pad-63 book-appmt-block">
+	<div class="col-md-12 pad0">
+    	<div class="breadcrumb-bg">
+            <div class="col-sm-1"> 
+            </div>
+            <div class="col-sm-11">
+                <booking-bread-crum></booking-bread-crum>
+            </div>
+        </div>
+    </div>
+    <div class="page-head">
+        <div class="container">
+            <h1>{{'Book Your Appointment'| translate}}</h1>
+        </div>
+        <!--<div class="appmt-steps col-md-12">
+            <ul class="list-inline row">
+                <li class="complete-step col-md-3">
+                    <span>Step 1</span> 
+                    <p class="tab-title">{{'Appt Info'| translate}}</p>
+                </li>
+                <li class="complete-step col-md-3">
+                    <span>Step 2</span> 
+                    <p class="tab-title">{{'Patient Info'| translate}}</p>
+                </li>
+                <li class="current-step col-md-3">
+                    <span>Step 3</span> 
+                    <p class="tab-title">{{'Details'| translate}}</p>
+                </li>
+                <li class="col-md-3">
+                    <span>Step 4</span> 
+                    <p class="tab-title">{{'Complete'| translate}}</p>
+                </li>
+            </ul>
+        </div>-->
+        <div class="col-xs-12"> 
+            <div class="book-appmt-doctor">
+                <h2>{{'Doctor'| translate}}</h2>
+                <div class="book-doctor-details text-center">
+                    <img class="doctor-image" ng-src="{{doctorProfile.attachmentable.data.thumb.medium}}" alt="Dr. Patricia A. Lloyd">    
+                    <h3 class="">
+                        {{doctorProfile.dr_title}} {{doctorProfile.first_name}} {{doctorProfile.last_name}}
+                    </h3>
+                    <p>
+                    <input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-star" icon-hover="hover" icon-full="fa-star" readonly="true" ng-model="doctorProfile.start_rating"></input-stars>
+                    </p>
+                    <address class="text-blue"> {{doctorProfile.address}} </address>
+                    <div class="js-time"> 
+                        <ul class="list-inline text-left">
+                            <li class="text-blue"> {{'Appt Date:'| translate }} {{appt_date}} </li>
+                            <li class="text-blue"> {{'Appt Time:'| translate }} {{appt_time}}</li>
+                        </ul>
+                    </div>
+                    <!--<ul class="list-inline text-left">
+                        <li class="text-grey">Reason for Visit</li>
+                        <li class="text-blue">Yet To Select</li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 book-appmt">
+            <div ng-if="$root.auth.role_id == model.ConstUserType.User">
+                <form class="form-content col-md-8" name="stepthree" ng-submit="model.step3(stepthree)" novalidate>
+                    <div class="form-group">
+                        <label>Phone number where the doctor can contact you</label>
+                        <input type="text" ng-model="model.formValue.phone" name="phone" class="form-control"> 
+                    </div>
+                    <div class="form-group">
+                        <label>Any note's for the doctor's office?</label>
+                        <textarea ng-model="model.formValue.notes" name="patient_notes" class="form-control"></textarea>
+                    </div>
+                    <div class="">
+                        <button class="btn btn-block btn-blue btn-animate" type="submit">{{'Book for Free'| translate }}</button>
+                    </div>
+                </form>
+            </div>
+            <div ng-if="$root.auth.role_id == model.ConstUserType.Doctor">
+                <div class="alert alert-danger">
+                    <strong><i class='fa fa-ban'></i> {{$root.auth.user_profile.dr_title}} {{$root.auth.user_profile.first_name}}</strong> Doctor will not able to schedule an appointment.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

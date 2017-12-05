@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="clearfix">
+        <div class="pull-left">
+            <h2>{{'Add to Wallet' | translate}}</h2>
+        </div>
+        <div class="pull-right">
+            <dashboard-settings></dashboard-settings>
+        </div>
+    </div>
+    <hr>
+    <form role="form" class="form-horizontal clearfix" name="WalletAdd"
+          ng-submit="WalletSubmit(WalletAdd.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : (WalletAdd.$submitted || WalletAdd.amount.$touched) && (WalletAdd.amount.$pristine || WalletAdd.amount.$invalid) }">
+            <label class="col-md-3 col-sm-3 control-label" for="amount">{{'Amount' | translate}}</label>
+            <div class="col-md-5 col-sm-9">
+                <input type="number" class="form-control" name="amount" id="amount" placeholder="{{'Amount' | translate}}" ng-model='wallet.amount' ng-required="true" min="{{min_wallet_amount}}" max="{{max_wallet_amount}}"/>
+                <span class="help-block" ng-show="(WalletAdd.$submitted || WalletAdd.amount.$touched) && (WalletAdd.amount.$pristine || WalletAdd.amount.$invalid) && (WalletAdd.amount.$error.required)">
+                    {{'Enter Amount'|translate }}
+                </span>
+                <span class="help-block" ng-show="(WalletAdd.$submitted || WalletAdd.amount.$touched) && (WalletAdd.amount.$pristine || WalletAdd.amount.$invalid) && (WalletAdd.amount.$error.number)">
+                    {{'You did not enter a valid number' | translate}}
+                </span>
+                <span class="help-block" ng-show="(WalletAdd.$submitted || WalletAdd.amount.$touched) && (WalletAdd.amount.$pristine || WalletAdd.amount.$invalid) && (WalletAdd.amount.$error.min)">
+                    {{'Your field value is lesser minimum value' | translate}}
+                </span>
+                <span class="help-block" ng-show="(WalletAdd.$submitted || WalletAdd.amount.$touched) && (WalletAdd.amount.$pristine || WalletAdd.amount.$invalid) && (WalletAdd.amount.$error.max)">
+                    {{'Your field value is greater maximum value' | translate}}
+                </span>
+                <span ng-show="amountErr" class="text-danger">{{amountErr}}</span>
+                <span class="help-block">
+                    <p>{{'Minimum wallet amount'|translate}}:&nbsp;<span>{{min_wallet_amount}}</span></p>
+                    <p>{{'Maximum wallet amount'|translate}}:&nbsp;<span>{{max_wallet_amount}}</span></p>
+                </span>
+
+            </div>
+        </div>
+        <div class="well well-sm clearfix">
+            <div class="pull-right">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{'Submit' | translate }}</button>
+            </div>
+        </div>
+    </form>
+</div>

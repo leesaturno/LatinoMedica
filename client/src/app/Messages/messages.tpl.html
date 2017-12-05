@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="edit-profile-page clearfix">
+        <header-menu></header-menu>
+        <div class="col-md-12">
+            <nav-menu></nav-menu>
+            <section class="clearfix appmt-table messages">
+                <div>
+                    <div class="page-head">    
+                        <h1>{{"Messages" | translate }}</h1>
+                    </div>
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a ui-sref="ComposeMessage()"><i class="fa fa-pencil" aria-hidden="true"></i> {{"Write" | translate }}</a>
+                        </li>
+                        <li class="received">
+                            <a ui-sref="Message()"><i class="fa fa-comment" aria-hidden="true"></i> {{"Received" | translate }}</a>
+                        </li>
+                        <li class="sent">
+                            <a ui-sref="SentMessage()"><i class="fa fa-comments" aria-hidden="true"></i> {{"Sent" | translate }}</a>
+                        </li>
+                        <li class="delete">
+                            <a href="javascript:void(0)" ng-click="model.messageDelete()"><i class="fa fa-trash" aria-hidden="true"></i> {{"Delete" | translate }}</a>
+                        </li>
+                    </ul>
+					<div class="medical-answer">
+                    	<div class="question-detail" ng-repeat="message in model.receivedMessages">
+							<div class="clearfix">
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="{{message.id}}"  ng-model="message.selected" checklist-value="message.id" ng-change="message.selected">
+                                        </label>
+                                    </div>
+                                    <h5><i class="fa fa-user" aria-hidden="true"></i>{{message.from_user.username}}<a href="javascript:void(0)" ng-click="model.ShowHide(message.id)">{{message.message_content.subject}}</a></h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="date">{{message.created_at | dateFormat}}</span>
+                                </div>
+                            </div>
+							<div class="hide js-answers{{message.id}}">
+                        		<p class="text-center"><a href="javascript:void(0)"><i class="fa fa-angle-down" aria-hidden="true"></i></a></p>
+                                <div class="answer-detail">
+                                    <div class="answers">
+                                        <div class="clearfix">
+                                            <div class="col-md-6 col-sm-5">
+                                                <h5><i class="fa fa-user" aria-hidden="true"></i>{{message.from_user.username}}<a href="javascript:void(0)">{{message.message_content.subject}}</a></h5>
+                                                <p><i class="fa fa-comments" aria-hidden="true"></i>{{message.message_content.message}}</p>
+												<span class=""><a href="javascript:void(0)" ng-click="model.messageReplyBox(message.id)">{{"Reply" | translate}}</a></span>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4">
+                                                <p></p>
+                                                <span class="date">{{message.created_at | dateFormat}}</span>
+                                            </div>
+                                            <div class="media" ng-repeat="child_message in message.children.data">
+												    <hr>
+                                                    <div class="media-body">
+														<div class="col-md-6">
+															<h5><i class="fa fa-user" aria-hidden="true"></i>{{child_message.from_user.username}}<a href="javascript:void(0)">{{child_message.message_content.subject}}</a></h5>
+														</div>
+															<div class="col-md-3">
+																<span class="date">{{child_message.created_at | dateFormat}}</span>
+															</div>
+													    <p><i class="fa fa-comments" aria-hidden="true"></i>{{child_message.message_content.message}}</p>
+														 <div class="col-md-3 col-sm-3">
+												<span class=""><a href="javascript:void(0)" ng-click="model.messageReplyBox(message.id)">{{"Reply" | translate}}</a></span>
+                                            </div>
+                                                    </div>
+                                                </div>
+											<div class="hide js-replybox{{message.id}} col-md-6 col-sm-5">
+												<form name="replyMessage" method="post" ng-submit="model.message_reply(replyMessage.$valid, message.from_user.id)" novalidate>
+                                                    <h3>{{"Reply Message" | translate }}</h3>
+                           							 <div class="form-body clearfix">
+														<div class="form-group">
+															<label>{{"Subject" | translate }}</label>
+															<div class="form-group" ng-class="{ 'has-error' : (replyMessage.$submitted || replyMessage.subject.$touched) && (replyMessage.subject.$pristine || replyMessage.subject.$invalid) && (replyMessage.subject.$error.required)}">
+															<input type="text" class="form-control" name="subject" id="subject" ng-model="model.reply_message.subject" ng-required="true" />
+																<span class="error" ng-show="(replyMessage.$submitted || replyMessage.message.$touched) && (replyMessage.message.$pristine || replyMessage.message.$invalid) && (replyMessage.message.$error.required)">{{"Enter Subject" | translate }} </span>
+
+															</div>
+														</div>
+                                                        <div class="form-group">
+															<label>{{"Message" | translate }}</label>
+															<div class="form-group" ng-class="{ 'has-error' : (replyMessage.$submitted || replyMessage.message.$touched) && (replyMessage.message.$pristine || replyMessage.message.$invalid) && (replyMessage.message.$error.required)}">
+															<textarea class="form-control" name="message" id="message" ng-model="model.reply_message.message" ng-required="true"></textarea>
+																<span class="error" ng-show="(replyMessage.$submitted || replyMessage.message.$touched) && (replyMessage.message.$pristine || replyMessage.message.$invalid) && (replyMessage.message.$error.required)">{{"Enter message" | translate }} </span>
+
+															</div>
+														</div>
+													</div>
+													<div class="form-footer appmt-btn">
+														<button class="btn btn-green btn-animate" type="submit">{{"Save" | translate }}</button>
+													</div>
+                       							 </form>
+											
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        </div>
+						<div class="clearfix" ng-show="!model.dataLength">
+							<p class="hor-space alert alert-danger">{{"No Record Found" | translate }}</p>
+						</div>
+                        <div class="paging clearfix text-center" ng-show="model.dataLength">
+                            <uib-pagination total-items="model._metadata.total" num-pages="model._metadata.total_pages" ng-model="model.currentPage" max-size="model.maxSize" boundary-links="true" boundary-link-numbers="true" rotate="false" items-per-page="model._metadata.per_page" previous-text="&#xf104;" next-text="&#xf105;" ng-change="model.paginate()"></uib-pagination>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</div>
+	</div>
+</div>

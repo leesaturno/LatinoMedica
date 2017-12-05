@@ -1,0 +1,120 @@
+{
+    "apis": [
+        {
+            "path": "/doctor/{username}",
+            "operations": [
+                {
+                    "summary": "For Get Doctor Profile Details",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "username",
+                            "paramType": "path",
+                            "type": "string",
+                            "description": "User name",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__doctor__username"
+                }
+            ]
+        },
+        {
+            "path": "/search/getdoctorweeklist/{doctorid}/{viewslot}",
+            "operations": [
+                {
+                    "summary": "For Get Doctor Appointment Slot",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "viewslot",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "View Slot Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__search__getdoctorweeklist__doctorid__viewslot"
+                }
+            ]
+        },
+        {
+            "path": "/bookings/{doctorid}/{patientid}",
+            "operations": [
+                {
+                    "summary": "For check the patient write the user review",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "doctorid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Doctor Id",
+                            "required": true
+                        },
+                        {
+                            "name": "patientid",
+                            "paramType": "path",
+                            "type": "integer",
+                            "description": "Patient Id",
+                            "required": true
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__bookings__doctorid__patientid"
+                }
+            ]
+        }
+        
+    ],
+    "models": {
+    },
+    "swaggerVersion": "1.2",
+    "apiVersion": "1",
+    "basePath": "http://abssalvador.localhost/api"
+}

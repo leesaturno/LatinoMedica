@@ -1,0 +1,1016 @@
+{
+    "apis": [
+	{
+      "path": "/users",
+      "operations": [
+        {
+          "summary": "Fetch List of Best Rated Doctors",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "type",
+              "paramType": "query",
+              "type": "string",
+              "description": "Display City By Listing Type",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "field",
+              "paramType": "query",
+              "type": "string",
+              "description": "Give Whatever Fields Needed by &quot;Comma Seperator&quot;",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "q",
+              "paramType": "query",
+              "type": "string",
+              "description": "Search City",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "filter",
+              "paramType": "query",
+              "type": "string",
+              "description": "filter list of City",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sort",
+              "paramType": "query",
+              "type": "string",
+              "description": "The City Identifier",
+              "required": false,
+              "format": "string"
+            },
+            {
+              "name": "sortby",
+              "paramType": "query",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "description": "Sort City by Ascending / Descending Order",
+              "required": false,
+              "format": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "OK"
+            },
+            {
+              "code": "404",
+              "message": "Not Found; Not found"
+            }
+          ],
+          "method": "GET",
+          "nickname": "get__doctors_filter__filter__sort__sort__sortby__sortby__type__type__field__field__q__q_"
+        }
+      ]
+    },
+        {
+            "path": "/users/register",
+            "operations": [
+                {
+                    "summary": "Register Users",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "Register",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "Register",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__users_register"
+                }
+            ]
+        },
+        {
+            "path": "/users/login",
+            "operations": [
+                {
+                    "summary": "Login user",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "Login",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "Login",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__users_login"
+                }
+            ]
+        },
+        {
+            "path": "/doctor/{username}",
+            "operations": [
+                {
+                    "summary": "view user profile",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "User",
+                            "paramType": "path",
+                            "type": "string",
+                            "format": "string",
+                            "required": true,
+                            "description": "The User slug"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__doctor__username_"
+                }
+            ]
+        },
+        {
+            "path": "/users/{user_id}/attachment",
+            "operations": [
+                {
+                    "summary": "Get user Upload image thumb",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "User",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "The User Identifier"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__users__user_id__attachment"
+                }
+            ]
+        },
+        {
+            "path": "/users/{user_id}/activate",
+            "operations": [
+                {
+                    "summary": "activate user",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "User",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "The User Identifier"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__users__user_id__activate"
+                }
+            ]
+        },
+        {
+            "path": "/users/{user_id}/deactivate",
+            "operations": [
+                {
+                    "summary": "activate/deactivate user",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "user_id",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "The User Identifier"
+                        },
+                        {
+                            "name": "DeactivateUser",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "DeactivateUser",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__users__user_id__deactivate"
+                }
+            ]
+        },
+        {
+            "path": "/users/forgot_password",
+            "operations": [
+                {
+                    "summary": "forgot password",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "ForgotPassword",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "ForgotPassword",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "post__users_forget_password"
+                }
+            ]
+        },
+        {
+            "path": "/users/{user_id}/change_password",
+            "operations": [
+                {
+                    "summary": "change user password",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "User",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "The User Identifier"
+                        },
+                        {
+                            "name": "ChangePassword",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "ChangePassword",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__users__user_id__change_password"
+                }
+            ]
+        },
+        {
+            "path": "/users/{user_id}/reset_password",
+            "operations": [
+                {
+                    "summary": "Reset password",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "User",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "The User Identifier"
+                        },
+                        {
+                            "name": "ResetPassword",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "ResetPassword",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__users__user_id__reset_password"
+                }
+            ]
+        },
+        {
+            "path": "/users/auth",
+            "operations": [
+                {
+                    "summary": "get user details",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__users_auth"
+                }
+            ]
+        },
+        {
+            "path": "/user/specialties",
+            "operations": [
+                {
+                    "summary": "Get Docotor Specialties",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__user__specialties"
+                }
+            ]
+        },
+        {
+            "path": "/user/specialties",
+            "operations": [
+                {
+                    "summary": "Update Doctor Specialties",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "Specialty",
+                            "paramType": "body",
+                            "type": "DoctorSpecialties",
+                            "required": true,
+                            "description": "Specialty Id's"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__user__specialties"
+                }
+            ]
+        }, {
+            "path": "/user/languages",
+            "operations": [
+                {
+                    "summary": "Get Doctor Languages",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__user__languages"
+                }
+            ]
+        },
+        {
+            "path": "/user/languages",
+            "operations": [
+                {
+                    "summary": "Update Doctor Languages",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "language",
+                            "paramType": "body",
+                            "type": "DoctorLanguages",
+                            "required": true,
+                            "description": "Languages Id's"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__user__languages"
+                }
+            ]
+        }, {
+            "path": "/user/education",
+            "operations": [
+                {
+                    "summary": "Doctor Education List",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__user__education"
+                }
+            ]
+        },
+        {
+            "path": "/user/education/add",
+            "operations": [
+                {
+                    "summary": "Update Doctor Specialties",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "UserEducations",
+                            "paramType": "body",
+                            "type": "UserEducations",
+                            "required": true,
+                            "description": "Add User Education"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "POST",
+                    "nickname": "post__user__education"
+                }
+            ]
+        },
+        {
+            "path": "/user/education/{id}/edit",
+            "operations": [
+                {
+                    "summary": "Edit Doctor Education",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "Edit Doctor Education in List"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__user__education__id__edit"
+                }
+            ]
+        },
+        {
+            "path": "/user/education/{id}",
+            "operations": [
+                {
+                    "summary": "Update Doctor Education Detail",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "Edit IP Details from List"
+                        },
+                        {
+                            "name": "EducationEdit",
+                            "paramType": "body",
+                            "required": true,
+                            "type": "EducationEdit",
+                            "format": "string"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__user__education__id"
+                },
+                {
+                    "summary": "Delete Doctor Education",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "paramType": "path",
+                            "type": "integer",
+                            "format": "int64",
+                            "required": true,
+                            "description": "Delete Education in List"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "DELETE",
+                    "nickname": "delete__user__education__id"
+                }
+            ]
+        },
+        {
+            "path": "/calender/events",
+            "operations": [
+                {
+                    "summary": "List Calender Events Current Month",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__calender__events"
+                }
+            ]
+        },
+        {
+            "path": "/calender/events/{month}/{year}/{workplaceid}",
+            "operations": [
+                {
+                    "summary": "List Calender Events Current Month",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "month",
+                            "paramType": "path",
+                            "type": "string",
+                            "required": true,
+                            "description": "Get Which month to want to Filter"
+                        },
+                        {
+                            "name": "year",
+                            "paramType": "path",
+                            "type": "string",
+                            "required": true,
+                            "description": "Get Which year to want to Filter"
+                        },
+                        {
+                            "name": "workplaceid",
+                            "paramType": "path",
+                            "type": "string",
+                            "required": true,
+                            "description": "Get Which workplace to want to Filter"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "GET",
+                    "nickname": "get__calender__events__month"
+                }
+            ]
+        },
+        {
+            "path": "/users/update/devicetoken",
+            "operations": [
+                {
+                    "summary": "For update the device token",
+                    "produces": [
+                        "application/json"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "DeviceInfo",
+                            "type": "DeviceInfo",
+                            "paramType":"body",
+                            "required": true,
+                            "description": "For update the Deivice Type and Token"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": "200",
+                            "message": "OK"
+                        },
+                        {
+                            "code": "404",
+                            "message": "Not Found; Not found"
+                        }
+                    ],
+                    "method": "PUT",
+                    "nickname": "put__users__update__devicetoken"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "ChangePassword": {
+            "properties": {
+                "old_password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Old Password"
+                },
+                "password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "New Password"
+                },
+                "confirm_password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Confirm Password"
+                }
+            },
+            "id": "ChangePassword"
+        },
+        "Register": {
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Email of the User"
+                },
+                "first_name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "first_name"
+                },
+                "last_name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "last_name"
+                },
+                "password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Password"
+                },
+                "confirm_password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Confirm Password"
+                },
+                "is_agree_terms_conditions": {
+                    "format": "int64",
+                    "type": "integer",
+                    "required": true,
+                    "description": "Accept Terms and Conditions"
+                },
+                "dob": {
+                    "type": "string",
+                    "required": true,
+                    "format": "date",
+                    "description": "Certification Date (2016-01-01)"
+                },
+                "city_id":{
+                    "type": "integer",
+                    "required": false,
+                    "description": "City"
+                },
+                "phone":{
+                    "type": "string",
+                    "required": true,
+                    "description": "Phone"
+                },
+                "hobbies":{
+                    "type": "string",
+                    "required": true,
+                    "description": "Phone"
+                },
+                "redirect_url":{
+                    "type": "string",
+                    "required": true,
+                    "description": "redirect_url"
+                }
+            },
+            "id": "Register"
+        },
+        "Login": {
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Login Email"
+                },
+                "password": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Login Password"
+                }
+            },
+            "id": "Login"
+        },
+        "ForgotPassword": {
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Enter Email"
+                }
+            },
+            "id": "ForgetPassword"
+        },
+        "ResetPassword": {
+            "properties": {
+                "hash": {
+                    "type": "string",
+                    "required": true,
+                    "description": "hash"
+                },
+                "passwd": {
+                    "type": "string",
+                    "description": "password",
+                    "required": false
+                },
+                "confirm_password": {
+                    "type": "string",
+                    "description": "confirm_passwd",
+                    "required": false
+                }
+            },
+            "id": "ResetPassword"
+        },
+        "DeactivateUser": {
+            "properties": {
+                "is_active":{
+                    "type": "integer",
+                    "required": false,
+                    "description": "is_active"
+                }
+            },
+            "id": "DeactivateUser"
+        },
+        "DoctorSpecialties": {
+            "properties": {
+                "specialty": {
+                    "type": "array",
+                    "required": true,
+                    "format": "int64"
+                }
+            }
+        },
+        "DoctorLanguages": {
+            "properties": {
+                "language": {
+                    "type": "array",
+                    "required": true,
+                    "format": "int64"
+                }
+            }
+        },
+        "UserEducations": {
+            "properties": {
+                "education": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Education Name"
+                },
+                "location": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Location of Studied"
+                },
+                "organization": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Studied Organization"
+                },
+                "certification_date": {
+                    "type": "string",
+                    "required": true,
+                    "format": "date",
+                    "description": "Certification Date (2016-01-01)"
+                }
+            }
+        },
+        "EducationEdit": {
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64",
+                    "required": true,
+                    "description": "Education identifier"
+                },
+                "education": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Education Name"
+                },
+                "location": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Location of Studied"
+                },
+                "organization": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Studied Organization"
+                },
+                "certification_date": {
+                    "type": "string",
+                    "required": true,
+                    "format": "date",
+                    "description": "Certification Date (2016-01-01)"
+                }
+            }
+        },
+        "DeviceInfo": {
+            "properties": {
+                 "device_type":{
+                    "type": "integer",
+                    "format": "int64",
+                    "required": true,
+                    "description": "If Iphone: 1, Android: 2"
+                },
+                "device_token":{
+                    "type": "string",
+                    "required": true,
+                    "description": "Device token"
+                }
+            }
+        }
+    },
+    
+    "swaggerVersion": "1.2",
+    "apiVersion": "1",
+    "basePath": "http://abssalvador.localhost/api"
+}
