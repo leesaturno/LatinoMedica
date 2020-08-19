@@ -7,13 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Acerca del Proyecto : LatinoMedica
+## Acerca del Proyecto : LatinoMedica (Descontinuado)
 
-Directorio Medico
+Directorio Medico: LatinoMedica Nace con la intención de brindar un portal para facilitar la ubicacion de profesionales de la Salud y concertar citas con estos esta desarrollado por el lado del Backend con el lenguaje PHP y el mini framework lumen mientras que en el lado del frontend usa HTML, CSS y JS y el framework Angular 1.5.
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
